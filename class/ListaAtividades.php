@@ -187,14 +187,12 @@ class ListaAtividades
 		
 			$selectAtividadesRotina = $sql->select("SELECT 
 														[ID]
-														,[TIPO_GRUPO_ATENDIMENTO]
 														,[NOME_ATIVIDADE]
-														,[ID_CELULA]
-														,[ATIVA]
 													FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
 													WHERE 
 														[TIPO_GRUPO_ATENDIMENTO] = 'ATIVIDADE'
-														AND [ID_CELULA] = :ID_CELULA", array(
+														AND [ID_CELULA] = :ID_CELULA
+														AND [ATIVA] = 1", array(
 															'ID_CELULA'=>$this->getIdCelula()
 														));
 			return json_encode($selectAtividadesRotina, JSON_UNESCAPED_SLASHES);
@@ -222,14 +220,12 @@ class ListaAtividades
 		
 			$selectAtividadesConsultoria = $sql->select("SELECT 
 														[ID]
-														,[TIPO_GRUPO_ATENDIMENTO]
 														,[NOME_ATIVIDADE]
-														,[ID_CELULA]
-														,[ATIVA]
 													FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
 													WHERE 
 														[TIPO_GRUPO_ATENDIMENTO] = 'CONSULTORIA'
-														AND [ID_CELULA] = :ID_CELULA", array(
+														AND [ID_CELULA] = :ID_CELULA
+														AND [ATIVA] = 1", array(
 															'ID_CELULA'=>$this->getIdCelula()
 														));
 			return json_encode($selectAtividadesConsultoria, JSON_UNESCAPED_SLASHES);
