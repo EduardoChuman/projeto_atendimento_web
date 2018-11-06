@@ -63,7 +63,7 @@
                             }
                             echo "</select><br><br>";
                             echo "<label>OBSERVAÇÕES SOBRE O ATENDIMENTO:<br>
-                                <textarea name='obsevacaoCeopc' cols='60' rows='10' placeholder='Insira suas observações aqui...'></textarea></label><br><br>
+                                <textarea name='observacaoCeopc' cols='60' rows='10' placeholder='Insira suas observações aqui...'></textarea></label><br><br>
                             UNIDADE DEMANDANTE: <input type='text' name='unidadeDemandante' maxlength='4'><br><br>
                             <input type='submit' value='REGISTRAR ATENDIMENTO'>   
                         </fieldset>
