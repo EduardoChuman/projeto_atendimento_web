@@ -20,7 +20,25 @@
     $empregadoCeopc = new Empregado();
     $empregadoCeopc->settarEmpregado($atendimento->getMatriculaCeopc());
 
-    echo $atendimento->getIdAtendimento();
+    // echo $atendimento->getIdAtendimento() . "<br>";
+    // echo $atendimento->getRecuperarDataAtendimento() . "<br>";
+    // echo $atendimento->getMatriculaCeopc() . "<br>";
+    // echo $atendimento->getTipoAtendimento() . "<br>";
+    // echo $atendimento->getCanalAtendimento() . "<br>";
+    // echo $atendimento->getNomeAtividade() . "<br>";
+
+    // VALIDA SE O ENTREVISTADO É A PESSOA ATENDIDA NA CONSULTORIA
+    // if ($entrevistado->getMatricula() != $atendimento->getMatriculaAtendido()) 
+    // {
+    //     header("location:http://www.geopc.mz.caixa/esteiracomex/sem_acesso.php");
+	// 	exit;
+    // }
+
+    if ($entrevistado->getMatricula() != $_GET['matriculaAtendido']) 
+    {
+        header("location:http://www.geopc.mz.caixa/esteiracomex/sem_acesso.php");
+		exit;
+    }
 
 
 ?>
@@ -34,7 +52,7 @@
 </head>
 <body>
     <h3>Olá <?php echo $entrevistado->getNome(); ?>!</h3>
-    <h4>Você foi retirou dúvidas sobre <?php echo $atendimento->getNomeAtividade(); ?> no dia <?php echo $atendimento->getDataAtendimento(); ?> com <?php echo $empregadoCeopc->getNome(); ?>.</h4>
+    <h4>Você retirou dúvidas sobre <?php echo $atendimento->getNomeAtividade(); ?>, via <?php echo $atendimento->getCanalAtendimento(); ?>, no dia <?php echo date("d/m/Y", strtotime($atendimento->getRecuperarDataAtendimento())); ?> com <?php echo $empregadoCeopc->getNome() . "(" . $atendimento->getMatriculaCeopc() . ")."; ?></h4>
     <hr>
     <form action="paginasTeste/capturaNotas.php" method="post">
         <fieldset>
@@ -69,9 +87,10 @@
                 <option value="5">ÓTIMO</option>
             </select>
         </label><br><br>
-        <label>QUER INSERIR ALGUMA OBSERVAÇÃO SOBRE O ATENDIMENTO PRESTADO?:<br>
+        <label>QUER INSERIR ALGUMA OBSERVAÇÃO SOBRE O ATENDIMENTO PRESTADO?<br>
             <textarea name='feedbackAtendido' cols='60' rows='10' placeholder='Insira suas observações aqui...'></textarea>
         </label><br><br>
+        <input type="hidden" name="idAtendimento" value="<?php echo $atendimento->getIdAtendimento() ?>">
         <input type="submit" value="AVALIAR"> 
         </fieldset>
     </form>

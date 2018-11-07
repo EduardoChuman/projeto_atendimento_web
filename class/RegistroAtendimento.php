@@ -8,6 +8,7 @@ class RegistroAtendimento
     // DEFINIÇÃO DOS ATRIBUTOS
     private $idAtendimento;
     private $dataAtendimento;
+    private $recuperarDataAtendimento;
     private $matriculaCeopc;
     private $tipoAtendimento;
     private $canalAtendimento;
@@ -16,6 +17,7 @@ class RegistroAtendimento
     private $observacaoCeopc;
     private $matriculaAtendido;
     private $unidadeDemandante;
+    private $contagemConsultorias;
 
 	// MÉTODOS
 
@@ -38,7 +40,17 @@ class RegistroAtendimento
     }
     public function setDataAtendimento()
     {
-        $this->data = date("Y-m-d H:i:s", time());
+        $this->dataAtendimento = date("Y-m-d H:i:s", time());
+    }
+
+    // $recuperarDataAtendimento
+    public function getRecuperarDataAtendimento()
+    {
+        return $this->recuperarDataAtendimento;
+    }
+    public function setRecuperarDataAtendimento($value)
+    {
+        $this->recuperarDataAtendimento = $value;
     }  
     
     // $matriculaCeopc
@@ -119,6 +131,16 @@ class RegistroAtendimento
     public function setUnidadeDemandante($value)
     {
         $this->unidadeDemandante = $value;
+    }
+
+    // $contagemConsultorias
+    public function getContagemConsultorias()
+    {
+        return $this->contagemConsultorias;
+    }
+    public function setContagemConsultorias($value)
+    {
+        $this->contagemConsultorias = $value;
     }  
 
     // CONSTRUCT
@@ -149,7 +171,7 @@ class RegistroAtendimento
                             )
                         VALUES
                             (
-                                :DATA_ATENDIMENTO,
+                                :DATA_ATENDIMENTO
                                 ,:MATRICULA_CEOPC
                                 ,:TIPO_ATENDIMENTO
                                 ,:CANAL_ATENDIMENTO
@@ -169,23 +191,56 @@ class RegistroAtendimento
                             ));
 
             // ROTINA PARA INSTANCIAR O OBJETO REGISTRO PESQUISA, REGISTRAR A PESQUISA NA TABELA REGISTRO_PESQUISA
-            if ($this->getTipoAtendimento() == 'CONSULTORIA') {
-                
-                $this->consultarUltimoProtocoloCadastrado();
+            if ($this->getTipoAtendimento() == 'CONSULTORIA') 
+            {
 
-                // INSTANCIA UM OBJETO DA CLASSE REGISTRO PESQUISA
-                $pesquisa = new RegistroPesquisa();
+                // QUERY PARA VERIFICAR SE HOUVE ALGUMA CONSULTORIA PARA ESSA MATRICULA, DO MESMO COLABORADOR CEOPC NA DATA DE HOJE
+                $validarQuantidadePesquisa = $sql->select("SELECT 
+                                                                'CONTAGEM' = COUNT([ID])
+                                                            FROM [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
+                                                            WHERE 
+                                                                [MATRICULA_ATENDIDO] = :MATRICULA_ATENDIDO
+                                                                AND [MATRICULA_CEOPC] = :MATRICULA_CEOPC
+                                                                AND [TIPO_ATENDIMENTO] = 'CONSULTORIA'
+                                                                AND CONVERT(DATE,[DATA_ATENDIMENTO]) = CONVERT(DATE, GETDATE())", array(
+                                                                    ':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
+                                                                    ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
+                                                                ));
+                // ATRIBUI O VALOR DA CONSULTA NA VARIÁVEL DO OBJETO
+                if(!empty($validarQuantidadePesquisa))
+                {
+                    $row = $validarQuantidadePesquisa[0];
+                    $this->setContagemConsultorias($row['CONTAGEM']);
+                }
 
-                $pesquisa->cadastrarEnvioPesquisa($this->getDataAtendimento(), $this->getIdAtendimento(), $this->getMatriculaAtendido(), $this->getMatriculaCeopc(), $this->getCanalAtendimento(), $this->getNomeAtividade);         
+                // VALIDA O RESULTADO DA PESQUISA E CASO NÃO TENHA CONSULTORIA NESSA DATA, SERÁ ENVIADO A PESQUISA
+                if ($this->getContagemConsultorias() <= 1) 
+                {
+                    $this->consultarUltimoProtocoloCadastrado();
 
+                    // INSTANCIA UM OBJETO DA CLASSE REGISTRO PESQUISA
+                    $pesquisa = new RegistroPesquisa();
+
+                    // CHAMA O MÉTODO DA CLASSE REGISTRO PESQUISA QUE FAZ INSERT NO BANCO E ENVIA O E-MAIL DE PESQUISA
+                    $pesquisa->cadastrarEnvioPesquisa($this->getDataAtendimento(), $this->getIdAtendimento(), $this->getMatriculaAtendido(), $this->getMatriculaCeopc(), $this->getCanalAtendimento(), $this->getNomeAtividade());
+                }
+                // CASO JÁ TENHA CONSULTORIA NESSA DATA, SERÁ RALIZADO SOMENTE O REGISTRO NA TABELA REGISTRO ATENDIMENTO
+                else
+                {
+                    echo "Consultoria registrada com sucesso! Pesquisa não foi enviada pois você já realizou uma consultoria para essa matricula hoje.";
+                }
+            
+            }
+            // CASO SEJA SOMENTE UM REGISTRO DE ATIVIDADE/ROTINA, NÃO É NECESSÁRIO INSTANCIAR O OBJETO DE REGISTRO PESQUISA
+            else
+            {
+                echo "Atendimento registrado com sucesso!";
             }
             
             $sql->commit();
-
         }
         catch(Exception $e) 
         {
-
 			$sql->rollback();
 
 			// EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
@@ -196,14 +251,14 @@ class RegistroAtendimento
 				"code"=>$e->getCode()
 			));
 		}
-
+        header("location:http://www.ceopc.hom.sp.caixa/atendimento_web/index_registro_atendimento.php");
     }
 
     public function consultarUltimoProtocoloCadastrado()
     {
-        $sql = new Sql();
+        $sql2 = new Sql();
 
-        $consultaId = $sql->select("SELECT TOP 1
+        $consultaId = $sql2->select("SELECT TOP 1
                         [ID]
                     FROM 
                         [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
@@ -227,7 +282,8 @@ class RegistroAtendimento
         $sql = new Sql();
 
         $consulta = $sql->select("SELECT 
-                                    ,'DATA_ATENDIMENTO' = ATENDIMENTO.[DATA_ATENDIMENTO]
+                                    'DATA_ATENDIMENTO' = ATENDIMENTO.[DATA_ATENDIMENTO]
+                                    ,'MATRICULA_ATENDIDO'=ATENDIMENTO.[MATRICULA_ATENDIDO]
                                     ,'MATRICULA_CEOPC' = ATENDIMENTO.[MATRICULA_CEOPC]
                                     ,'TIPO_ATENDIMENTO' = ATENDIMENTO.[TIPO_ATENDIMENTO]
                                     ,'CANAL_ATENDIMENTO' = ATENDIMENTO.[CANAL_ATENDIMENTO]
@@ -241,8 +297,9 @@ class RegistroAtendimento
         if(!empty($consulta))
         {
             $row = $consulta[0];
-            $this->setDataAtendimento($row['DATA_ATENDIMENTO']);
+            $this->setRecuperarDataAtendimento($row['DATA_ATENDIMENTO']);
             $this->setMatriculaCeopc($row['MATRICULA_CEOPC']);
+            $this->setMatriculaAtendido($row['MATRICULA_ATENDIDO']);
             $this->setTipoAtendimento($row['TIPO_ATENDIMENTO']);
             $this->setCanalAtendimento($row['CANAL_ATENDIMENTO']);
             $this->setNomeAtividade($row['NOME_ATIVIDADE']);

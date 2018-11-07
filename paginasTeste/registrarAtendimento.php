@@ -29,11 +29,7 @@
     else 
     {
         $unidadeDemandante = $_POST['unidadeDemandante'];
-    }
-
-
-
-    
+    } 
 
     $registroAtendimento->setMatriculaCeopc($_POST['matriculaCeopc']);
     $registroAtendimento->setTipoAtendimento($_POST['tipoAtendimento']);
@@ -42,13 +38,15 @@
     $registroAtendimento->setObservacaoCeopc($_POST['observacaoCeopc']);
     $registroAtendimento->setUnidadeDemandante($unidadeDemandante);
 
-    echo "Matricula CEOPC: " . $registroAtendimento->getMatriculaCeopc() . "<br>";
-    echo "Tipo Atendimento: " . $registroAtendimento->getTipoAtendimento() . " <br>";
-    echo "Canal Atendimento: " . $registroAtendimento->getCanalAtendimento() . " <br>";
-    echo "Atividade: " . $registroAtendimento->getItemListaAtividades() . " <br>";
-    echo "Observação CEOPC: " . $registroAtendimento->getObservacaoCeopc() . " <br>";
-    echo "Matricula Atendido: " . $registroAtendimento->getMatriculaAtendido() . " <br>";
-    echo "Unidade Demandante: " . $registroAtendimento->getUnidadeDemandante() . " <br>";
+    // VALIDANDO A ATRIBUIÇÃO DAS VARIÁVEIS
+    // echo "Matricula CEOPC: " . $registroAtendimento->getMatriculaCeopc() . "<br>";
+    // echo "Tipo Atendimento: " . $registroAtendimento->getTipoAtendimento() . " <br>";
+    // echo "Canal Atendimento: " . $registroAtendimento->getCanalAtendimento() . " <br>";
+    // echo "Atividade: " . $registroAtendimento->getItemListaAtividades() . " <br>";
+    // echo "Observação CEOPC: " . $registroAtendimento->getObservacaoCeopc() . " <br>";
+    // echo "Matricula Atendido: " . $registroAtendimento->getMatriculaAtendido() . " <br>";
+    // echo "Unidade Demandante: " . $registroAtendimento->getUnidadeDemandante() . " <br>";
 
+    $registroAtendimento->registrarAtendimento();
 
 ?>

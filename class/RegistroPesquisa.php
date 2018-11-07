@@ -54,9 +54,9 @@ class registroPesquisas
     {
         return $this->dataResposta;
     }
-    public function setDataResposta($value)
+    public function setDataResposta()
     {
-        $this->dataResposta = $value;
+        $this->dataResposta = date("Y-m-d H:i:s", time());
     }
 
     // $notaCordialidade
@@ -161,47 +161,65 @@ class registroPesquisas
         $mail->Body = 
         "
         <head>
-        <meta charset=\"UTF-8\">
-        <style>
-            body{
-                font-family: arial,verdana,sans serif;
-            }
+            <meta charset=\"UTF-8\">
+            <style>
+                body{
+                    font-family: arial,verdana,sans serif;
+                }
 
-            .head_msg{
-                font-weight: bold;
-                text-align: center;
-            }
+                .head_msg{
+                    font-weight: bold;
+                    text-align: center;
+                }
 
-            .gray{
-                color: #808080;
-            }
-
-
-        </style>
-    </head>
-    <body style=\"font-family: arial;\">
+                .gray{
+                    color: #808080;
+                }
 
 
-        <h3 class=\"head_msg gray\">TESTE DE ENVIO.</h3>
-        <p>Data do Atendimento: " . $dataEnvio . ".</p>
-        <p>Protocolo Atendimento: " . $idRegistroAtendimento . ".</p>
-        <p>Matricula Atendido: " . $matriculaAtendido . ".</p>
-        <p>Matricula CEOPC: " . $matriculaCeopc . ".</p>
-        <p>Tipo Atendimento: CONSULTORIA.</p>
-        <p>Canal de Atendimento: " . $canalAtendimento . ".</p>
-        <p>Nome Atividade: " . $nomeAtividade . ".</p><br><br>
-        <p>Para responder a pesquisa, <a href='http://www.ceopc.hom.sp.caixa/atendimento_web/index_registro_pesquisa.php?idAtendimento=" . $idRegistroAtendimento . "'>clique aqui</a>.</p>
-    </body>";
+            </style>
+        </head>
+        <body style=\"font-family: arial;\">
+
+
+            <h3 class=\"head_msg gray\">TESTE DE ENVIO.</h3>
+            <p>Data do Atendimento: " . $dataEnvio . ".</p>
+            <p>Protocolo Atendimento: " . $idRegistroAtendimento . ".</p>
+            <p>Matricula Atendido: " . $matriculaAtendido . ".</p>
+            <p>Matricula CEOPC: " . $matriculaCeopc . ".</p>
+            <p>Tipo Atendimento: CONSULTORIA.</p>
+            <p>Canal de Atendimento: " . $canalAtendimento . ".</p>
+            <p>Nome Atividade: " . $nomeAtividade . ".</p><br><br>
+            <p>Para responder a pesquisa, <a href='http://www.ceopc.hom.sp.caixa/atendimento_web/index_responde_pesquisa.php?idAtendimento=" . $idRegistroAtendimento . "&matriculaAtendido=" . $matriculaAtendido . "'>clique aqui</a>.</p>
+         </body>";
 
         $mail->send();
 
-        echo "e-mail encaminhado com sucesso!";
-
+        echo "Consultoria registrada com sucesso! A pesquisa de satisfação foi enviada.";
     }
 
     // MÉTODO PARA DAR O UPDATE DA RESPOSTA DA PESQUISA
     public function registrarRespostaPesquisa()
     {
+        $sql = new Sql();
+
+        $sql->select("UPDATE [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
+                    SET 
+                        [DATA_RESPOSTA] = :DATA_RESPOSTA
+                        ,[NOTA_CORDIALIDADE] = :NOTA_CORDIALIDADE
+                        ,[NOTA_DOMINIO] = :NOTA_DOMINIO
+                        ,[NOTA_TEMPESTIVIDADE] = :NOTA_TEMPESTIVIDADE
+                        ,[FEEDBACK_ATENDIDO] = :FEEDBACK_ATENDIDO
+                    WHERE 
+                        [ID_REGISTRO_ATENDIMENTO] = :ID_REGISTRO_ATENDIMENTO", array(
+                            ':DATA_RESPOSTA'=>$this->getDataResposta()
+                            ,':NOTA_CORDIALIDADE'=>$this->getNotaCordialidade()
+                            ,':NOTA_DOMINIO'=>$this->getNotaDominio()
+                            ,':NOTA_TEMPESTIVIDADE'=>$this->getNotaTempestividade()
+                            ,':FEEDBACK_ATENDIDO'=>$this->getFeedbackAtendido()
+                        ));
+        
+        header("location:http://www.ceopc.hom.sp.caixa/atendimento_web/voto/");
         
     }
 }
