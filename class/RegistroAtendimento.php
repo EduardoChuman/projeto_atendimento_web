@@ -154,58 +154,69 @@ class RegistroAtendimento
     {
         $sql = new Sql();
 
-        $sql->beginTransaction();
+        // $sql->beginTransaction();
 
-        try
-        {
-            $sql->select("INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
-                            (
-                                [DATA_ATENDIMENTO]
-                                ,[MATRICULA_CEOPC]
-                                ,[TIPO_ATENDIMENTO]
-                                ,[CANAL_ATENDIMENTO]
-                                ,[ITEM_LISTA_ATIVIDADES]
-                                ,[OBSERVACAO_CEOPC]
-                                ,[MATRICULA_ATENDIDO]
-                                ,[UNIDADE_DEMANDANTE]
-                            )
-                        VALUES
-                            (
-                                :DATA_ATENDIMENTO
-                                ,:MATRICULA_CEOPC
-                                ,:TIPO_ATENDIMENTO
-                                ,:CANAL_ATENDIMENTO
-                                ,:ITEM_LISTA_ATIVIDADES
-                                ,:OBSERVACAO_CEOPC
-                                ,:MATRICULA_ATENDIDO
-                                ,:UNIDADE_DEMANDANTE
-                            )", array(
-                                ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
-                                ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
-                                ,':TIPO_ATENDIMENTO'=>$this->getTipoAtendimento()
-                                ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
-                                ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
-                                ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
-                                ,':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
-                                ,':UNIDADE_DEMANDANTE'=>$this->getUnidadeDemandante()
-                            ));
+        // try
+        // {
+            $sql->select
+            (
+                "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
+                    (
+                        [DATA_ATENDIMENTO]
+                        ,[MATRICULA_CEOPC]
+                        ,[TIPO_ATENDIMENTO]
+                        ,[CANAL_ATENDIMENTO]
+                        ,[ITEM_LISTA_ATIVIDADES]
+                        ,[OBSERVACAO_CEOPC]
+                        ,[MATRICULA_ATENDIDO]
+                        ,[UNIDADE_DEMANDANTE]
+                    )
+                VALUES
+                    (
+                        :DATA_ATENDIMENTO
+                        ,:MATRICULA_CEOPC
+                        ,:TIPO_ATENDIMENTO
+                        ,:CANAL_ATENDIMENTO
+                        ,:ITEM_LISTA_ATIVIDADES
+                        ,:OBSERVACAO_CEOPC
+                        ,:MATRICULA_ATENDIDO
+                        ,:UNIDADE_DEMANDANTE
+                    )"
+                , array
+                (
+                    ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
+                    ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
+                    ,':TIPO_ATENDIMENTO'=>$this->getTipoAtendimento()
+                    ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
+                    ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
+                    ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
+                    ,':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
+                    ,':UNIDADE_DEMANDANTE'=>$this->getUnidadeDemandante()
+                )
+            );
 
             // ROTINA PARA INSTANCIAR O OBJETO REGISTRO PESQUISA, REGISTRAR A PESQUISA NA TABELA REGISTRO_PESQUISA
             if ($this->getTipoAtendimento() == 'CONSULTORIA') 
             {
-
                 // QUERY PARA VERIFICAR SE HOUVE ALGUMA CONSULTORIA PARA ESSA MATRICULA, DO MESMO COLABORADOR CEOPC NA DATA DE HOJE
-                $validarQuantidadePesquisa = $sql->select("SELECT 
-                                                                'CONTAGEM' = COUNT([ID])
-                                                            FROM [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
-                                                            WHERE 
-                                                                [MATRICULA_ATENDIDO] = :MATRICULA_ATENDIDO
-                                                                AND [MATRICULA_CEOPC] = :MATRICULA_CEOPC
-                                                                AND [TIPO_ATENDIMENTO] = 'CONSULTORIA'
-                                                                AND CONVERT(DATE,[DATA_ATENDIMENTO]) = CONVERT(DATE, GETDATE())", array(
-                                                                    ':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
-                                                                    ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
-                                                                ));
+                $validarQuantidadePesquisa = $sql->select
+                (
+                    "SELECT 
+                        'CONTAGEM' = COUNT([ID])
+                    FROM 
+                        [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
+                    WHERE 
+                        [MATRICULA_ATENDIDO] = :MATRICULA_ATENDIDO
+                        AND [MATRICULA_CEOPC] = :MATRICULA_CEOPC
+                        AND [TIPO_ATENDIMENTO] = 'CONSULTORIA'
+                        AND CONVERT(DATE,[DATA_ATENDIMENTO]) = CONVERT(DATE, GETDATE())"
+                    , array
+                    (
+                        ':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
+                        ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
+                    )
+                );
+
                 // ATRIBUI O VALOR DA CONSULTA NA VARIÁVEL DO OBJETO
                 if(!empty($validarQuantidadePesquisa))
                 {
@@ -222,78 +233,105 @@ class RegistroAtendimento
                     $pesquisa = new RegistroPesquisa();
 
                     // CHAMA O MÉTODO DA CLASSE REGISTRO PESQUISA QUE FAZ INSERT NO BANCO E ENVIA O E-MAIL DE PESQUISA
-                    $pesquisa->cadastrarEnvioPesquisa($this->getDataAtendimento(), $this->getIdAtendimento(), $this->getMatriculaAtendido(), $this->getMatriculaCeopc(), $this->getCanalAtendimento(), $this->getNomeAtividade());
+                    $pesquisa->cadastrarEnvioPesquisa
+                    (
+                        $this->getDataAtendimento()
+                        ,$this->getIdAtendimento()
+                        ,$this->getMatriculaAtendido()
+                        ,$this->getMatriculaCeopc()
+                        ,$this->getCanalAtendimento()
+                        ,$this->getNomeAtividade()
+                    );
                 }
                 // CASO JÁ TENHA CONSULTORIA NESSA DATA, SERÁ RALIZADO SOMENTE O REGISTRO NA TABELA REGISTRO ATENDIMENTO
                 else
                 {
-                    echo "Consultoria registrada com sucesso! Pesquisa não foi enviada pois você já realizou uma consultoria para essa matricula hoje.";
-                }
-            
+                    echo "Consultoria registrada com sucesso! Pesquisa não foi enviada pois você já realizou uma consultoria para essa matricula hoje. <br>";
+                }          
             }
             // CASO SEJA SOMENTE UM REGISTRO DE ATIVIDADE/ROTINA, NÃO É NECESSÁRIO INSTANCIAR O OBJETO DE REGISTRO PESQUISA
             else
             {
-                echo "Atendimento registrado com sucesso!";
+                echo "Atendimento registrado com sucesso! <br>";
             }
-            
-            $sql->commit();
-        }
-        catch(Exception $e) 
-        {
-			$sql->rollback();
+        // $sql->commit();
+        // }
+        // catch(Exception $e)
+        // {
+			// $sql->rollback();
 
 			// EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-		}
-        header("location:http://www.ceopc.hom.sp.caixa/atendimento_web/index_registro_atendimento.php");
+            // echo json_encode
+            // (
+                // array
+                // (
+                    // "message"=>$e->getMessage(),
+                    // "line"=>$e->getLine(),
+                    // "file"=>$e->getFile(),
+                    // "code"=>$e->getCode()
+                // )
+            // );
+		// }
+        echo "<a href='http://www.ceopc.hom.sp.caixa/atendimento_web/index_registro_atendimento.php'>Voltar</a>";
     }
 
+    // MÉTODO DE CONSULTA DO ÚLTIMO PROTOCOLO CADASTRADO PARA INSERT NA TABELA PESQUISA
     public function consultarUltimoProtocoloCadastrado()
     {
         $sql2 = new Sql();
 
-        $consultaId = $sql2->select("SELECT TOP 1
-                        [ID]
-                    FROM 
-                        [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
-                    WHERE
-                        [MATRICULA_CEOPC] = :MATRICULA
-                    ORDER BY 
-                        [ID] DESC", array(
-                            ':MATRICULA'=>$this->getMatriculaCeopc()
-                        ));
+        $consultaId = $sql2->select
+        (
+            "SELECT TOP 1
+                'ID' = ATENDIMENTO.[ID]
+                ,'NOME_ATIVIDADE' = ATIVIDADES.[NOME_ATIVIDADE]
+            FROM 
+                [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO] AS ATENDIMENTO
+                INNER JOIN [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES] AS ATIVIDADES 
+                ON ATENDIMENTO.[ITEM_LISTA_ATIVIDADES] = ATIVIDADES.[ID]
+            WHERE
+                [MATRICULA_CEOPC] = :MATRICULA
+            ORDER BY 
+                [ID] DESC"
+            , array
+            (
+                ':MATRICULA'=>$this->getMatriculaCeopc()
+            )
+        );
         if(!empty($consultaId))
         {
-            $row = $result[0];
+            $row = $consultaId[0];
             $this->setIdAtendimento($row['ID']);
+            $this->setNomeAtividade($row['NOME_ATIVIDADE']);
         }
     }
 
+    // MÉTODO QUE RESGATA INFORMAÇÕES DO ATENDIMENTO
     public function consultarAtendimento($idAtendimento)
     {
         $this->setIdAtendimento($idAtendimento);
 
         $sql = new Sql();
 
-        $consulta = $sql->select("SELECT 
-                                    'DATA_ATENDIMENTO' = ATENDIMENTO.[DATA_ATENDIMENTO]
-                                    ,'MATRICULA_ATENDIDO'=ATENDIMENTO.[MATRICULA_ATENDIDO]
-                                    ,'MATRICULA_CEOPC' = ATENDIMENTO.[MATRICULA_CEOPC]
-                                    ,'TIPO_ATENDIMENTO' = ATENDIMENTO.[TIPO_ATENDIMENTO]
-                                    ,'CANAL_ATENDIMENTO' = ATENDIMENTO.[CANAL_ATENDIMENTO]
-                                    ,'NOME_ATIVIDADE' = ATIVIDADES.[NOME_ATIVIDADE]
-                                FROM 
-                                    [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO] AS ATENDIMENTO
-                                    INNER JOIN [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES] AS ATIVIDADES ON ATENDIMENTO.ITEM_LISTA_ATIVIDADES = ATIVIDADES.ID
-                                WHERE ATENDIMENTO.[ID] = :ID", array(
-                                    ':ID'=>$this->getIdAtendimento()
-                                ));
+        $consulta = $sql->select
+        (
+            "SELECT 
+                'DATA_ATENDIMENTO' = ATENDIMENTO.[DATA_ATENDIMENTO]
+                ,'MATRICULA_ATENDIDO'=ATENDIMENTO.[MATRICULA_ATENDIDO]
+                ,'MATRICULA_CEOPC' = ATENDIMENTO.[MATRICULA_CEOPC]
+                ,'TIPO_ATENDIMENTO' = ATENDIMENTO.[TIPO_ATENDIMENTO]
+                ,'CANAL_ATENDIMENTO' = ATENDIMENTO.[CANAL_ATENDIMENTO]
+                ,'NOME_ATIVIDADE' = ATIVIDADES.[NOME_ATIVIDADE]
+            FROM 
+                [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO] AS ATENDIMENTO
+                INNER JOIN [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES] AS ATIVIDADES ON ATENDIMENTO.[ITEM_LISTA_ATIVIDADES] = ATIVIDADES.[ID]
+            WHERE 
+                ATENDIMENTO.[ID] = :ID"
+            , array
+            (
+                ':ID'=>$this->getIdAtendimento()
+            )
+        );
         if(!empty($consulta))
         {
             $row = $consulta[0];
@@ -303,9 +341,10 @@ class RegistroAtendimento
             $this->setTipoAtendimento($row['TIPO_ATENDIMENTO']);
             $this->setCanalAtendimento($row['CANAL_ATENDIMENTO']);
             $this->setNomeAtividade($row['NOME_ATIVIDADE']);
-        }
-        
+        }   
     }
 }
 
 ?>
+
+

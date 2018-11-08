@@ -3,7 +3,7 @@
 	$pos = strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE');
 	if ($pos !== false) 
 	{			
-		 header("location: /esteiracomex/data/voto/index1.html");															
+		 header("location: /atendimento_web/voto/index1.html");															
 		exit;	 
 	}	
 ?>

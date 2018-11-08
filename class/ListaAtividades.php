@@ -65,12 +65,6 @@ class ListaAtividades
 	{
 		$this->ativa = $value;
     }
-    
-    // CONSTRUCT
-    public function __construct()
-    {
-
-    }
 
     // MÉTODO PARA CADASTRAR NOVA ATIVIDADE
     public function incluirAtividade($tipoGrupoAtendimento, $nomeAtividade, $idCelula)
@@ -82,37 +76,45 @@ class ListaAtividades
 
 		$sql = new Sql();
 
-		try{
-
-			$registraAtividade = $sql->select("INSERT [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
-													(
-														[TIPO_GRUPO_ATENDIMENTO]
-														,[NOME_ATIVIDADE]
-														,[ID_CELULA]
-														,[ATIVA]
-													)
-												VALUES
-													(
-														:TIPO_GRUPO_ATENDIMENTO,
-														:NOME_ATIVIDADE,
-														:ID_CELULA,
-														:ATIVA
-													)", array(
-														':TIPO_GRUPO_ATENDIMENTO'=>$this->getTipoGrupoAtendimento(),
-														':NOME_ATIVIDADE'=>$this->getNomeAtividade(),
-														':ID_CELULA'=>$this->getIdCelula(),
-														':ATIVA'=>$this->getAtiva()
-													));
-
-		} catch (Exception $e) {
-
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-
+		try
+		{
+			$registraAtividade = $sql->select
+			(
+				"INSERT [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+					(
+						[TIPO_GRUPO_ATENDIMENTO]
+						,[NOME_ATIVIDADE]
+						,[ID_CELULA]
+						,[ATIVA]
+					)
+				VALUES
+					(
+						:TIPO_GRUPO_ATENDIMENTO,
+						:NOME_ATIVIDADE,
+						:ID_CELULA,
+						:ATIVA
+					)"
+				, array
+				(
+					':TIPO_GRUPO_ATENDIMENTO'=>$this->getTipoGrupoAtendimento(),
+					':NOME_ATIVIDADE'=>$this->getNomeAtividade(),
+					':ID_CELULA'=>$this->getIdCelula(),
+					':ATIVA'=>$this->getAtiva()
+				)
+			);
+		} 
+		catch (Exception $e) 
+		{
+			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
 		}
     }
 
@@ -123,26 +125,33 @@ class ListaAtividades
 
 		$sql = new Sql();
 
-		try{
-
-			$desativaAtividade = $sql->select("UPDATE [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
-												SET 
-													[ATIVA] = 0
-												WHERE 
-													[ID] = :ID
-												", array(
-													':ID'=>$this->getIdAtividade()
-												));
-		
-		} catch (Exception $e) {
-
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-
+		try
+		{
+			$desativaAtividade = $sql->select
+			(
+				"UPDATE [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				SET 
+					[ATIVA] = 0
+				WHERE 
+					[ID] = :ID"
+				, array
+				(
+					':ID'=>$this->getIdAtividade()
+				)
+			);		
+		} 
+		catch (Exception $e) 
+		{
+			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
 		}
 	}
 
@@ -153,26 +162,33 @@ class ListaAtividades
 
 		$sql = new Sql();
 
-		try{
-
-			$reativaAtividade = $sql->select("UPDATE [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
-												SET 
-													[ATIVA] = 1
-												WHERE 
-													[ID] = :ID
-												", array(
-													':ID'=>$this->getIdAtividade()
-												));
-		
-		} catch (Exception $e) {
-
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-
+		try
+		{
+			$reativaAtividade = $sql->select
+			(
+				"UPDATE [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				SET 
+					[ATIVA] = 1
+				WHERE 
+					[ID] = :ID"
+				, array
+				(
+					':ID'=>$this->getIdAtividade()
+				)
+			);
+		} 
+		catch (Exception $e) 
+		{
+			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
 		}
 	}
 	
@@ -183,29 +199,37 @@ class ListaAtividades
 
 		$sql = new Sql();
 
-		try{
-		
-			$selectAtividadesRotina = $sql->select("SELECT 
-														[ID]
-														,[NOME_ATIVIDADE]
-													FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
-													WHERE 
-														[TIPO_GRUPO_ATENDIMENTO] = 'ATIVIDADE'
-														AND [ID_CELULA] = :ID_CELULA
-														AND [ATIVA] = 1", array(
-															'ID_CELULA'=>$this->getIdCelula()
-														));
-			return json_encode($selectAtividadesRotina, JSON_UNESCAPED_SLASHES);
-		
-		} catch (Exception $e) {
-
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-
+		try
+		{		
+			$selectAtividadesRotina = $sql->select
+			(
+				"SELECT 
+					[ID]
+					,[NOME_ATIVIDADE]
+				FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				WHERE 
+					[TIPO_GRUPO_ATENDIMENTO] = 'ATIVIDADE'
+					AND [ID_CELULA] = :ID_CELULA
+					AND [ATIVA] = 1"
+				, array
+				(
+					'ID_CELULA'=>$this->getIdCelula()
+				)
+			);
+			return json_encode($selectAtividadesRotina, JSON_UNESCAPED_SLASHES);	
+		} 
+		catch (Exception $e) 
+		{
+			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
 		}
 	}
 
@@ -216,31 +240,38 @@ class ListaAtividades
 
 		$sql = new Sql();
 
-		try{
-		
-			$selectAtividadesConsultoria = $sql->select("SELECT 
-														[ID]
-														,[NOME_ATIVIDADE]
-													FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
-													WHERE 
-														[TIPO_GRUPO_ATENDIMENTO] = 'CONSULTORIA'
-														AND [ID_CELULA] = :ID_CELULA
-														AND [ATIVA] = 1", array(
-															'ID_CELULA'=>$this->getIdCelula()
-														));
+		try
+		{		
+			$selectAtividadesConsultoria = $sql->select
+			(
+				"SELECT 
+					[ID]
+					,[NOME_ATIVIDADE]
+				FROM [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				WHERE 
+					[TIPO_GRUPO_ATENDIMENTO] = 'CONSULTORIA'
+					AND [ID_CELULA] = :ID_CELULA
+					AND [ATIVA] = 1"
+				, array
+				(
+					'ID_CELULA'=>$this->getIdCelula()
+				)
+			);
 			return json_encode($selectAtividadesConsultoria, JSON_UNESCAPED_SLASHES);
-		
-		} catch (Exception $e) {
-
-			echo json_encode(array(
-				"message"=>$e->getMessage(),
-				"line"=>$e->getLine(),
-				"file"=>$e->getFile(),
-				"code"=>$e->getCode()
-			));
-
+		} 
+		catch (Exception $e) 
+		{
+			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
 		}
 	}
 }
-
 ?>

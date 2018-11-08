@@ -2,46 +2,34 @@
 
     // VERIFICA SE EXISTEM ERROS DE EXECUÇÃO NO CÓDIGO
     ini_set('display_errors',1);
+
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
-    require('../config_classes_globais.php');
+    require_once("../config_classes_globais.php");
     require_once("config_atendimento_web.php");
 
+    // INSTANCIA OS OBJETOS DAS CLASSES EMPREGADO E REGISTRO ATENDIMENTO
     $entrevistado = new Empregado();
-    // TESTES DA CLASSE EMPREGADO CEOPC
-    // $empregadoCeopc = new EmpregadoCeopc();
-    // echo $empregadoCeopc;
-    // echo "<hr>";
-
-    // TESTES DA CLASSE REGISTRO PESQUISA
     $atendimento = new RegistroAtendimento();
-    $atendimento->setIdAtendimento($_GET['idAtendimento']);
-    $atendimento->consultarAtendimento($atendimento->getIdAtendimento());
-
     $empregadoCeopc = new Empregado();
+
+    // RECEBE DADOS VIA GET E ATRIBUI AO OBJETO 
+    $atendimento->setIdAtendimento($_GET['idAtendimento']);
+    
+    // CHAMA O MÉTODO QUE RESGATA OS DADOS DO ATENDIMENTO
+    $atendimento->consultarAtendimento($atendimento->getIdAtendimento());
+    
+    // CHAMA O MÉTODO QUE RESGATA OS DADOS DO EMPREGADO CEOPC QUE REALIZOU O ATENDIMENTO 
     $empregadoCeopc->settarEmpregado($atendimento->getMatriculaCeopc());
 
-    // echo $atendimento->getIdAtendimento() . "<br>";
-    // echo $atendimento->getRecuperarDataAtendimento() . "<br>";
-    // echo $atendimento->getMatriculaCeopc() . "<br>";
-    // echo $atendimento->getTipoAtendimento() . "<br>";
-    // echo $atendimento->getCanalAtendimento() . "<br>";
-    // echo $atendimento->getNomeAtividade() . "<br>";
-
     // VALIDA SE O ENTREVISTADO É A PESSOA ATENDIDA NA CONSULTORIA
-    // if ($entrevistado->getMatricula() != $atendimento->getMatriculaAtendido()) 
-    // {
-    //     header("location:http://www.geopc.mz.caixa/esteiracomex/sem_acesso.php");
-	// 	exit;
-    // }
-
     if ($entrevistado->getMatricula() != $_GET['matriculaAtendido']) 
     {
         header("location:http://www.geopc.mz.caixa/esteiracomex/sem_acesso.php");
 		exit;
     }
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

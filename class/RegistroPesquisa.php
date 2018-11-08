@@ -2,8 +2,15 @@
 // VERIFICA SE EXISTEM ERROS DE EXECUÇÃO NO CÓDIGO
 ini_set('display_errors',1);
 
+// CARREGA AS BIBLIOTECAS DO PHP MAILER
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require '../../PHPMailer/src/Exception.php';
+require '../../PHPMailer/src/PHPMailer.php';
+require '../../PHPMailer/src/SMTP.php';
+
 // CRIAÇÃO DA CLASSE
-class registroPesquisas 
+class RegistroPesquisa
 {
     // DEFINIÇÃO DOS ATRIBUTOS
     private $idPesquisa;
@@ -99,44 +106,47 @@ class registroPesquisas
         $this->feedbackAtendido = $value;
     }
 
-    // MÉTODO DE INSERT E ENVIO DA PESQUISA
-    public function cadastrarEnvioPesquisa($dataEnvio, $idRegistroAtendimento, $matriculaAtendido, $matriculaCeopc, $canalAtendimento, $nomeAtividade)
+    // MÉTODO DE INSERT NA TABELA REGISTRO PESQUISA E ENVIO DA PESQUISA VIA PHP MAILER
+    public function cadastrarEnvioPesquisa
+    (
+        $dataEnvio
+        ,$idRegistroAtendimento
+        ,$matriculaAtendido
+        ,$matriculaCeopc
+        ,$canalAtendimento
+        ,$nomeAtividade
+    )
     {
         $this->setDataEnvio($dataEnvio);
         $this->setIdRegistroAtendimento($idRegistroAtendimento);
 
-        $sql = new Sql();
+        $sql3 = new Sql();
 
-        $sql->select("INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
-                        (
-                            [DATA_ENVIO]
-                            ,[ID_REGISTRO_ATENDIMENTO]
-                            ,[DATA_RESPOSTA]
-                            ,[NOTA_CORDIALIDADE]
-                            ,[NOTA_DOMINIO]
-                            ,[NOTA_TEMPESTIVIDADE]
-                            ,[FEEDBACK_ATENDIDO]
-                        )
-                    VALUES
-                        (
-                            :DATA_ENVIO
-                            ,:ID_REGISTRO_ATENDIMENTO
-                        )", array(
-                            ':DATA_ENVIO'=>$this->getDataEnvio()
-                            ,':ID_REGISTRO_ATENDIMENTO'=>$this->getIdRegistroAtendimento()
-                        ));
-
-        // ENVIO DA PESQUISA
-        require_once ("../../PHPMailer/src/Exception.php");
-        require_once ("../../PHPMailer/src/PHPMailer.php");
-        require_once ("../../PHPMailer/src/SMTP.php");
+        $sql3->select
+        (
+            "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
+                (
+                    [DATA_ENVIO]
+                    ,[ID_REGISTRO_ATENDIMENTO]
+                )
+            VALUES
+                (
+                    :DATA_ENVIO
+                    ,:ID_REGISTRO_ATENDIMENTO
+                )"
+            , array
+            (
+                ':DATA_ENVIO'=>$this->getDataEnvio()
+                ,':ID_REGISTRO_ATENDIMENTO'=>$this->getIdRegistroAtendimento()
+            )
+        );
 
         // INICIA A CRIAÇÃO DO E-MAIL PARA ENVIO
-		$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+        $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
         $mail->CharSet = 'UTF-8';
         //Server settings
-        $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+        // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'sistemas.correiolivre.caixa';            // Specify main and backup SMTP servers
         $mail->SMTPAuth = false;                               // Enable SMTP authentication
@@ -175,13 +185,9 @@ class registroPesquisas
                 .gray{
                     color: #808080;
                 }
-
-
             </style>
         </head>
         <body style=\"font-family: arial;\">
-
-
             <h3 class=\"head_msg gray\">TESTE DE ENVIO.</h3>
             <p>Data do Atendimento: " . $dataEnvio . ".</p>
             <p>Protocolo Atendimento: " . $idRegistroAtendimento . ".</p>
@@ -195,7 +201,7 @@ class registroPesquisas
 
         $mail->send();
 
-        echo "Consultoria registrada com sucesso! A pesquisa de satisfação foi enviada.";
+        echo "Consultoria registrada com sucesso! A pesquisa de satisfação foi enviada. <br>";
     }
 
     // MÉTODO PARA DAR O UPDATE DA RESPOSTA DA PESQUISA
@@ -203,24 +209,28 @@ class registroPesquisas
     {
         $sql = new Sql();
 
-        $sql->select("UPDATE [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
-                    SET 
-                        [DATA_RESPOSTA] = :DATA_RESPOSTA
-                        ,[NOTA_CORDIALIDADE] = :NOTA_CORDIALIDADE
-                        ,[NOTA_DOMINIO] = :NOTA_DOMINIO
-                        ,[NOTA_TEMPESTIVIDADE] = :NOTA_TEMPESTIVIDADE
-                        ,[FEEDBACK_ATENDIDO] = :FEEDBACK_ATENDIDO
-                    WHERE 
-                        [ID_REGISTRO_ATENDIMENTO] = :ID_REGISTRO_ATENDIMENTO", array(
-                            ':DATA_RESPOSTA'=>$this->getDataResposta()
-                            ,':NOTA_CORDIALIDADE'=>$this->getNotaCordialidade()
-                            ,':NOTA_DOMINIO'=>$this->getNotaDominio()
-                            ,':NOTA_TEMPESTIVIDADE'=>$this->getNotaTempestividade()
-                            ,':FEEDBACK_ATENDIDO'=>$this->getFeedbackAtendido()
-                        ));
-        
-        header("location:http://www.ceopc.hom.sp.caixa/atendimento_web/voto/");
-        
+        $sql->query
+        (
+            "UPDATE [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
+            SET 
+                [DATA_RESPOSTA] = :DATA_RESPOSTA
+                ,[NOTA_CORDIALIDADE] = :NOTA_CORDIALIDADE
+                ,[NOTA_DOMINIO] = :NOTA_DOMINIO
+                ,[NOTA_TEMPESTIVIDADE] = :NOTA_TEMPESTIVIDADE
+                ,[FEEDBACK_ATENDIDO] = :FEEDBACK_ATENDIDO
+            WHERE 
+                [ID_REGISTRO_ATENDIMENTO] = :ID_REGISTRO_ATENDIMENTO"
+            , array
+            (
+                ':ID_REGISTRO_ATENDIMENTO'=>$this->getIdRegistroAtendimento()
+                ,':DATA_RESPOSTA'=>$this->getDataResposta()
+                ,':NOTA_CORDIALIDADE'=>$this->getNotaCordialidade()
+                ,':NOTA_DOMINIO'=>$this->getNotaDominio()
+                ,':NOTA_TEMPESTIVIDADE'=>$this->getNotaTempestividade()
+                ,':FEEDBACK_ATENDIDO'=>$this->getFeedbackAtendido()
+            )
+        );
+        header("location:http://www.ceopc.hom.sp.caixa/atendimento_web/voto/");      
     }
 }
 

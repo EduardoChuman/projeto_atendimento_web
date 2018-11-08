@@ -2,20 +2,25 @@
 
     // VERIFICA SE EXISTEM ERROS DE EXECUÇÃO NO CÓDIGO
     ini_set('display_errors',1);
+
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
-    require('../../config_classes_globais.php');
+    require_once("../../config_classes_globais.php");
     require_once("../config_atendimento_web.php");
 
-    // CAPTURA OS DADOS DO EMPREGADO CEOPC
+    // INSTANCIA O OBJETO EMPREGADO CEOPC
     $empregadoCeopc = new EmpregadoCeopc();
+    
+    // FORÇA A CÉLULA MIDDLE OFFICE PARA QUE TENHAMOS DADOS DE ATIVIDADES
     $empregadoCeopc->setIdCelula(5);
 
-    // TESTES DA CLASSE REGISTRO ATENDIMENTO
+    // INSTACIA OS OBJETOS LISTA ATIVIDADE E REGISTRO ATENDIMENTO
     $classeListaAtividade = new ListaAtividades();
     $registroAtendimento = new RegistroAtendimento();
 
+    // RECEBE DADOS VIA GET E ATRIBUI NO OBJETO REGISTRO ATENDIMENTO
     $registroAtendimento->setTipoAtendimento($_GET['tipoGrupoAtendimento']);
 
+    // CRIA O FORMULÁRIO DE ATENDIMENTO CONFORME O DADO TIPO ATENDIMENTO DO OBJETO REGISTRO ATENDIMENTO
     switch ($registroAtendimento->getTipoAtendimento()) 
     {
         case 'ATIVIDADE':
@@ -127,8 +132,6 @@
             header('location:../index_registro_atendimento.php');
             break;
     }
-
 ?>
-
 
 <a href="../index_registro_atendimento.php">VOLTAR</a>
