@@ -210,7 +210,8 @@ class ListaAtividades
 				WHERE 
 					[TIPO_GRUPO_ATENDIMENTO] = 'ATIVIDADE'
 					AND [ID_CELULA] = :ID_CELULA
-					AND [ATIVA] = 1"
+					AND [ATIVA] = 1
+				ORDER BY [NOME_ATIVIDADE]"
 				, array
 				(
 					'ID_CELULA'=>$this->getIdCelula()
@@ -251,7 +252,8 @@ class ListaAtividades
 				WHERE 
 					[TIPO_GRUPO_ATENDIMENTO] = 'CONSULTORIA'
 					AND [ID_CELULA] = :ID_CELULA
-					AND [ATIVA] = 1"
+					AND [ATIVA] = 1
+				ORDER BY [NOME_ATIVIDADE]"
 				, array
 				(
 					'ID_CELULA'=>$this->getIdCelula()

@@ -110,7 +110,14 @@ class RegistroAtendimento
     }
     public function setObservacaoCeopc($value)
     {
-        $this->observacaoCeopc = $value;
+        if ($value != "") 
+        {
+            $this->observacaoCeopc = $value;
+        }
+        else
+        {
+            $this->observacaoCeopc = null;
+        }
     }  
 
     // $matriculaAtendido
@@ -149,8 +156,52 @@ class RegistroAtendimento
         $this->setDataAtendimento();
     }
 
-    // MÉTODO DE REGISTRO DE ATENDIMENTO
-    public function registrarAtendimento()
+    // MÉTODO DE REGISTRO DE ROTINA
+    public function registrarAtendimentoRotina()
+    {
+        $sql = new Sql();
+
+        $sql->select
+        (
+            "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
+                (
+                    [DATA_ATENDIMENTO]
+                    ,[MATRICULA_CEOPC]
+                    ,[ROTINA]
+                    ,[CANAL_ATENDIMENTO]
+                    ,[ITEM_LISTA_ATIVIDADES]
+                    ,[OBSERVACAO_CEOPC]
+                    ,[MATRICULA_ATENDIDO]
+                    ,[UNIDADE_DEMANDANTE]
+                )
+            VALUES
+                (
+                    :DATA_ATENDIMENTO
+                    ,:MATRICULA_CEOPC
+                    ,:ROTINA
+                    ,:CANAL_ATENDIMENTO
+                    ,:ITEM_LISTA_ATIVIDADES
+                    ,:OBSERVACAO_CEOPC
+                    ,:MATRICULA_ATENDIDO
+                    ,:UNIDADE_DEMANDANTE
+                )"
+            , array
+            (
+                ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
+                ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
+                ,':ROTINA'=>1
+                ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
+                ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
+                ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
+                ,':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
+                ,':UNIDADE_DEMANDANTE'=>$this->getUnidadeDemandante()
+            )
+        );
+        echo "Atendimento registrado com sucesso! <br>";
+    }
+
+    // MÉTODO DE REGISTRO DE CONSULTORIA
+    public function registrarAtendimentoConsultoria()
     {
         $sql = new Sql();
 
@@ -164,7 +215,7 @@ class RegistroAtendimento
                     (
                         [DATA_ATENDIMENTO]
                         ,[MATRICULA_CEOPC]
-                        ,[TIPO_ATENDIMENTO]
+                        ,[CONSULTORIA]
                         ,[CANAL_ATENDIMENTO]
                         ,[ITEM_LISTA_ATIVIDADES]
                         ,[OBSERVACAO_CEOPC]
@@ -175,7 +226,7 @@ class RegistroAtendimento
                     (
                         :DATA_ATENDIMENTO
                         ,:MATRICULA_CEOPC
-                        ,:TIPO_ATENDIMENTO
+                        ,:CONSULTORIA
                         ,:CANAL_ATENDIMENTO
                         ,:ITEM_LISTA_ATIVIDADES
                         ,:OBSERVACAO_CEOPC
@@ -186,7 +237,7 @@ class RegistroAtendimento
                 (
                     ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
                     ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
-                    ,':TIPO_ATENDIMENTO'=>$this->getTipoAtendimento()
+                    ,':CONSULTORIA'=>1
                     ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
                     ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
                     ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
@@ -242,6 +293,7 @@ class RegistroAtendimento
                         ,$this->getCanalAtendimento()
                         ,$this->getNomeAtividade()
                     );
+                    echo "Consultoria registrada com sucesso! <br>";
                 }
                 // CASO JÁ TENHA CONSULTORIA NESSA DATA, SERÁ RALIZADO SOMENTE O REGISTRO NA TABELA REGISTRO ATENDIMENTO
                 else
@@ -272,7 +324,6 @@ class RegistroAtendimento
                 // )
             // );
 		// }
-        echo "<a href='http://www.ceopc.hom.sp.caixa/atendimento_web/index_registro_atendimento.php'>Voltar</a>";
     }
 
     // MÉTODO DE CONSULTA DO ÚLTIMO PROTOCOLO CADASTRADO PARA INSERT NA TABELA PESQUISA
@@ -319,9 +370,7 @@ class RegistroAtendimento
                 'DATA_ATENDIMENTO' = ATENDIMENTO.[DATA_ATENDIMENTO]
                 ,'MATRICULA_ATENDIDO'=ATENDIMENTO.[MATRICULA_ATENDIDO]
                 ,'MATRICULA_CEOPC' = ATENDIMENTO.[MATRICULA_CEOPC]
-                ,'TIPO_ATENDIMENTO' = ATENDIMENTO.[TIPO_ATENDIMENTO]
                 ,'CANAL_ATENDIMENTO' = ATENDIMENTO.[CANAL_ATENDIMENTO]
-                ,'NOME_ATIVIDADE' = ATIVIDADES.[NOME_ATIVIDADE]
             FROM 
                 [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO] AS ATENDIMENTO
                 INNER JOIN [tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES] AS ATIVIDADES ON ATENDIMENTO.[ITEM_LISTA_ATIVIDADES] = ATIVIDADES.[ID]
@@ -338,13 +387,9 @@ class RegistroAtendimento
             $this->setRecuperarDataAtendimento($row['DATA_ATENDIMENTO']);
             $this->setMatriculaCeopc($row['MATRICULA_CEOPC']);
             $this->setMatriculaAtendido($row['MATRICULA_ATENDIDO']);
-            $this->setTipoAtendimento($row['TIPO_ATENDIMENTO']);
             $this->setCanalAtendimento($row['CANAL_ATENDIMENTO']);
-            $this->setNomeAtividade($row['NOME_ATIVIDADE']);
         }   
     }
 }
 
 ?>
-
-

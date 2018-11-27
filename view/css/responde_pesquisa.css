@@ -1,0 +1,369 @@
+* {
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    Margin: 0;
+    padding: 0;
+    min-width: 100%;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    mso-line-height-rule: exactly;
+    text-align: center;
+}
+table {
+    border-spacing: 0;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+img {
+    border: 0;
+}
+select {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #fff; /* fallback color if gradients are not supported */
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #ccc;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+textarea {
+    width: 97%;
+    height: 60px;
+    border: 3px solid #cccccc;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+span {
+    color: #1c60ab; 
+    font-weight: bold;
+    /*width: 100px;*/
+    margin: 1px;
+    text-align: center;
+        
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+.webkit {
+    max-width: 800px;
+}
+.outer {
+    Margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+.full-width-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+.inner {
+    padding: 10px;
+}
+p {
+    Margin: 0;
+    padding-bottom: 10px;
+}
+.h1 {
+    font-size: 21px;
+    font-weight: bold;
+    Margin-top: 15px;
+    Margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.h2 {
+    font-size: 18px;
+    font-weight: bold;
+    Margin-top: 10px;
+    Margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.one-column .contents {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.one-column p {
+    font-size: 14px;
+    Margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.two-column {
+    text-align: center;
+    font-size: 0;
+}
+.two-column .column {
+    width: 100%;
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contents {
+    width: 100%;
+}
+.two-column .contents {
+    font-size: 14px;
+    text-align: left;
+}
+.two-column img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+.two-column .text {
+    padding-top: 10px;
+}
+.three-column {
+    text-align: center;
+    font-size: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.three-column .column {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.three-column .contents {
+    font-size: 14px;
+    text-align: center;
+}
+.three-column img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+.three-column .text {
+    padding-top: 10px;
+}
+.img-align-vertical img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.select {
+display: block;
+margin: 0 auto;
+}
+
+#imagemFundoForm{
+    background-image: url("../images/plano_fundo.jpg");
+    background-color:#ffffff; 
+    width:800px;
+    height:200px;
+    vertical-align:top;
+    /* horizontal-align:left; */
+    padding:10px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    table[class=hide], img[class=hide], td[class=hide] {
+        display: none !important;
+    }
+    .contents1 {
+        width: 100%;
+    }
+    .contents1 {
+        width: 100%;
+    }
+    .contents1 {
+        width: 100%;
+    }
+}
+#cordialidade-1:checked ~ fieldset [for='cordialidade-1'] svg, 
+#cordialidade-2:checked ~ fieldset [for='cordialidade-1'] svg, 
+#cordialidade-2:checked ~ fieldset [for='cordialidade-2'] svg, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-1'] svg, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-2'] svg, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-3'] svg, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-1'] svg, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-2'] svg, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-3'] svg, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-4'] svg, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-1'] svg, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-2'] svg, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-3'] svg, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-4'] svg, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-5'] svg {
+-webkit-transform: scale(1);
+        transform: scale(1);
+}
+
+#cordialidade-1:checked ~ fieldset [for='cordialidade-1'] svg path, 
+#cordialidade-2:checked ~ fieldset [for='cordialidade-1'] svg path, 
+#cordialidade-2:checked ~ fieldset [for='cordialidade-2'] svg path, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-1'] svg path, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-2'] svg path, 
+#cordialidade-3:checked ~ fieldset [for='cordialidade-3'] svg path, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-1'] svg path, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-2'] svg path, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-3'] svg path, 
+#cordialidade-4:checked ~ fieldset [for='cordialidade-4'] svg path, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-1'] svg path, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-2'] svg path, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-3'] svg path, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-4'] svg path, 
+#cordialidade-5:checked ~ fieldset [for='cordialidade-5'] svg path {
+fill: #FFBB00;
+stroke: #cc9600;
+}
+#dominio-1:checked ~ fieldset [for='dominio-1'] svg, 
+#dominio-2:checked ~ fieldset [for='dominio-1'] svg, 
+#dominio-2:checked ~ fieldset [for='dominio-2'] svg, 
+#dominio-3:checked ~ fieldset [for='dominio-1'] svg, 
+#dominio-3:checked ~ fieldset [for='dominio-2'] svg, 
+#dominio-3:checked ~ fieldset [for='dominio-3'] svg, 
+#dominio-4:checked ~ fieldset [for='dominio-1'] svg, 
+#dominio-4:checked ~ fieldset [for='dominio-2'] svg, 
+#dominio-4:checked ~ fieldset [for='dominio-3'] svg, 
+#dominio-4:checked ~ fieldset [for='dominio-4'] svg, 
+#dominio-5:checked ~ fieldset [for='dominio-1'] svg, 
+#dominio-5:checked ~ fieldset [for='dominio-2'] svg, 
+#dominio-5:checked ~ fieldset [for='dominio-3'] svg, 
+#dominio-5:checked ~ fieldset [for='dominio-4'] svg, 
+#dominio-5:checked ~ fieldset [for='dominio-5'] svg {
+-webkit-transform: scale(1);
+        transform: scale(1);
+}
+
+#dominio-1:checked ~ fieldset [for='dominio-1'] svg path, 
+#dominio-2:checked ~ fieldset [for='dominio-1'] svg path, 
+#dominio-2:checked ~ fieldset [for='dominio-2'] svg path, 
+#dominio-3:checked ~ fieldset [for='dominio-1'] svg path, 
+#dominio-3:checked ~ fieldset [for='dominio-2'] svg path, 
+#dominio-3:checked ~ fieldset [for='dominio-3'] svg path, 
+#dominio-4:checked ~ fieldset [for='dominio-1'] svg path, 
+#dominio-4:checked ~ fieldset [for='dominio-2'] svg path, 
+#dominio-4:checked ~ fieldset [for='dominio-3'] svg path, 
+#dominio-4:checked ~ fieldset [for='dominio-4'] svg path, 
+#dominio-5:checked ~ fieldset [for='dominio-1'] svg path, 
+#dominio-5:checked ~ fieldset [for='dominio-2'] svg path, 
+#dominio-5:checked ~ fieldset [for='dominio-3'] svg path, 
+#dominio-5:checked ~ fieldset [for='dominio-4'] svg path, 
+#dominio-5:checked ~ fieldset [for='dominio-5'] svg path {
+fill: #FFBB00;
+stroke: #cc9600;
+}
+#tespestividade-1:checked ~ fieldset [for='tespestividade-1'] svg, 
+#tespestividade-2:checked ~ fieldset [for='tespestividade-1'] svg, 
+#tespestividade-2:checked ~ fieldset [for='tespestividade-2'] svg, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-1'] svg, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-2'] svg, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-3'] svg, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-1'] svg, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-2'] svg, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-3'] svg, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-4'] svg, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-1'] svg, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-2'] svg, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-3'] svg, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-4'] svg, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-5'] svg {
+-webkit-transform: scale(1);
+        transform: scale(1);
+}
+
+#tespestividade-1:checked ~ fieldset [for='tespestividade-1'] svg path, 
+#tespestividade-2:checked ~ fieldset [for='tespestividade-1'] svg path, 
+#tespestividade-2:checked ~ fieldset [for='tespestividade-2'] svg path, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-1'] svg path, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-2'] svg path, 
+#tespestividade-3:checked ~ fieldset [for='tespestividade-3'] svg path, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-1'] svg path, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-2'] svg path, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-3'] svg path, 
+#tespestividade-4:checked ~ fieldset [for='tespestividade-4'] svg path, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-1'] svg path, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-2'] svg path,
+#tespestividade-5:checked ~ fieldset [for='tespestividade-3'] svg path, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-4'] svg path, 
+#tespestividade-5:checked ~ fieldset [for='tespestividade-5'] svg path {
+fill: #FFBB00;
+stroke: #cc9600;
+}
+
+fieldset {
+    /* width: 100%; */
+    /* position: absolute; */
+    top: 0;
+    /* left: 50%; */
+    /* -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0); */
+    border: none;
+    padding: 1px;
+}
+
+legend{
+    color: #1c60ab; 
+    font-weight: bold;
+    text-align: left;
+}
+
+label {
+display: inline-block;
+width: 50px;
+text-align: center;
+cursor: pointer;
+}
+label svg {
+width: 100%;
+height: 40px;
+fill: white;
+stroke: #CCC;
+-webkit-transform: scale(0.8);
+        transform: scale(0.8);
+transition: -webkit-transform 200ms ease-in-out;
+transition: transform 200ms ease-in-out;
+transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+label svg path {
+transition: fill 200ms ease-in-out, stroke 100ms ease-in-out;
+}
+
+label[for="cordialidade-null"] {
+display: block;
+margin: 0 auto;
+color: #999;
+}
+label[for="dominio-null"] {
+display: block;
+margin: 0 auto;
+color: #999;
+}
+label[for="tespestividade-null"] {
+display: block;
+margin: 0 auto;
+color: #999;
+}
+
+input {
+margin-top: 1rem;
+}
