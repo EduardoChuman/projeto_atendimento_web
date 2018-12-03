@@ -5,7 +5,7 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("../controller/config_atendimento_web.php");
 
     // INSTANCIA OS OBJETOS DAS CLASSES EMPREGADO E REGISTRO ATENDIMENTO
     $entrevistado = new Empregado();

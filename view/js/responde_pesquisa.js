@@ -1,52 +1,27 @@
-
-
-
-
-// avisa que o registro foi salvo antes de recarregar a página e impede cadastramento de registros sem avaliação;
-
-function limpar() 
-{ 
-   document.getElementById("preenchimento_campos").innerHTML=""; 
-} 
-
-
-
-var select = document.querySelector('select'),
+var select = document.querySelector('input'),
     form = document.querySelector('form');
 
 form.addEventListener('submit', validateAndSubmit, false);
 
-function validateAndSubmit(event) {
+function validateAndSubmit(event) 
+{
   // Prevenindo o comportamento padrão.
 
   event.preventDefault();
 
-  let notaCordialidade = formAvaliaMiddle.notaCordialidade.value;
-  let notaDominio = formAvaliaMiddle.notaDominio.value;
-  let notaTempestividade = formAvaliaMiddle.notaTempestividade.value;
+  var notaCordialidade = formAvaliaMiddle.notaCordialidade.value;
+  var notaDominio = formAvaliaMiddle.notaDominio.value;
+  var notaTempestividade = formAvaliaMiddle.notaTempestividade.value;
 
-  if(notaCordialidade=="")
-
-    {
-    document.getElementById('preenchimento_campos').innerHTML += '<br> Por favor avaliar sobre a Cordialidade do atendimento';
-    return false;
-    }
-
-  if (notaDominio=="")
-    {
-    document.getElementById('preenchimento_campos').innerHTML += '<br> Por favor avaliar sobre o Dominio do Analista durante o atendimento';
-    return false;
-    }
-
-  if (notaTempestividade=="")
+  if(notaCordialidade < 1 || notaDominio < 1 || notaTempestividade < 1)
   {
-    document.getElementById('preenchimento_campos').innerHTML += '<br> Por favor avaliar sobre a Tempestividade do atendimento';
+    alert('Os três quesitos devem ser avaliados.');
     return false;
-  } 
-
-  else {
+  }
+  else 
+  {
     form.submit();
-    alert('Alteração feita com sucesso!');
+    // alert('Alteração feita com sucesso!');
   }
 }
 

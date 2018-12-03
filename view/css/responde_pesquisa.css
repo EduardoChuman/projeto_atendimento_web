@@ -1,6 +1,11 @@
 * {
     -webkit-font-smoothing: antialiased;
 }
+em
+{
+    color: red;
+    font-weight: bold;
+}
 body {
     Margin: 0;
     padding: 0;
@@ -9,6 +14,7 @@ body {
     -webkit-font-smoothing: antialiased;
     mso-line-height-rule: exactly;
     text-align: center;
+
 }
 table {
     border-spacing: 0;
@@ -172,8 +178,8 @@ margin: 0 auto;
 }
 
 #imagemFundoForm{
-    background-image: url("../images/plano_fundo.jpg");
-    background-color:#ffffff; 
+    background-image: url("../images/plano_fundo_original.jpg");
+    background-color:#ccc; 
     width:800px;
     height:200px;
     vertical-align:top;
@@ -181,6 +187,12 @@ margin: 0 auto;
     padding:10px;
     background-repeat:no-repeat;
     background-size:cover;
+
+}
+
+h3
+{
+    text-shadow: 3px 3px 8px #fff;
 }
 
 
@@ -337,7 +349,7 @@ label svg {
 width: 100%;
 height: 40px;
 fill: white;
-stroke: #CCC;
+stroke: rgb(117, 117, 117);
 -webkit-transform: scale(0.8);
         transform: scale(0.8);
 transition: -webkit-transform 200ms ease-in-out;

@@ -14,7 +14,7 @@ spl_autoload_register(function($className)
 	// SERVIDOR CEOPC (PRODUÇÃO - esteiracomex2)
 	// $fileName = $caminho . DIRECTORY_SEPARATOR . "esteiracomex2" . DIRECTORY_SEPARATOR . "atendimento_web" . DIRECTORY_SEPARATOR . "class". DIRECTORY_SEPARATOR . $className . ".php";
 	// SERVIDOR HOMOLOGAÇÃO
-	$fileName = $caminho . DIRECTORY_SEPARATOR . "atendimento_web" . DIRECTORY_SEPARATOR . "class". DIRECTORY_SEPARATOR . $className . ".php";
+	$fileName = $caminho . DIRECTORY_SEPARATOR . "atendimento_web". DIRECTORY_SEPARATOR . "model" . DIRECTORY_SEPARATOR . $className . ".php";
 
 	if(file_exists($fileName)) 
 	{

@@ -5,7 +5,7 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("../controller/config_atendimento_web.php");
 
     // INSTANCIA OS OBJETOS DAS CLASSES EMPREGADO E REGISTRO ATENDIMENTO
     $entrevistado = new Empregado();
@@ -35,6 +35,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/responde_pesquisa.css">
 
     <title>Avaliação Atendimento CEOPC</title>
@@ -113,15 +114,20 @@
                                                 <div>
                                                     <p style='color:#262626; font-size:26px; text-align:center; font-family: Verdana, Geneva, sans-serif'>Pesquisa CEOPC</p>
                                                     <h3 style='color:#000000; font-size:16px; text-align:center; font-family: Verdana, Geneva, sans-serif; line-height:22px'>INFORMAMOS QUE SEU FEEDBACK É TOTALMENTE ANÔNIMO</h3> 
-                                                    <p style='color:#000000; font-size:16px; text-align:center; font-family: Verdana, Geneva, sans-serif; line-height:22px'>Como você avalia o atendimento recebido em <?php echo date("d/m/Y", strtotime($atendimento->getRecuperarDataAtendimento()));?>, via <?php echo $atendimento->getCanalAtendimento(); ?>, pelo(a) empregado(a) do Middle Office COMEX – CEOPC07: <?php echo $empregadoCeopc->getNome() . "(" . $atendimento->getMatriculaCeopc() . ")"; ?> em relação aos seguintes aspectos: </p>
-                                                    <form action="capturaNotas.php" method="post" name="formAvaliaMiddle">
-                                                        
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-null" value disabled required hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-1" value="1" required hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-2" value="2" required hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-3" value="3" required hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-4" value="4" required hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-5" value="5" required hidden/>
+                                                    <p style='color:#000000; font-size:16px; text-align:center; font-family: Verdana, Geneva, sans-serif; line-height:22px'>Com relação ao atendimento recebido do(a) empregado(a) <?php echo $empregadoCeopc->getNome() . "(" . $atendimento->getMatriculaCeopc() . ")"; ?> do Middle Office COMEX – CEOPC07 em <?php echo date("d/m/Y", strtotime($atendimento->getRecuperarDataAtendimento()));?>, via <?php echo $atendimento->getCanalAtendimento(); ?>:</p>
+                                                    <form action="capturaNotasPesquisa.php" method="post" name="formAvaliaMiddle">
+                                                        <span>Sua solicitação foi atendida?</span><br>
+                                                            <input type="radio" name="consultoriaAtendida" value="1" required>SIM
+                                                            <input type="radio" name="consultoriaAtendida" value="0">NÃO
+                                                        <br><br>
+                                                        <span>Como você avalia o referido atendimento em relação aos seguintes aspectos: </span>
+                                                        <br><br>    
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-null" value disabled  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-1" value="1"  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-2" value="2"  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-3" value="3"  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-4" value="4"  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-5" value="5"  hidden/>
 
                                                         <fieldset><legend>Cordialidade</legend>
                                                             <label for="cordialidade-1">
@@ -160,7 +166,7 @@
                                                         <input type="radio" name="notaDominio" id="dominio-4" value="4" hidden/>
                                                         <input type="radio" name="notaDominio" id="dominio-5" value="5" hidden/>
 
-                                                        <fieldset><legend>Domínio</legend>
+                                                        <fieldset><legend>Domínio do Assunto</legend>
                                                             <label for="dominio-1">
                                                                 <svg width="255" height="240" viewBox="0 0 51 48">
                                                                     <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
@@ -226,19 +232,13 @@
                                                             <!-- <label for="tespestividade-null">
                                                                 Clear
                                                             </label> -->
-                                                        </fieldset>
-
+                                                        </fieldset><br>
                                                         <span>Quer inserir alguma observação sobre o atendimento prestado?<br>
                                                             <textarea name='feedbackAtendido' placeholder='Insira suas observações aqui...'></textarea>
                                                         </span><br>
                                                         <input type="hidden" name="idAtendimento" value="<?php echo $atendimento->getIdAtendimento() ?>">
-                                                        <span>Sua dúvida foi atendida?
-                                                            <input type="radio" name="consultoriaAtendida" value="1" required>SIM
-                                                            <input type="radio" name="consultoriaAtendida" value="0">NÃO
-                                                        </span><br>
-                                                        <input type="submit" value="AVALIAR"><br><br>
-                                                        <span style='color:#262626; font-size:16px; text-align:left; font-family: Verdana, Geneva, sans-serif'>Críticas/Elogios/Sugestões gerais, <a href="https://atender.caixa/siouv/" target="_blank">Atender.Caixa</a>.</span>
-                                                        
+                                                        <input type="submit" value="AVALIAR"><em> *Os três quesitos devem ser avaliados.</em><br><br> 
+                                                        <span style='color:#262626; font-size:16px; text-align:left; font-family: Verdana, Geneva, sans-serif'>Críticas/Elogios/Sugestões gerais, <a href="https://atender.caixa/siouv/" target="_blank">Atender.Caixa</a>.</span>                                                        
                                                     </form>
                                                     <!-- END BUTTON -->
                                                 </div>
@@ -254,5 +254,6 @@
             </tr>
         </table>
     </center>
+    <script type="text/javascript" src="js/responde_pesquisa.js"></script>
 </body>
 </html>

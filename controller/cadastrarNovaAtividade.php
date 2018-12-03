@@ -21,4 +21,4 @@
     echo "Atividade cadastrada com sucesso! <br><hr>"
 
 ?>
-<a href="index_lista_atividades.php">VOLTAR</a>
+<a href="lista_atividades.php">VOLTAR</a>

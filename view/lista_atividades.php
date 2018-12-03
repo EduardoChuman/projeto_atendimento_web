@@ -4,7 +4,7 @@
     ini_set('display_errors',1);
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require('../../config_classes_globais.php');
-    require_once("config_atendimento_web.php");
+    require_once("../controller/config_atendimento_web.php");
 
     // TESTES DA CLASSE EMPREGADO CEOPC
     $empregadoCeopc = new EmpregadoCeopc();
@@ -14,7 +14,7 @@
     echo "<hr>";    
 
     // TESTES DA CLASSE LISTA ATIVIDADE
-    $listaAtividade = new ListaAtividades();
+    $listaAtividade = new ListaAtividade();
     // MÉTODO DE LISTAR ATIVIDADES DE CONSULTORIA
     // echo $listaAtividade->listaAtividadesConsultoria(5);
     // echo "<hr>";

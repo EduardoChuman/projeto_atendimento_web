@@ -24,7 +24,7 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("../controller/config_atendimento_web.php");
 
     // INSTANCIA O OBJETO EMPREGADO CEOPC
     $empregadoCeopc = new EmpregadoCeopc();
@@ -33,7 +33,7 @@
     // FORÇA A CÉLULA MIDDLE OFFICE PARA QUE TENHAMOS DADOS DE ATIVIDADES
     $empregadoCeopc->setIdCelula(5);
     // INSTACIA OS OBJETOS LISTA ATIVIDADE E REGISTRO ATENDIMENTO
-    $classeListaAtividade = new ListaAtividades();
+    $classeListaAtividade = new ListaAtividade();
     $registroAtendimento = new RegistroAtendimento();
 
     // RECEBE DADOS VIA GET E ATRIBUI NO OBJETO REGISTRO ATENDIMENTO
@@ -149,12 +149,12 @@
             break;
 
         default:
-            header('location:../index_registro_atendimento.php');
+            header('location:../registro_atendimento.php');
             break;
     }
 ?>
 
-    <a href="index_registro_atendimento.php">VOLTAR</a>
+    <a href="registro_atendimento.php">VOLTAR</a>
 
 </body>
 </html>

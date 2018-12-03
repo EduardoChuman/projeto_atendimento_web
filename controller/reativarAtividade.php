@@ -15,11 +15,11 @@
 
     echo "ID da Atividade: " . $listaAtividade->getIdAtividade()  . "<br><hr>";
 
-    // CHAMA O MÉTODO DE REMOVER (DESABILITAR) A ATIVIDADE
-    $listaAtividade->removerAtividade($listaAtividade->getIdAtividade());
+    // CHAMA O MÉTODO DE REATIVAR A ATIVIDADE
+    $listaAtividade->reativarAtividade($listaAtividade->getIdAtividade());
 
-    echo "Atividade removida com sucesso!<br><hr>";
-
+    echo "Atividade reativada com sucesso!<br><hr>";
+    
 ?>
 
-<a href="index_lista_atividades.php">VOLTAR</a>
+<a href="lista_atividades.php">VOLTAR</a>

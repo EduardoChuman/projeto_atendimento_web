@@ -58,7 +58,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script language="JavaScript" type="text/javascript">
-        window.onload = setTimeout("location.href = 'index_registro_atendimento.php'",1500); // milliseconds, so 10 seconds = 10000ms
+        window.onload = setTimeout("location.href = 'registro_atendimento.php'",1500); // milliseconds, so 10 seconds = 10000ms
     </script>
     <title>SUCESSSO</title>
 </head>
@@ -67,4 +67,4 @@
 </body>
 </html>
 
-<a href="index_registro_atendimento.php">VOLTAR</a>
+<!-- <a href="registro_atendimento.php">VOLTAR</a> -->

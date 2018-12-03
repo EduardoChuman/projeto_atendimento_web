@@ -3,7 +3,7 @@
 ini_set('display_errors',1);
 
 // CRIAÇÃO DA CLASSE
-class ListaAtividades 
+class ListaAtividade
 {
 	// DEFINIÇÃO DOS ATRIBUTOS
 	private $idAtividade;
