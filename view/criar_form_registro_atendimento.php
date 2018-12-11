@@ -66,29 +66,29 @@
                             <label><input type='radio' name='canalAtendimento' value='LYNC'>LYNC</label><br>
                             <label><input type='radio' name='canalAtendimento' value='TELEFONE'>TELEFONE</label><br>
                             <br>";
-                            echo "<select name='itemListaAtividades' required>"; 
-                            echo "<option disabled selected value>SELECIONE A ROTINA</option>";
-                            foreach ($listaAtividade as $linha) 
-                            {
-                                foreach ($linha as $chave => $valor) 
-                                {
-                                    switch ($chave) 
-                                    {
-                                        case 'ID':
-                                            $id = '';
-                                            $id = $valor;
-                                            break;
-                                    }
-                                    switch ($chave) 
-                                    {
-                                        case 'NOME_ATIVIDADE':
-                                            $nomeAtividade = '';
-                                            $nomeAtividade = $valor;
-                                            break;
-                                    }      
-                                }
-                                echo "<option value='$id'>$nomeAtividade</option>";
-                            }
+                            echo "<select id='atividadesRotinaMiddle' name='itemListaAtividades' required>"; 
+                            echo "<option disabled selected value>Carregando...</option>";
+                            // foreach ($listaAtividade as $linha) 
+                            // {
+                            //     foreach ($linha as $chave => $valor) 
+                            //     {
+                            //         switch ($chave) 
+                            //         {
+                            //             case 'ID':
+                            //                 $id = '';
+                            //                 $id = $valor;
+                            //                 break;
+                            //         }
+                            //         switch ($chave) 
+                            //         {
+                            //             case 'NOME_ATIVIDADE':
+                            //                 $nomeAtividade = '';
+                            //                 $nomeAtividade = $valor;
+                            //                 break;
+                            //         }      
+                            //     }
+                            //     echo "<option value='$id'>$nomeAtividade</option>";
+                            // }
                             echo "</select><br><br>
                             <label>OBSERVAÇÕES SOBRE A REALIZAÇÃO DA ROTINA:<br>
                                 <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>

@@ -161,43 +161,57 @@ class RegistroAtendimento
     {
         $sql = new Sql();
 
-        $sql->select
-        (
-            "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
-                (
-                    [DATA_ATENDIMENTO]
-                    ,[MATRICULA_CEOPC]
-                    ,[ROTINA]
-                    ,[CANAL_ATENDIMENTO]
-                    ,[ITEM_LISTA_ATIVIDADES]
-                    ,[OBSERVACAO_CEOPC]
-                    ,[MATRICULA_ATENDIDO]
-                    ,[UNIDADE_DEMANDANTE]
-                )
-            VALUES
-                (
-                    :DATA_ATENDIMENTO
-                    ,:MATRICULA_CEOPC
-                    ,:ROTINA
-                    ,:CANAL_ATENDIMENTO
-                    ,:ITEM_LISTA_ATIVIDADES
-                    ,:OBSERVACAO_CEOPC
-                    ,:MATRICULA_ATENDIDO
-                    ,:UNIDADE_DEMANDANTE
-                )"
-            , array
+        try
+        {
+            $sql->select
             (
-                ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
-                ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
-                ,':ROTINA'=>1
-                ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
-                ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
-                ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
-                ,':MATRICULA_ATENDIDO'=>$this->getMatriculaAtendido()
-                ,':UNIDADE_DEMANDANTE'=>$this->getUnidadeDemandante()
-            )
-        );
-        echo "Atendimento registrado com sucesso! <br>";
+                "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
+                    (
+                        [DATA_ATENDIMENTO]
+                        ,[MATRICULA_CEOPC]
+                        ,[ROTINA]
+                        ,[CANAL_ATENDIMENTO]
+                        ,[ITEM_LISTA_ATIVIDADES]
+                        ,[OBSERVACAO_CEOPC]
+                        ,[UNIDADE_DEMANDANTE]
+                    )
+                VALUES
+                    (
+                        :DATA_ATENDIMENTO
+                        ,:MATRICULA_CEOPC
+                        ,:ROTINA
+                        ,:CANAL_ATENDIMENTO
+                        ,:ITEM_LISTA_ATIVIDADES
+                        ,:OBSERVACAO_CEOPC
+                        ,:UNIDADE_DEMANDANTE
+                    )"
+                , array
+                (
+                    ':DATA_ATENDIMENTO'=>$this->getDataAtendimento()
+                    ,':MATRICULA_CEOPC'=>$this->getMatriculaCeopc()
+                    ,':ROTINA'=>1
+                    ,':CANAL_ATENDIMENTO'=>$this->getCanalAtendimento()
+                    ,':ITEM_LISTA_ATIVIDADES'=>$this->getItemListaAtividades()
+                    ,':OBSERVACAO_CEOPC'=>$this->getObservacaoCeopc()
+                    ,':UNIDADE_DEMANDANTE'=>$this->getUnidadeDemandante()
+                )
+            );
+            echo "Atendimento registrado com sucesso! <br>";
+        }
+        catch(Exception $e)
+        {
+            // EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
+            echo json_encode
+            (
+                array
+                (
+                    "message"=>$e->getMessage(),
+                    "line"=>$e->getLine(),
+                    "file"=>$e->getFile(),
+                    "code"=>$e->getCode()
+                )
+            );
+        }
     }
 
     // MÉTODO DE REGISTRO DE CONSULTORIA
@@ -205,10 +219,8 @@ class RegistroAtendimento
     {
         $sql = new Sql();
 
-        // $sql->beginTransaction();
-
-        // try
-        // {
+        try
+        {
             $sql->select
             (
                 "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
@@ -306,24 +318,21 @@ class RegistroAtendimento
             {
                 echo "Atendimento registrado com sucesso! <br>";
             }
-        // $sql->commit();
-        // }
-        // catch(Exception $e)
-        // {
-			// $sql->rollback();
-
+        }
+        catch(Exception $e)
+        {
 			// EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
-            // echo json_encode
-            // (
-                // array
-                // (
-                    // "message"=>$e->getMessage(),
-                    // "line"=>$e->getLine(),
-                    // "file"=>$e->getFile(),
-                    // "code"=>$e->getCode()
-                // )
-            // );
-		// }
+            echo json_encode
+            (
+                array
+                (
+                    "message"=>$e->getMessage(),
+                    "line"=>$e->getLine(),
+                    "file"=>$e->getFile(),
+                    "code"=>$e->getCode()
+                )
+            );
+		}
     }
 
     // MÉTODO DE CONSULTA DO ÚLTIMO PROTOCOLO CADASTRADO PARA INSERT NA TABELA PESQUISA

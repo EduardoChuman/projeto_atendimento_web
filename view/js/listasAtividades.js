@@ -1,10 +1,8 @@
-var   _atividadesRotina;
+
 
 $(document).ready(function () {
 
-    carregaListaRotina();
-    listaAtividadesRotina();
-
+    carregarListaRotinasMiddle();
 
 });
 
@@ -13,7 +11,7 @@ console.log("ola");
 
 
 
-function carregaListaRotina() {
+function carregarListaRotinasMiddle() {
 
  
      $.ajax({
@@ -22,11 +20,16 @@ function carregaListaRotina() {
           dataType: "json",
           // async: false
       }).done(function (json) {
-  
-        // _atividadesRotina = new Array;
-        // _atividadesRotina = json;
-        console.log(json);
-        
+
+        var str = "";
+
+        $.each(json, function(id,rotina){
+            str += "<option value='" + rotina.ID + "'>" + rotina.NOME_ATIVIDADE + "</option>";
+        });
+
+        str = "<option disabled selected value>SELECIONE A ROTINA</option>" + str;
+
+        $('#atividadesRotinaMiddle').html(str);
                       
       }).fail(function (jqXHR, textStatus, errorThrown) {
   
@@ -36,7 +39,7 @@ function carregaListaRotina() {
       });
  }
 
- console.log(_atividadesRotina);
+
 
  
 
