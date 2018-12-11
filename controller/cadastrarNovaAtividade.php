@@ -5,10 +5,10 @@
     
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("configAtendimentoWeb.php");
 
     // INSTANCIA OBJETO DA CLASSE LISTA ATIVIDADE
-    $listaAtividade = new ListaAtividades();
+    $listaAtividade = new ListaAtividade();
 
     // ATRIBUI OS DADOS RECEBIDOS VIA GET NAS VARIÁVEIS
     $grupoAtendimento = $_GET['tipoGrupoAtendimento'];
@@ -21,4 +21,4 @@
     echo "Atividade cadastrada com sucesso! <br><hr>"
 
 ?>
-<a href="lista_atividades.php">VOLTAR</a>
+<a href="../view/lista_atividades.php">VOLTAR</a>

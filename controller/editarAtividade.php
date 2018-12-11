@@ -10,15 +10,9 @@
     // INSTANCIA OBJETO DA CLASSE LISTA ATIVIDADE
     $listaAtividade = new ListaAtividade();
 
-    // RECEBE DADOS VIA GET E ATRIBUI AO OBJETO
-    $listaAtividade->setIdAtividade($_GET['itemListaAtividades']);
+    $listaAtividade->alteraNomeAtividade($_GET['idAtividade'], $_GET['novoNomeAtividade']);
 
-    // echo "ID da Atividade: " . $listaAtividade->getIdAtividade()  . "<br><hr>";
-
-    // CHAMA O MÉTODO DE REMOVER (DESABILITAR) A ATIVIDADE
-    $listaAtividade->removerAtividade($listaAtividade->getIdAtividade());
-
-    echo "Atividade removida com sucesso!<br><hr>";
+    echo "Atividade alterada com sucesso!<br>";
 
 ?>
 

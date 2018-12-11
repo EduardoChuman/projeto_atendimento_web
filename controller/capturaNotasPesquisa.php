@@ -1,11 +1,10 @@
 <?php
-
     // VERIFICA SE EXISTEM ERROS DE EXECUÇÃO NO CÓDIGO
     ini_set('display_errors',1);
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("configAtendimentoWeb.php");
 
     // INSTANCIA O OBJETO DE REGOSTRO DE PESQUISA
     $pesquisa = new RegistroPesquisa();
@@ -22,6 +21,5 @@
     // CHAMA O MÉTODO DE FAZ O UPDATE DAS NOTAS NA TABELA REGISTRO PESQUISAS
     $pesquisa->registrarRespostaPesquisa();
 
-    header("location:voto/"); 
-
+    header("location:../view/voto/"); 
 ?>

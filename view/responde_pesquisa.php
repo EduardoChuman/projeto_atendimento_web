@@ -5,18 +5,15 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("../controller/config_atendimento_web.php");
+    require_once("../controller/configAtendimentoWeb.php");
 
     // INSTANCIA OS OBJETOS DAS CLASSES EMPREGADO E REGISTRO ATENDIMENTO
     $entrevistado = new Empregado();
     $atendimento = new RegistroAtendimento();
     $empregadoCeopc = new Empregado();
-
-    // RECEBE DADOS VIA GET E ATRIBUI AO OBJETO 
-    $atendimento->setIdAtendimento($_GET['idAtendimento']);
     
     // CHAMA O MÉTODO QUE RESGATA OS DADOS DO ATENDIMENTO
-    $atendimento->consultarAtendimento($atendimento->getIdAtendimento());
+    $atendimento->consultarAtendimento($_GET['idAtendimento']);
     
     // CHAMA O MÉTODO QUE RESGATA OS DADOS DO EMPREGADO CEOPC QUE REALIZOU O ATENDIMENTO 
     $empregadoCeopc->settarEmpregado($atendimento->getMatriculaCeopc());
@@ -115,19 +112,19 @@
                                                     <p style='color:#262626; font-size:26px; text-align:center; font-family: Verdana, Geneva, sans-serif'>Pesquisa CEOPC</p>
                                                     <h3 style='color:#000000; font-size:16px; text-align:center; font-family: Verdana, Geneva, sans-serif; line-height:22px'>INFORMAMOS QUE SEU FEEDBACK É TOTALMENTE ANÔNIMO</h3> 
                                                     <p style='color:#000000; font-size:16px; text-align:center; font-family: Verdana, Geneva, sans-serif; line-height:22px'>Com relação ao atendimento recebido do(a) empregado(a) <?php echo $empregadoCeopc->getNome() . "(" . $atendimento->getMatriculaCeopc() . ")"; ?> do Middle Office COMEX – CEOPC07 em <?php echo date("d/m/Y", strtotime($atendimento->getRecuperarDataAtendimento()));?>, via <?php echo $atendimento->getCanalAtendimento(); ?>:</p>
-                                                    <form action="capturaNotasPesquisa.php" method="post" name="formAvaliaMiddle">
+                                                    <form action="../controller/capturaNotasPesquisa.php" method="post" name="formAvaliaMiddle">
                                                         <span>Sua solicitação foi atendida?</span><br>
                                                             <input type="radio" name="consultoriaAtendida" value="1" required>SIM
                                                             <input type="radio" name="consultoriaAtendida" value="0">NÃO
                                                         <br><br>
                                                         <span>Como você avalia o referido atendimento em relação aos seguintes aspectos: </span>
                                                         <br><br>    
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-null" value disabled  hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-1" value="1"  hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-2" value="2"  hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-3" value="3"  hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-4" value="4"  hidden/>
-                                                        <input type="radio" name="notaCordialidade" id="cordialidade-5" value="5"  hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-null" value disabled required hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-1" value="1" required hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-2" value="2" required hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-3" value="3" required hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-4" value="4" required hidden/>
+                                                        <input type="radio" name="notaCordialidade" id="cordialidade-5" value="5" required hidden/>
 
                                                         <fieldset><legend>Cordialidade</legend>
                                                             <label for="cordialidade-1">
@@ -160,11 +157,11 @@
                                                             </label> -->
                                                         </fieldset>
                                                         <input type="radio" name="notaDominio" id="dominio-null" value disabled required hidden/>
-                                                        <input type="radio" name="notaDominio" id="dominio-1" value="1" hidden/>
-                                                        <input type="radio" name="notaDominio" id="dominio-2" value="2" hidden/>
-                                                        <input type="radio" name="notaDominio" id="dominio-3" value="3" hidden/>
-                                                        <input type="radio" name="notaDominio" id="dominio-4" value="4" hidden/>
-                                                        <input type="radio" name="notaDominio" id="dominio-5" value="5" hidden/>
+                                                        <input type="radio" name="notaDominio" id="dominio-1" value="1" required hidden/>
+                                                        <input type="radio" name="notaDominio" id="dominio-2" value="2" required hidden/>
+                                                        <input type="radio" name="notaDominio" id="dominio-3" value="3" required hidden/>
+                                                        <input type="radio" name="notaDominio" id="dominio-4" value="4" required hidden/>
+                                                        <input type="radio" name="notaDominio" id="dominio-5" value="5" required hidden/>
 
                                                         <fieldset><legend>Domínio do Assunto</legend>
                                                             <label for="dominio-1">
@@ -197,11 +194,11 @@
                                                             </label> -->
                                                         </fieldset>
                                                         <input type="radio" name="notaTempestividade" id="tespestividade-null" value disabled required hidden/>
-                                                        <input type="radio" name="notaTempestividade" id="tespestividade-1" value="1" hidden/>
-                                                        <input type="radio" name="notaTempestividade" id="tespestividade-2" value="2" hidden/>
-                                                        <input type="radio" name="notaTempestividade" id="tespestividade-3" value="3" hidden/>
-                                                        <input type="radio" name="notaTempestividade" id="tespestividade-4" value="4" hidden/>
-                                                        <input type="radio" name="notaTempestividade" id="tespestividade-5" value="5" hidden/>
+                                                        <input type="radio" name="notaTempestividade" id="tespestividade-1" value="1" required hidden/>
+                                                        <input type="radio" name="notaTempestividade" id="tespestividade-2" value="2" required hidden/>
+                                                        <input type="radio" name="notaTempestividade" id="tespestividade-3" value="3" required hidden/>
+                                                        <input type="radio" name="notaTempestividade" id="tespestividade-4" value="4" required hidden/>
+                                                        <input type="radio" name="notaTempestividade" id="tespestividade-5" value="5" required hidden/>
 
                                                         <fieldset><legend>Tespestividade</legend>
                                                             <label for="tespestividade-1">

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Atendimento Middle</title>
+    <link rel="stylesheet" href="css/formulario1.css">
+    <!-- <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css"> -->
     <!-- jQuery 2.2.3 -->
-    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../../../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
     <script>
@@ -24,14 +26,14 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("../controller/config_atendimento_web.php");
+    require_once("../controller/configAtendimentoWeb.php");
 
     // INSTANCIA O OBJETO EMPREGADO CEOPC
     $empregadoCeopc = new EmpregadoCeopc();
-    //$empregadoCeopc->setIdCelula(5);  
     
     // FORÇA A CÉLULA MIDDLE OFFICE PARA QUE TENHAMOS DADOS DE ATIVIDADES
     $empregadoCeopc->setIdCelula(5);
+
     // INSTACIA OS OBJETOS LISTA ATIVIDADE E REGISTRO ATENDIMENTO
     $classeListaAtividade = new ListaAtividade();
     $registroAtendimento = new RegistroAtendimento();
@@ -45,9 +47,10 @@
         case 'ROTINA':
             $registroAtendimento->setmatriculaCeopc($empregadoCeopc->getMatricula());
             $listaAtividade = json_decode($classeListaAtividade->listaAtividadesRotina($empregadoCeopc->getIdCelula()), TRUE);
-                echo "<form action='registrarAtendimento.php' method='post'>
+                echo "<form action='../controller/registrarAtendimento.php' method='post'>
                         <input type='text' name='matriculaCeopc' value='" . $empregadoCeopc->getMatricula() . "' hidden>
                         <input type='text' name='tipoAtendimento' value='" . $registroAtendimento->getTipoAtendimento() . "' hidden>
+                        <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
                         <fieldset>
                             <legend>CADASTRAR UMA NOVA ATIVIDADE DE ROTINA</legend><br>
                             <!-- <label>QUAL FOI O CANAL DO ATENDIMENTO:
@@ -88,19 +91,33 @@
                             }
                             echo "</select><br><br>
                             <label>OBSERVAÇÕES SOBRE A REALIZAÇÃO DA ROTINA:<br>
-                                <textarea name='observacaoCeopc' cols='60' rows='10' placeholder='Insira suas observações aqui...'></textarea>
+                                <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>
                             </label><br><br>
-                            <input type='submit' value='REGISTRAR ATENDIMENTO'>
+                            <input class='botao' type='submit' value='REGISTRAR ATENDIMENTO'>
                         </fieldset>
-                    </form>";
+                    </form>
+                    
+                    <div id='rodape'>
+                        <img src='images/rodape2.png'/> 
+            
+                        <div>
+                        <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
+                        </div>
+
+                    </div> 
+                    <br>
+                    <a href='registro_atendimento.php'>
+                    <button class='botao'>VOLTAR</button>
+                    </a>";
             break;
 
         case 'CONSULTORIA':
             $registroAtendimento->setmatriculaCeopc($empregadoCeopc->getMatricula());
             $listaAtividade = json_decode($classeListaAtividade->listaAtividadesConsultoria($empregadoCeopc->getIdCelula()), TRUE);
-            echo "<form action='registrarAtendimento.php' method='post'>
+            echo "<form action='../controller/registrarAtendimento.php' method='post'>
                     <input type='text' name='matriculaCeopc' value='" . $empregadoCeopc->getMatricula() . "' hidden>
                     <input type='text' name='tipoAtendimento' value='" . $registroAtendimento->getTipoAtendimento() . "' hidden>
+                    <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
                     <fieldset>
                         <legend>CADASTRAR UMA NOVA CONSULTORIA</legend><br>
                         <!-- <label>QUAL FOI O CANAL DO ATENDIMENTO:
@@ -141,20 +158,33 @@
                         }
                         echo "</select><br><br>";
                         echo "<label>OBSERVAÇÕES SOBRE A CONSULTORIA:<br>
-                            <textarea name='observacaoCeopc' cols='60' rows='10' placeholder='Insira suas observações aqui...'></textarea>
+                            <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>
                         </label><br><br>
-                        <input type='submit' value='REGISTRAR CONSULTORIA'>   
+                        <input class='botao' type='submit' value='REGISTRAR CONSULTORIA'>   
                     </fieldset>
-                </form>";
+                </form>
+                <div id='rodape'>
+                    <img src='images/rodape2.png'/> 
+        
+                    <div>
+                    <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
+                    </div>
+
+                </div>  
+                <br>   
+                    <a href='registro_atendimento.php'>
+                    <button class='botao'>VOLTAR</button>
+                    </a>";
             break;
 
         default:
-            header('location:../registro_atendimento.php');
+            header('location:registro_atendimento.php');
             break;
     }
 ?>
-
-    <a href="registro_atendimento.php">VOLTAR</a>
+   
+   <script src="js/listasAtividades.js"></script>
+    
 
 </body>
 </html>

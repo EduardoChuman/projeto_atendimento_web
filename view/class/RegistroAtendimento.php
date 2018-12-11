@@ -390,17 +390,6 @@ class RegistroAtendimento
             $this->setCanalAtendimento($row['CANAL_ATENDIMENTO']);
         }   
     }
-
-    // MÉTODO PARA TRAZER OS DADOS DO OBJETO COMO JSON
-	public function __toString()
-	{
-		return json_encode(array(
-			"DATA_ATENDIMENTO"=>$this->getRecuperarDataAtendimento(),
-			"MATRICULA_CEOPC"=>$this->getMatriculaCeopc(),
-			"MATRICULA_ATENDIDO"=>$this->getMatriculaAtendido(),
-			"CANAL_ATENDIMENTO"=>$this->getCanalAtendimento(),
-		), JSON_UNESCAPED_SLASHES);
-	}
 }
 
 ?>

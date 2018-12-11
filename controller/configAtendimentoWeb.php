@@ -5,6 +5,8 @@ ini_set('display_errors',1);
 // FUNÇÃO QUE VERIFICA SE DETERMINADA CLASSE EXISTE E, EM CASO AFIRMATIVO, FAZ O REQUIRE DO ARQUIVO
 spl_autoload_register(function($className)
 {
+	// CAMINHO PARA ACESSAR DO SERVIDOR DA CEOPC (TESTES)
+	// $fileName = "class". DIRECTORY_SEPARATOR . $className . ".php";
 	// CAMINHO FIXO
 	$caminho = $_SERVER["DOCUMENT_ROOT"];
 	// SERVIDOR CEOPC (TESTES - esteiracomex)
@@ -18,4 +20,5 @@ spl_autoload_register(function($className)
 	{
 		require_once($fileName);
 	}
+
 });

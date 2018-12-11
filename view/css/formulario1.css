@@ -1,0 +1,108 @@
+
+
+.titulo-header-cinza {
+    font-family: "arial";
+    vertical-align: middle;
+    text-align: center;
+        float: inherit;
+       font-size: 21px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    background-color: #303133;
+   
+    border-bottom: 2px solid #fc8f01;
+    
+    color: #ffb555;
+    text-align: center;
+    padding: 5px 0 6px 16px;
+    
+    z-index: 10;
+}
+
+label{
+    font-size: 16px;
+    color: #000000;
+    
+}
+
+legend{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    
+}
+
+fieldset{
+    
+    border-top: 2px solid #fc8f01;
+    border-bottom: 2px solid #fc8f01;
+    border-left: 2px solid #fc8f01;
+    border-right: 2px solid #fc8f01;
+
+}
+
+#rodape {
+    width: 100%;
+     position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+}
+#rodape img {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+   
+    object-fit: cover; /* classe pra deixa a imagem com a proporção correta e não ficar achatada */
+}
+
+#rodape label {
+     position: absolute;
+    
+    margin-bottom: 17px; 
+    margin-left: 62%;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+    text-align: right;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 03px;
+    
+    border-top: 2px solid #fc8f01;
+    border-bottom: 2px solid #fc8f01;
+    border-left: 2px solid #fc8f01;
+    border-right: 2px solid #fc8f01;
+  
+  }
+
+  .logo{
+    color: #fc8f01;
+    text-transform: uppercase;
+
+  }
+
+  .logo2{
+    color: #fc8f01;
+    font-weight: bold;
+    
+  }
+
+  .botao{
+      font-weight: bold;
+      color: #fc8f01;
+      background-color: #140c00;
+      padding-top: 5px;
+      padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+
+ 
+  }
+
+  

@@ -5,15 +5,15 @@
 
     // CHAMA OS ARQUIVOS DE VERIFICAÇÃO DE EXISTÊNCIA DAS CLASSES
     require_once("../../config_classes_globais.php");
-    require_once("config_atendimento_web.php");
+    require_once("configAtendimentoWeb.php");
 
     // INSTANCIA OBJETO DA CLASSE LISTA ATIVIDADE
-    $listaAtividade = new ListaAtividades();
+    $listaAtividade = new ListaAtividade();
 
     // RECEBE DADOS VIA GET E ATRIBUI AO OBJETO
     $listaAtividade->setIdAtividade($_GET['idAtividade']);
 
-    echo "ID da Atividade: " . $listaAtividade->getIdAtividade()  . "<br><hr>";
+    // echo "ID da Atividade: " . $listaAtividade->getIdAtividade()  . "<br><hr>";
 
     // CHAMA O MÉTODO DE REATIVAR A ATIVIDADE
     $listaAtividade->reativarAtividade($listaAtividade->getIdAtividade());
@@ -22,4 +22,4 @@
     
 ?>
 
-<a href="lista_atividades.php">VOLTAR</a>
+<a href="../view/lista_atividades.php">VOLTAR</a>

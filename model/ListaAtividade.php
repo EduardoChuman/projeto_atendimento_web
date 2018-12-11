@@ -105,7 +105,6 @@ class ListaAtividade
 		} 
 		catch (Exception $e) 
 		{
-			echo json_encode
 			(
 				array
 				(
@@ -142,7 +141,6 @@ class ListaAtividade
 		} 
 		catch (Exception $e) 
 		{
-			echo json_encode
 			(
 				array
 				(
@@ -179,7 +177,6 @@ class ListaAtividade
 		} 
 		catch (Exception $e) 
 		{
-			echo json_encode
 			(
 				array
 				(
@@ -221,7 +218,6 @@ class ListaAtividade
 		} 
 		catch (Exception $e) 
 		{
-			echo json_encode
 			(
 				array
 				(
@@ -263,7 +259,83 @@ class ListaAtividade
 		} 
 		catch (Exception $e) 
 		{
-			echo json_encode
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
+		}
+	}
+
+	// MÉTODO PARA LISTAR AS ATIVIDADES DESABILITADAS
+	public function listaAtividadesDesabilitadas($idCelula)
+	{
+		$this->setIdCelula($idCelula);
+
+		$sql = new Sql();
+
+		try
+		{		
+			$selectAtividadesDesabilitadas = $sql->select
+			(
+				"SELECT 
+					[ID]
+				    ,[TIPO_GRUPO_ATENDIMENTO]
+				    ,[NOME_ATIVIDADE]
+				FROM 
+					[dbo].[tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				WHERE 
+					[ATIVA] = 0
+					AND [ID_CELULA] = :ID_CELULA"
+				, array
+				(
+					'ID_CELULA'=>$this->getIdCelula()
+				)
+			);
+			return json_encode($selectAtividadesDesabilitadas, JSON_UNESCAPED_SLASHES);
+		} 
+		catch (Exception $e) 
+		{
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
+		}
+	}
+
+	// MÉTODO PARA ALTERAR NOME DE ATIVIDADE
+	public function alteraNomeAtividade($idAtividade, $novoNomeAtividade)
+	{
+		$this->setIdAtividade($idAtividade);
+
+		$sql = new Sql();
+
+		try
+		{		
+			$selectAlteraNomeAtividade = $sql->select
+			(
+				"UPDATE [dbo].[tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES]
+				   SET [NOME_ATIVIDADE] = :NOME_ATIVIDADE
+				WHERE 
+					[ID] = :ID"
+				, array
+				(
+					':ID'=>$this->getIdAtividade()
+					,':NOME_ATIVIDADE'=>mb_strtoupper($novoNomeAtividade)
+				)
+			);
+		} 
+		catch (Exception $e) 
+		{
 			(
 				array
 				(
