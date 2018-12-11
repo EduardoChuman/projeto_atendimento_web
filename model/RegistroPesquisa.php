@@ -583,29 +583,46 @@ class RegistroPesquisa
   {
     $sql = new Sql();
 
-    $sql->query
-    (
-      "UPDATE [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
-      SET 
-        [DATA_RESPOSTA] = :DATA_RESPOSTA
-        ,[NOTA_CORDIALIDADE] = :NOTA_CORDIALIDADE
-        ,[NOTA_DOMINIO] = :NOTA_DOMINIO
-        ,[NOTA_TEMPESTIVIDADE] = :NOTA_TEMPESTIVIDADE
-        ,[CONSULTORIA_ATENDIDA] = :CONSULTORIA_ATENDIDA
-        ,[FEEDBACK_ATENDIDO] = :FEEDBACK_ATENDIDO
-      WHERE 
-        [ID_REGISTRO_ATENDIMENTO] = :ID_REGISTRO_ATENDIMENTO"
-      , array
+    try 
+    {
+      $sql->query
       (
-        ':ID_REGISTRO_ATENDIMENTO'=>$this->getIdRegistroAtendimento()
-        ,':DATA_RESPOSTA'=>$this->getDataResposta()
-        ,':NOTA_CORDIALIDADE'=>$this->getNotaCordialidade()
-        ,':NOTA_DOMINIO'=>$this->getNotaDominio()
-        ,':NOTA_TEMPESTIVIDADE'=>$this->getNotaTempestividade()
-        ,':CONSULTORIA_ATENDIDA'=>$this->getConsultoriaAtendida()
-        ,':FEEDBACK_ATENDIDO'=>$this->getFeedbackAtendido()
-      )
-    );
+        "UPDATE [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS]
+        SET 
+          [DATA_RESPOSTA] = :DATA_RESPOSTA
+          ,[NOTA_CORDIALIDADE] = :NOTA_CORDIALIDADE
+          ,[NOTA_DOMINIO] = :NOTA_DOMINIO
+          ,[NOTA_TEMPESTIVIDADE] = :NOTA_TEMPESTIVIDADE
+          ,[CONSULTORIA_ATENDIDA] = :CONSULTORIA_ATENDIDA
+          ,[FEEDBACK_ATENDIDO] = :FEEDBACK_ATENDIDO
+        WHERE 
+          [ID_REGISTRO_ATENDIMENTO] = :ID_REGISTRO_ATENDIMENTO"
+        , array
+        (
+          ':ID_REGISTRO_ATENDIMENTO'=>$this->getIdRegistroAtendimento()
+          ,':DATA_RESPOSTA'=>$this->getDataResposta()
+          ,':NOTA_CORDIALIDADE'=>$this->getNotaCordialidade()
+          ,':NOTA_DOMINIO'=>$this->getNotaDominio()
+          ,':NOTA_TEMPESTIVIDADE'=>$this->getNotaTempestividade()
+          ,':CONSULTORIA_ATENDIDA'=>$this->getConsultoriaAtendida()
+          ,':FEEDBACK_ATENDIDO'=>$this->getFeedbackAtendido()
+        )
+      );
+    } 
+    catch (Exception $e) 
+    {
+      // EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
+      echo json_encode
+      (
+        array
+        (
+            "message"=>$e->getMessage(),
+            "line"=>$e->getLine(),
+            "file"=>$e->getFile(),
+            "code"=>$e->getCode()
+        )
+      );
+    }
   }
 }
 
