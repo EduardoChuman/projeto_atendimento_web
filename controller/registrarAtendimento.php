@@ -39,32 +39,51 @@
     $registroAtendimento->setObservacaoCeopc(mb_strtoupper($_POST['observacaoCeopc'], 'UTF-8'));
     $registroAtendimento->setUnidadeDemandante($unidadeDemandante);
 
-    // REGISTRO ATENDIMENTO
-    if ($_POST['tipoAtendimento'] == 'CONSULTORIA') 
-    {
-        $registroAtendimento->registrarAtendimentoConsultoria();
-    }
-    else
-    {
-        $registroAtendimento->registrarAtendimentoRotina();
-    } 
+    // // REGISTRO ATENDIMENTO
+    // if ($_POST['tipoAtendimento'] == 'CONSULTORIA') 
+    // {
+    //     $registroAtendimento->registrarAtendimentoConsultoria();
+    // }
+    // else
+    // {
+    //     $registroAtendimento->registrarAtendimentoRotina();
+    // } 
     
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/css/formulario1.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script language="JavaScript" type="text/javascript">
-        window.onload = setTimeout("location.href = '../view/registro_atendimento.php'",1500); // milliseconds, so 10 seconds = 10000ms
+        window.onload = setTimeout("location.href = '../view/registro_atendimento.html'",2500);
     </script>
     <title>SUCESSSO</title>
 </head>
-<body>
-    
-</body>
+    <body>
+        <h3 class="titulo-header-cinza">Formulário atendimento <br/>Middle Office</h3>
+        <br>
+        <h2>
+            <?php     
+                if ($_POST['tipoAtendimento'] == 'CONSULTORIA') 
+                {
+                    $registroAtendimento->registrarAtendimentoConsultoria();
+                }
+                else
+                {
+                    $registroAtendimento->registrarAtendimentoRotina();
+                }  
+            ?>
+        </h2>
+        <div id="rodape">
+            <img src="../view/images/rodape2.png"/> 
+            <div>
+                <label><span class="logo">caixa</span> <span class="logo2">corporativo</span></label>
+            </div>
+        </div>
+    </body>
 </html>
-
-<!-- <a href="registro_atendimento.php">VOLTAR</a> -->

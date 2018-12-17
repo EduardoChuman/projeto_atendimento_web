@@ -280,6 +280,54 @@ class RelatorioMiddle
 		}
 	}
 
+	public function contagemAtendimentosPorAssistente($matricula)
+	{
+		$sql = new Sql();
+
+		try
+		{
+			$selectContagemAtendimentosPorAssistente = $sql->select
+			(
+				"SELECT
+					'MES' = DATEPART(MONTH,ATENDIMENTO.[DATA_ATENDIMENTO])
+					,ATENDIMENTO.[MATRICULA_CEOPC]
+					,EMPREGADOS.[NOME]
+					,'ROTINA' = COUNT(ATENDIMENTO.[ROTINA])
+					,'CONSULTORIA' = COUNT(ATENDIMENTO.[CONSULTORIA])
+					,'TOTAL_ATENDIMENTOS_MES' = COUNT(ATENDIMENTO.[CONSULTORIA]) + COUNT(ATENDIMENTO.[ROTINA])
+				FROM 
+					[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO] AS ATENDIMENTO 
+					INNER JOIN [EMPREGADOS] ON CONVERT(BIGINT,REPLACE(ATENDIMENTO.MATRICULA_CEOPC, 'c', '')) = EMPREGADOS.[MATRICULA]
+				WHERE 
+					DATEPART(YEAR,ATENDIMENTO.[DATA_ATENDIMENTO]) >= YEAR(GETDATE())
+					AND DATEPART(MONTH, [DATA_ATENDIMENTO]) BETWEEN (MONTH(GETDATE())-3) AND MONTH(GETDATE())
+					AND ATENDIMENTO.[MATRICULA_CEOPC] = :MATRICULA
+				GROUP BY 
+					MONTH(ATENDIMENTO.[DATA_ATENDIMENTO])
+					,ATENDIMENTO.[MATRICULA_CEOPC]
+					,EMPREGADOS.[NOME]"
+				,
+				array
+				(
+					':MATRICULA'=>$matricula
+				)
+			);
+			return json_encode($selectContagemAtendimentosPorAssistente, JSON_UNESCAPED_SLASHES);	
+		} 
+		catch (Exception $e) 
+		{
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
+		}
+	}
+
 	public function contagemPizzaAtendimentos()
 	{
 		$sql = new Sql();
@@ -317,6 +365,101 @@ class RelatorioMiddle
 		}
 	}
 
-	
+	public function feedbackAtendidosGeral()
+	{
+		$sql = new Sql();
 
+		try
+		{
+			$selectFeedbackAtendidosGeral = $sql->select
+			(
+				"SELECT 
+					ATENDIMENTO.[MATRICULA_CEOPC]
+					,EMPREGADOS.[NOME]
+					,ATIVIDADE.[NOME_ATIVIDADE]
+				    ,PESQUISAS.[DATA_ENVIO]
+					,ATENDIMENTO.[OBSERVACAO_CEOPC]
+					,ATENDIMENTO.[UNIDADE_DEMANDANTE]
+				    ,PESQUISAS.[DATA_RESPOSTA]
+				    ,PESQUISAS.[NOTA_CORDIALIDADE]
+				    ,PESQUISAS.[NOTA_DOMINIO]
+				    ,PESQUISAS.[NOTA_TEMPESTIVIDADE]
+				    ,PESQUISAS.[FEEDBACK_ATENDIDO]
+				FROM 
+					[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS] AS PESQUISAS
+					INNER JOIN tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO AS ATENDIMENTO ON PESQUISAS.[ID_REGISTRO_ATENDIMENTO] = ATENDIMENTO.[ID]
+					INNER JOIN tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES AS ATIVIDADE ON ATENDIMENTO.[ITEM_LISTA_ATIVIDADES] = ATIVIDADE.[ID]
+					LEFT JOIN [EMPREGADOS] AS EMPREGADOS ON CONVERT(BIGINT,REPLACE(ATENDIMENTO.MATRICULA_CEOPC, 'c', '')) = EMPREGADOS.[MATRICULA]
+				WHERE
+					DATEPART(YEAR, PESQUISAS.[DATA_ENVIO]) >= YEAR(GETDATE())
+					AND DATEPART(MONTH, PESQUISAS.[DATA_ENVIO]) BETWEEN (MONTH(GETDATE())-3) AND MONTH(GETDATE())
+					AND PESQUISAS.[DATA_RESPOSTA] IS NOT NULL"
+			);
+			return json_encode($selectFeedbackAtendidosGeral, JSON_UNESCAPED_SLASHES);	
+		} 
+		catch (Exception $e) 
+		{
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
+		}
+	}
+
+	public function feedbackAtendidosAssistente($matricula)
+	{
+		$sql = new Sql();
+
+		try
+		{
+			$selectFeedbackAtendidosGeral = $sql->select
+			(
+				"SELECT 
+					ATENDIMENTO.[MATRICULA_CEOPC]
+					,EMPREGADOS.[NOME]
+					,ATIVIDADE.[NOME_ATIVIDADE]
+				    ,PESQUISAS.[DATA_ENVIO]
+					,ATENDIMENTO.[OBSERVACAO_CEOPC]
+					,ATENDIMENTO.[UNIDADE_DEMANDANTE]
+				    ,PESQUISAS.[DATA_RESPOSTA]
+				    ,PESQUISAS.[NOTA_CORDIALIDADE]
+				    ,PESQUISAS.[NOTA_DOMINIO]
+				    ,PESQUISAS.[NOTA_TEMPESTIVIDADE]
+				    ,PESQUISAS.[FEEDBACK_ATENDIDO]
+				FROM 
+					[tbl_ATENDIMENTO_WEB_REGISTRO_PESQUISAS] AS PESQUISAS
+					INNER JOIN tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO AS ATENDIMENTO ON PESQUISAS.[ID_REGISTRO_ATENDIMENTO] = ATENDIMENTO.[ID]
+					INNER JOIN tbl_ATENDIMENTO_WEB_LISTA_ATIVIDADES AS ATIVIDADE ON ATENDIMENTO.[ITEM_LISTA_ATIVIDADES] = ATIVIDADE.[ID]
+					LEFT JOIN [EMPREGADOS] AS EMPREGADOS ON CONVERT(BIGINT,REPLACE(ATENDIMENTO.MATRICULA_CEOPC, 'c', '')) = EMPREGADOS.[MATRICULA]
+				WHERE
+					DATEPART(YEAR, PESQUISAS.[DATA_ENVIO]) >= YEAR(GETDATE())
+					AND DATEPART(MONTH, PESQUISAS.[DATA_ENVIO]) BETWEEN (MONTH(GETDATE())-3) AND MONTH(GETDATE())
+					AND PESQUISAS.[DATA_RESPOSTA] IS NOT NULL
+					AND ATENDIMENTO.[MATRICULA_CEOPC] = :MATRICULA"
+				,
+				array
+				(
+					':MATRICULA'=>$matricula
+				)
+			);
+			return json_encode($selectFeedbackAtendidosGeral, JSON_UNESCAPED_SLASHES);	
+		} 
+		catch (Exception $e) 
+		{
+			(
+				array
+				(
+					"message"=>$e->getMessage(),
+					"line"=>$e->getLine(),
+					"file"=>$e->getFile(),
+					"code"=>$e->getCode()
+				)
+			);
+		}
+	}
 }

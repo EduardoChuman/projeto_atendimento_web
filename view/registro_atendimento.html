@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/formulario1.css">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <title>Atendimento Web - Pesquisa Middle</title>
+    </head>
+    <body>
+        <h3 class="titulo-header-cinza">Formulário atendimento <br/>Middle Office</h3>    
+        <form>
+            <fieldset>
+                <legend>CADASTRAR UM NOVO ATENDIMENTO</legend>
+                <br>
+                <label>SELECIONE O TIPO DE ATENDIMENTO:
+                    <select id="selectbox" name="tipoGrupoAtendimento" onchange="javascript:location.href = this.value;">
+                        <option disabled selected value>SELECIONE</option>
+                        <option value="criar_form_registro_atendimento.php?tipoGrupoAtendimento=ROTINA">ROTINA</option>
+                        <option value="criar_form_registro_atendimento.php?tipoGrupoAtendimento=CONSULTORIA">CONSULTORIA</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        <div id="rodape">
+            <img src="images/rodape2.png"/> 
+            <div>
+                <label><span class="logo">caixa</span> <span class="logo2">corporativo</span></label>
+            </div>
+        </div>
+        <script src="js/listasAtividades.js"></script>
+    </body>
+</html>

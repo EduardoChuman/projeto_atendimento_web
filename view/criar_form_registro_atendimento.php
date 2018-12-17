@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <title>Atendimento Middle</title>
     <link rel="stylesheet" href="css/formulario1.css">
     <!-- <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css"> -->
@@ -52,14 +53,7 @@
                         <input type='text' name='tipoAtendimento' value='" . $registroAtendimento->getTipoAtendimento() . "' hidden>
                         <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
                         <fieldset>
-                            <legend>CADASTRAR UMA NOVA ATIVIDADE DE ROTINA</legend><br>
-                            <!-- <label>QUAL FOI O CANAL DO ATENDIMENTO:
-                                <select name='canalAtendimento' required>
-                                    <option value='EMAIL'>E-MAIL</option>
-                                    <option value='LYNC'>LYNC</option>
-                                    <option value='TELEFONE'>TELEFONE</option>
-                                </select><br>
-                            </label> -->                            
+                            <legend>CADASTRAR UMA NOVA ATIVIDADE DE ROTINA</legend><br>                          
                             UNIDADE DEMANDANTE: <input type='text' name='unidadeDemandante' maxlength='4' required><br><br>
                             QUAL FOI O CANAL DO ATENDIMENTO:<br>
                             <label><input type='radio' name='canalAtendimento' value='EMAIL' required>E-MAIL</label><br>
@@ -92,23 +86,21 @@
                             echo "</select><br><br>
                             <label>OBSERVAÇÕES SOBRE A REALIZAÇÃO DA ROTINA:<br>
                                 <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>
-                            </label><br><br>
+                            </label><br>
                             <input class='botao' type='submit' value='REGISTRAR ATENDIMENTO'>
                         </fieldset>
-                    </form>
-                    
+                    </form><br>
+                    <a href='registro_atendimento.html'>
+                        <button class='botao'>VOLTAR</button>
+                    </a>
                     <div id='rodape'>
-                        <img src='images/rodape2.png'/> 
-            
+                        <img src='images/rodape2.png'/>
                         <div>
-                        <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
+                            <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
                         </div>
-
                     </div> 
                     <br>
-                    <a href='registro_atendimento.php'>
-                    <button class='botao'>VOLTAR</button>
-                    </a>";
+                    ";
             break;
 
         case 'CONSULTORIA':
@@ -120,13 +112,6 @@
                     <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
                     <fieldset>
                         <legend>CADASTRAR UMA NOVA CONSULTORIA</legend><br>
-                        <!-- <label>QUAL FOI O CANAL DO ATENDIMENTO:
-                            <select name='canalAtendimento' required>
-                                <option value='EMAIL'>E-MAIL</option>
-                                <option value='LYNC'>LYNC</option>
-                                <option value='TELEFONE'>TELEFONE</option>
-                            </select><br>
-                        </label> -->
                         <label>MATRICULA DO ATENDIDO: <input name='matriculaAtendido' tabindex='1' id='matriculaAtendido' maxlength='7'  pattern='(^[C,c])?(\d{6})' required></label><br><br>
                         QUAL FOI O CANAL DO ATENDIMENTO:<br>
                         <label><input type='radio' name='canalAtendimento' value='EMAIL' required>E-MAIL</label><br>
@@ -159,10 +144,13 @@
                         echo "</select><br><br>";
                         echo "<label>OBSERVAÇÕES SOBRE A CONSULTORIA:<br>
                             <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>
-                        </label><br><br>
+                        </label><br>
                         <input class='botao' type='submit' value='REGISTRAR CONSULTORIA'>   
                     </fieldset>
-                </form>
+                </form><br>
+                <a href='registro_atendimento.html'>
+                    <button class='botao'>VOLTAR</button>
+                </a>
                 <div id='rodape'>
                     <img src='images/rodape2.png'/> 
         
@@ -170,21 +158,15 @@
                     <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
                     </div>
 
-                </div>  
-                <br>   
-                    <a href='registro_atendimento.php'>
-                    <button class='botao'>VOLTAR</button>
-                    </a>";
+                </div>    
+                ";
             break;
 
         default:
-            header('location:registro_atendimento.php');
+            header('location:registro_atendimento.html');
             break;
     }
 ?>
-   
    <script src="js/listasAtividades.js"></script>
-    
-
 </body>
 </html>

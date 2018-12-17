@@ -265,13 +265,12 @@ class RegistroAtendimento
                 $validarQuantidadePesquisa = $sql->select
                 (
                     "SELECT 
-                        'CONTAGEM' = COUNT([ID])
+                        'CONTAGEM' = COUNT([CONSULTORIA])
                     FROM 
                         [tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]
                     WHERE 
                         [MATRICULA_ATENDIDO] = :MATRICULA_ATENDIDO
                         AND [MATRICULA_CEOPC] = :MATRICULA_CEOPC
-                        AND [TIPO_ATENDIMENTO] = 'CONSULTORIA'
                         AND CONVERT(DATE,[DATA_ATENDIMENTO]) = CONVERT(DATE, GETDATE())"
                     , array
                     (
