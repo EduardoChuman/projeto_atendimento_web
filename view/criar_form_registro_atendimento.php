@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <title>Atendimento Middle</title>
     <link rel="stylesheet" href="css/formulario1.css">
-    <!-- <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css"> -->
     <!-- jQuery 2.2.3 -->
     <script src="../../../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -118,29 +117,29 @@
                         <label><input type='radio' name='canalAtendimento' value='LYNC'>LYNC</label><br>
                         <label><input type='radio' name='canalAtendimento' value='TELEFONE'>TELEFONE</label><br>
                         <br>";
-                        echo "<select name='itemListaAtividades' required>"; 
+                        echo "<select id='atividadesConsultoriaMiddle'name='itemListaAtividades' required>"; 
                         echo "<option disabled selected value>SELECIONE A CONSULTORIA</option>";
-                        foreach ($listaAtividade as $linha) 
-                        {
-                            foreach ($linha as $chave => $valor) 
-                            {
-                                switch ($chave) 
-                                {
-                                    case 'ID':
-                                        $id = '';
-                                        $id = $valor;
-                                        break;
-                                }
-                                switch ($chave) 
-                                {
-                                    case 'NOME_ATIVIDADE':
-                                        $nomeAtividade = '';
-                                        $nomeAtividade = $valor;
-                                        break;
-                                }      
-                            }
-                            echo "<option value=\"$id\">$nomeAtividade</option>";
-                        }
+                        // foreach ($listaAtividade as $linha) 
+                        // {
+                        //     foreach ($linha as $chave => $valor) 
+                        //     {
+                        //         switch ($chave) 
+                        //         {
+                        //             case 'ID':
+                        //                 $id = '';
+                        //                 $id = $valor;
+                        //                 break;
+                        //         }
+                        //         switch ($chave) 
+                        //         {
+                        //             case 'NOME_ATIVIDADE':
+                        //                 $nomeAtividade = '';
+                        //                 $nomeAtividade = $valor;
+                        //                 break;
+                        //         }      
+                        //     }
+                        //     echo "<option value=\"$id\">$nomeAtividade</option>";
+                        // }
                         echo "</select><br><br>";
                         echo "<label>OBSERVAÇÕES SOBRE A CONSULTORIA:<br>
                             <textarea name='observacaoCeopc' cols='60' rows='5' placeholder='Insira suas observações aqui...'></textarea>
@@ -161,7 +160,6 @@
                 </div>    
                 ";
             break;
-
         default:
             header('location:registro_atendimento.html');
             break;
