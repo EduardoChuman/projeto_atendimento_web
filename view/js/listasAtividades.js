@@ -47,7 +47,7 @@ function carregarListaConsultriaMiddle()
     {
       str += "<option value='" + consultoria.ID + "'>" + consultoria.NOME_ATIVIDADE + "</option>";
     });
-    str = "<option disabled selected value>SELECIONE A COLSULTORIA</option>" + str;
+    str = "<option disabled selected value>SELECIONE A CONSULTORIA</option>" + str;
     $('#atividadesConsultoriaMiddle').html(str);
   }).fail(function (jqXHR, textStatus, errorThrown) 
   {

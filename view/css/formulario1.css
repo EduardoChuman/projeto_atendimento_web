@@ -13,7 +13,7 @@
    
     border-bottom: 2px solid #fc8f01;
     
-    color: #ffb555;
+    color: #f6f1eb;
     text-align: center;
     padding: 5px 0 6px 16px;
     
@@ -21,17 +21,18 @@
 }
 
 label{
-    font-size: 16px;
+    font-size: 1em;
+    font-weight: bold;  
     color: #000000;
-    
+    padding: 10px;
+    margin-top: 5px; 
+   
 }
 
-legend{
-    font-size: 20px;
+  legend {
+    font-size: 0.8rem;
     font-weight: bold;
-    color: #000000;
-    
-}
+  }
 
 fieldset{
     
@@ -49,21 +50,11 @@ fieldset{
     left: 0;
     display: inline-block;
 }
-#rodape img {
-    width: 100%;
-    height: 100px;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-   
-    object-fit: cover; /* classe pra deixa a imagem com a proporção correta e não ficar achatada */
-}
 
 #rodape label {
      position: absolute;
     
-    margin-bottom: 17px; 
+    margin-bottom:0.5rem ; 
     margin-left: 62%;
     bottom: 0;
     left: 0;
@@ -93,16 +84,55 @@ fieldset{
     
   }
 
-  .botao{
-      font-weight: bold;
-      color: #fc8f01;
-      background-color: #140c00;
-      padding-top: 5px;
-      padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
 
- 
+.botao
+  {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fc8f01;
+    background-color: #140c00;
+    padding: 10px;
+    margin-top: 8px;
   }
 
-  
+.botao:hover{
+   background:#fff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:#000;
+}
+
+.botao:after {
+    content: "";
+    background: #fc8f01;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.botao:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+
+  .rodape{
+    border-bottom: 59px solid black;
+    
+    
+  }
+
+  body {
+    font-family: arial;
+    font-size: 0.8em;
+  }
+

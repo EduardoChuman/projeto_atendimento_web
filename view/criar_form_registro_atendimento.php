@@ -32,7 +32,7 @@
     $empregadoCeopc = new EmpregadoCeopc();
     
     // FORÇA A CÉLULA MIDDLE OFFICE PARA QUE TENHAMOS DADOS DE ATIVIDADES
-    $empregadoCeopc->setIdCelula(5);
+    // $empregadoCeopc->setIdCelula(5);
 
     // INSTACIA OS OBJETOS LISTA ATIVIDADE E REGISTRO ATENDIMENTO
     $classeListaAtividade = new ListaAtividade();
@@ -50,9 +50,9 @@
                 echo "<form action='../controller/registrarAtendimento.php' method='post'>
                         <input type='text' name='matriculaCeopc' value='" . $empregadoCeopc->getMatricula() . "' hidden>
                         <input type='text' name='tipoAtendimento' value='" . $registroAtendimento->getTipoAtendimento() . "' hidden>
-                        <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
+                        <h3 class='titulo-header-cinza'> Rotinas - Middle Office</h3>
                         <fieldset>
-                            <legend>CADASTRAR UMA NOVA ATIVIDADE DE ROTINA</legend><br>                          
+                            <legend>CADASTRAR REALIZAÇÃO DE ATIVIDADE DE ROTINA</legend><br>                          
                             UNIDADE DEMANDANTE: <input type='text' name='unidadeDemandante' maxlength='4' required><br><br>
                             QUAL FOI O CANAL DO ATENDIMENTO:<br>
                             <label><input type='radio' name='canalAtendimento' value='EMAIL' required>E-MAIL</label><br>
@@ -93,11 +93,14 @@
                         <button class='botao'>VOLTAR</button>
                     </a>
                     <div id='rodape'>
-                        <img src='images/rodape2.png'/>
-                        <div>
-                            <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
+                    <div>
+                        <div class='rodape'>
+
+                            <img src='http://www.geopc.mz.caixa/esteiracomex/dist/img/logotipo_black.png' style='width: 9.5rem;position: absolute;'>
                         </div>
-                    </div> 
+                    </div>
+                        
+                </div>
                     <br>
                     ";
             break;
@@ -108,7 +111,7 @@
             echo "<form action='../controller/registrarAtendimento.php' method='post'>
                     <input type='text' name='matriculaCeopc' value='" . $empregadoCeopc->getMatricula() . "' hidden>
                     <input type='text' name='tipoAtendimento' value='" . $registroAtendimento->getTipoAtendimento() . "' hidden>
-                    <h3 class='titulo-header-cinza'> Formulário Atendimento <br> Middle Office</h3>
+                    <h3 class='titulo-header-cinza'>Consultoria - Middle Office</h3>
                     <fieldset>
                         <legend>CADASTRAR UMA NOVA CONSULTORIA</legend><br>
                         <label>MATRICULA DO ATENDIDO: <input name='matriculaAtendido' tabindex='1' id='matriculaAtendido' maxlength='7'  pattern='(^[C,c])?(\d{6})' required></label><br><br>
@@ -151,13 +154,15 @@
                     <button class='botao'>VOLTAR</button>
                 </a>
                 <div id='rodape'>
-                    <img src='images/rodape2.png'/> 
-        
                     <div>
-                    <label><span class='logo'>caixa</span> <span class='logo2'>corporativo</span></label>
-                    </div>
+                        <div class='rodape'>
 
-                </div>    
+                            <img src='http://www.geopc.mz.caixa/esteiracomex/dist/img/logotipo_black.png' style='width: 9.5rem;position: absolute;'>
+                        </div>
+                    </div>
+                        
+                </div>
+                
                 ";
             break;
         default:

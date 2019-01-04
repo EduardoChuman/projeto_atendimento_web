@@ -39,24 +39,7 @@ footer {
     z-index: 10;
 }
 
-.toggler {
-    cursor: pointer;
-    vertical-align: middle;
-    display: inline-block;    
-    margin-right: 10px;
-}
 
-.toggler > div {
-    width: 19px;
-    height: 1px;
-    background-color: rgb(219, 213, 209);
-    margin: 5px 0;
-    transition: all 0.2s linear;
-}
-
-.toggler:hover > div {
-    background-color: #F78E1E; /*cor dos 03 risquinhos ao lado da ceocp*/
-}
 
 .titulo-header-cinza {
     font-family: "arial";
@@ -123,6 +106,13 @@ footer {
    
     }
 
+    .rodape{ 
+       
+        border-bottom: 10px solid #fc8f01;
+        
+    }
+
+
     .avaliacoes{
         margin-left: 70px;
         margin-top: 5px;
@@ -162,217 +152,5 @@ footer {
 
 }
 
-.toggle-menu {
-    background-color: #323435;
-    color: #fff;
-    width: 280px;
-    position: fixed;
-    margin-top: 56px;
-    height: 100%;
-    z-index: 9;
-}
 
 
-
-
-
-.toggle-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.toggle-menu ul li a {
-    color: #ffffff;
-    display: block;
-    width: 100%;
-     border-top: 1px solid #f1a16c; /*cores das linhas */
-    font-size: 14px;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: background-color 0.2s linear;
-}
-
-.toggle-menu ul li.selecionado a,
-.toggle-menu ul li a:hover,
-.toggle-menu ul li a:active
-{
-    background-color: #e9810c; /* cor do mouse */
-}
-
-.toggle-menu ul li a i {
-    text-shadow: none;
-    text-align: center;
-    font-size: 16px;
-    width: 1.25em;
-    margin-right: 9px;
-    color: #f17909;
-}
-
-.toggle-menu ul li.selecionado a i,
-.toggle-menu ul li a:hover i,
-.toggle-menu ul li a:active i
-{
-    color: #fff;
-}
-
-.toggle-menu ul li ul {
-    display: none;
-}
-
-.toggle-menu ul li ul li a {
-    border-top: none;
-    background-color: rgb(74, 73, 72);
-    padding-left: 30px;
-}
-
-/** TOGGLE MENU - COMPORTAMENTO FECHADO **/
-
-body.toggle-menu-toggled .toggle-menu{
-    width: 45px;
-}
-
-body.toggle-menu-toggled .toggle-menu .menu-filter-fechado {
-    display: block;
-}
-
-body.toggle-menu-toggled .toggle-menu .menu-filter { 
-    display: none;
-}
-
-body.toggle-menu-toggled .toggle-menu ul li a {
-    color: #fff;
-    display: block;
-    width: 100%;
-    border-top: 1px solid #f1a16c; /*cor da linha menu fechado*/
-    font-size: 14px;
-    padding: 10px 0 10px 6px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s linear;
-}
-
-body.toggle-menu-toggled .toggle-menu ul li a span {
-    display: none;
-}
-
-body.toggle-menu-toggled .toggle-menu ul li a i.pull-right {
-    display: none;
-}
-
-
-body.toggle-menu-toggled .conteudo {
-    margin-left: 45px;
-}
-
-/** TOGGLE MENU - COMPORTAMENTO FECHADO E MOUSE POR CIMA **/
-
-body.toggle-menu-toggled .toggle-menu:hover{
-    width: 280px;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover .menu-filter-fechado {
-    display: none;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover .menu-filter { 
-    display: block;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover ul li a {
-    padding: 10px 15px;
-    transition: background-color 0.2s linear;
-    text-align: left;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover ul li ul li a {
-    border-top: none;
-    background-color: rgb(74, 73, 72);
-    padding-left: 30px;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover ul li a span {
-    display: inline;
-}
-
-body.toggle-menu-toggled .toggle-menu:hover ul li a i.pull-right {
-    display: inline;
-}
-
-
-
-/** TOGGLE MENU - COMPORTAMENTO TELAS MENORES **/
-
-@media screen and (max-width: 980px) {
-
-    .toggle-menu,
-    body.toggle-menu-toggled .toggle-menu 
-    {
-        display: block;
-        width: 100%;
-        position: fixed;
-        height: auto;
-    }
-
-    .toggle-menu {
-        top: -1000px;
-        transition: top 0.2s linear;
-    }
-
-    body.toggle-menu-toggled .toggle-menu{
-        top: 0px;
-    }
-
-    body.toggle-menu-toggled .toggle-menu ul li a {
-        padding: 10px 15px;
-        transition: background-color 0.2s linear;
-        text-align: left;
-    }
-    body.toggle-menu-toggled .toggle-menu ul li a span {
-        display: inline;
-    }
-
-    body.toggle-menu-toggled .toggle-menu .menu-filter-fechado {
-        display: none;
-    }
-
-    body.toggle-menu-toggled .toggle-menu .menu-filter { 
-        display: block;
-    }
-
-    body.toggle-menu-toggled .toggle-menu ul li a i.pull-right {
-        display: inline;
-    }
-
-    /** HOVER **/
-
-    body.toggle-menu-toggled .toggle-menu:hover{
-        width: 100%;
-    }
-
-    body.toggle-menu-toggled .toggle-menu:hover .menu-filter-fechado {
-        display: none;
-    }
-
-    body.toggle-menu-toggled .toggle-menu:hover .menu-filter { 
-        display: block;
-    }
-
-    body.toggle-menu-toggled .toggle-menu:hover ul li a span {
-        display: inline;
-    }
-
-    .conteudo, body.toggle-menu-toggled .conteudo {
-        margin-left: 0px;
-    }
-
-    footer small{
-        display: none;
-    }
-
-
-}
-
-
-
-/** FIM DO TOGGLE MENU **/
