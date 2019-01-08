@@ -90,7 +90,7 @@
                         </fieldset>
                     </form><br>
                     <a href='registro_atendimento.html'>
-                        <button class='botao'>VOLTAR</button>
+                        <button>VOLTAR</button>
                     </a>
                     <div id='rodape'>
                     <div>
@@ -151,7 +151,7 @@
                     </fieldset>
                 </form><br>
                 <a href='registro_atendimento.html'>
-                    <button class='botao'>VOLTAR</button>
+                    <button>VOLTAR</button>
                 </a>
                 <div id='rodape'>
                     <div>
