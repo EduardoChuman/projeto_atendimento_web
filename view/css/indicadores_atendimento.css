@@ -1,0 +1,34 @@
+.tituloIndicador
+{
+    text-align: center;
+    font-weight: bold;
+    color: grey;
+}
+
+.divisoriaGrafico
+{
+    border: 1px solid gray;
+    background-color:#ecf0f1;
+    border-radius: 5px;
+}
+
+.divisoriaGrafico:hover
+{
+    transition: .5s ease;
+    background-color:rgba(236, 240, 241, 0.3);
+}
+
+.divisoriaTabela
+{   
+    padding: 0.5%;
+    margin: 0.5% 0;
+    border: 1px solid gray;
+    background-color:#ecf0f1;
+    border-radius: 5px;
+}
+
+.divisoriaTabela:hover
+{
+    transition: .5s ease;
+    background-color:rgba(236, 240, 241, 0.5);
+}
