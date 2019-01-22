@@ -34,30 +34,48 @@
 						############################          INICIO DA PÁGINA         ############################
 						###########################################################################################
 						-->
+						<h3 class="text-center">Números relativos ao mês atual</h3>
                         <div class="row">    
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapsePizzaContagemAtendimentos" >                                       
-                                <div class="divisoriaGrafico col-md-3">                                 
-                                    <h4 class="tituloIndicador">Contagem Atendimentos</h4>
-                                    <canvas id="myChart"></canvas>
+                                <div class="divisoriaGrafico col-md-4">                                 
+                                    <h4 class="tituloIndicador">Rotina/Consultoria</h4>
+                                    <canvas id="ChartPizzaAtendimentoRotinaConsultoria"></canvas>
                                 </div>                                   
                             </a>
-                            <!-- <div class="divisoriaGrafico col-md-3">                                 
-                                <h4 class="tituloIndicador">Contagem Atendimentos</h4>    
-                            </div>
-                            <div class="divisoriaGrafico col-md-3">                                 
-                                <h4 class="tituloIndicador">Contagem Atendimentos</h4>    
-                            </div>
-                            <div class="divisoriaGrafico col-md-3">                                 
-                                <h4 class="tituloIndicador">Contagem Atendimentos</h4>    
-                            </div> -->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseChartPorCanalAtendimento" >                                       
+                                <div class="divisoriaGrafico col-md-4">                                 
+                                    <h4 class="tituloIndicador">Canal de Atendimento</h4>
+                                    <canvas id="ChartPorCanalAtendimento"></canvas>
+                                </div>                                   
+                            </a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseChartMediaNotasPesquisa" >                                       
+                                <div class="divisoriaGrafico col-md-4">                                 
+                                    <h4 class="tituloIndicador">Média de Notas</h4>
+                                    <canvas id="ChartMediaNotasPesquisa"></canvas>
+                                </div>                                   
+                            </a>
                         </div>
                         <div id="collapsePizzaContagemAtendimentos" class="panel-collapse collapse">
                             <div class="row">
-                                <div class="divisoriaTabela col-md-3">
+                                <div class="divisoriaTabela col-md-12">
                                     <table id="tabelaPizzaContagemAtendimentos" class="table table-striped compact" ></table>
                                 </div>
                             </div>
-                        </div>                           
+                        </div>
+						<div id="collapseChartPorCanalAtendimento" class="panel-collapse collapse">
+                            <div class="row">
+                                <div class="divisoriaTabela col-md-12">
+                                    <table id="tabelaPorCanalAtendimento" class="table table-striped compact" ></table>
+                                </div>
+                            </div>
+                        </div>
+						<div id="collapseChartMediaNotasPesquisa" class="panel-collapse collapse">
+                            <div class="row">
+                                <div class="divisoriaTabela col-md-12">
+                                    <table id="tabelaMediaNotasPesquisa" class="table table-striped compact" ></table>
+                                </div>
+                            </div>
+                        </div>                              
 						<!--
 						###########################################################################################
 						############################           FIM DA PÁGINA           ############################
