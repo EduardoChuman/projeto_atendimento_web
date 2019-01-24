@@ -1,0 +1,2144 @@
+[{
+	"contagemAtendimentosUfDire": [{
+		"lote": "2018/12",
+		"direA": "2",
+		"direB": "2",
+		"direCD": "37",
+		"direE": "11",
+		"direF": "4",
+		"direG": "5",
+		"direH": "8",
+		"direOutros": "2",
+		"total": "71"
+	}, {
+		"lote": "2019/01",
+		"direA": "100",
+		"direB": "57",
+		"direCD": "231",
+		"direE": "65",
+		"direF": "68",
+		"direG": "98",
+		"direH": "30",
+		"direOutros": "12",
+		"total": "661"
+	}]
+}, {
+	"contagemCanalAtendimento": [{
+		"lote": "2018/12",
+		"telefone": "6",
+		"lync": "29",
+		"email": "36",
+		"total": "71"
+	}, {
+		"lote": "2019/01",
+		"telefone": "72",
+		"lync": "231",
+		"email": "358",
+		"total": "661"
+	}]
+}, {
+	"contagemPesquisasEnviadasPesquisasRespondidasMediaNotasGeral": [{
+		"lote": "2019/01",
+		"pesquisaEnviadas": "273",
+		"pesquisasRespondidas": "99",
+		"mediaCordialidade": "4.98",
+		"mediaDominio": "4.96",
+		"mediaTempestividade": "4.94"
+	}, {
+		"lote": "2018/12",
+		"pesquisaEnviadas": "43",
+		"pesquisasRespondidas": "19",
+		"mediaCordialidade": "5.00",
+		"mediaDominio": "4.95",
+		"mediaTempestividade": "4.84"
+	}]
+}, {
+	"contagemPesquisasEnviadasPesquisasRespondidasMediaNotasPorAssistenteGeral": [{
+		"lote": "2019/01",
+		"matricula": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"pesquisasEnviadas": "62",
+		"pesquisasRespondidas": "24",
+		"mediaCordialidade": "4.958333333333333",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "4.958333333333333"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c142765",
+		"nome": "CARLOS ALBERTO DALCIN DAVID ",
+		"pesquisasEnviadas": "1",
+		"pesquisasRespondidas": "0",
+		"mediaCordialidade": null,
+		"mediaDominio": null,
+		"mediatempestividade": null
+	}, {
+		"lote": "2019/01",
+		"matricula": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"pesquisasEnviadas": "20",
+		"pesquisasRespondidas": "9",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"pesquisasEnviadas": "28",
+		"pesquisasRespondidas": "8",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"pesquisasEnviadas": "32",
+		"pesquisasRespondidas": "14",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "4.9285714285714288",
+		"mediatempestividade": "4.9285714285714288"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"pesquisasEnviadas": "56",
+		"pesquisasRespondidas": "22",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "4.9545454545454541"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"pesquisasEnviadas": "10",
+		"pesquisasRespondidas": "6",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "4.833333333333333",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c111687",
+		"nome": "LUIZA CRISTIANE MIRANDA ",
+		"pesquisasEnviadas": "1",
+		"pesquisasRespondidas": "0",
+		"mediaCordialidade": null,
+		"mediaDominio": null,
+		"mediatempestividade": null
+	}, {
+		"lote": "2019/01",
+		"matricula": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"pesquisasEnviadas": "50",
+		"pesquisasRespondidas": "14",
+		"mediaCordialidade": "4.9285714285714288",
+		"mediaDominio": "4.8571428571428568",
+		"mediatempestividade": "4.7857142857142856"
+	}, {
+		"lote": "2019/01",
+		"matricula": "c113591",
+		"nome": "THIAGO DE OLIVEIRA MONTANARI ",
+		"pesquisasEnviadas": "13",
+		"pesquisasRespondidas": "2",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2018/12",
+		"matricula": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"pesquisasEnviadas": "22",
+		"pesquisasRespondidas": "12",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "4.916666666666667",
+		"mediatempestividade": "4.916666666666667"
+	}, {
+		"lote": "2018/12",
+		"matricula": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"pesquisasEnviadas": "5",
+		"pesquisasRespondidas": "1",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2018/12",
+		"matricula": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"pesquisasEnviadas": "3",
+		"pesquisasRespondidas": "1",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2018/12",
+		"matricula": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"pesquisasEnviadas": "1",
+		"pesquisasRespondidas": "0",
+		"mediaCordialidade": null,
+		"mediaDominio": null,
+		"mediatempestividade": null
+	}, {
+		"lote": "2018/12",
+		"matricula": "c052617",
+		"nome": "LUCYENNE DE OLIVEIRA SILVA ",
+		"pesquisasEnviadas": "2",
+		"pesquisasRespondidas": "1",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "5.0"
+	}, {
+		"lote": "2018/12",
+		"matricula": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"pesquisasEnviadas": "10",
+		"pesquisasRespondidas": "4",
+		"mediaCordialidade": "5.0",
+		"mediaDominio": "5.0",
+		"mediatempestividade": "4.5"
+	}]
+}, {
+	"contagemPesquisasEnviadasPesquisasRespondidasMediaNotasPorAssistente": []
+}, {
+	"contagemAtendimentosorAssistenteGeral": [{
+		"lote": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"rotina": "54",
+		"consultoria": "74",
+		"totalAtendimentoMes": "128"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c142765",
+		"nome": "CARLOS ALBERTO DALCIN DAVID ",
+		"rotina": "16",
+		"consultoria": "1",
+		"totalAtendimentoMes": "17"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"rotina": "36",
+		"consultoria": "21",
+		"totalAtendimentoMes": "57"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"rotina": "10",
+		"consultoria": "32",
+		"totalAtendimentoMes": "42"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"rotina": "45",
+		"consultoria": "67",
+		"totalAtendimentoMes": "112"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"rotina": "64",
+		"consultoria": "74",
+		"totalAtendimentoMes": "138"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"rotina": "3",
+		"consultoria": "12",
+		"totalAtendimentoMes": "15"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c111687",
+		"nome": "LUIZA CRISTIANE MIRANDA ",
+		"rotina": "0",
+		"consultoria": "1",
+		"totalAtendimentoMes": "1"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"rotina": "56",
+		"consultoria": "63",
+		"totalAtendimentoMes": "119"
+	}, {
+		"lote": "2019/01",
+		"matriculaCeopc": "c113591",
+		"nome": "THIAGO DE OLIVEIRA MONTANARI ",
+		"rotina": "19",
+		"consultoria": "13",
+		"totalAtendimentoMes": "32"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"rotina": "15",
+		"consultoria": "24",
+		"totalAtendimentoMes": "39"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"rotina": "4",
+		"consultoria": "5",
+		"totalAtendimentoMes": "9"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"rotina": "0",
+		"consultoria": "3",
+		"totalAtendimentoMes": "3"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"rotina": "1",
+		"consultoria": "1",
+		"totalAtendimentoMes": "2"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c114783",
+		"nome": "JULIANE MIEKO INOUE YOSHIDA ",
+		"rotina": "1",
+		"consultoria": "0",
+		"totalAtendimentoMes": "1"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c052617",
+		"nome": "LUCYENNE DE OLIVEIRA SILVA ",
+		"rotina": "0",
+		"consultoria": "2",
+		"totalAtendimentoMes": "2"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"rotina": "3",
+		"consultoria": "11",
+		"totalAtendimentoMes": "14"
+	}, {
+		"lote": "2018/12",
+		"matriculaCeopc": "c113591",
+		"nome": "THIAGO DE OLIVEIRA MONTANARI ",
+		"rotina": "1",
+		"consultoria": "0",
+		"totalAtendimentoMes": "1"
+	}]
+}, {
+	"contagemAtendimentosPorAssistente": []
+}, {
+	"contagemPizzaAtendimentos": [{
+		"lote": "2019/01",
+		"rotina": "303",
+		"consultoria": "358",
+		"total": "661"
+	}, {
+		"lote": "2018/12",
+		"rotina": "25",
+		"consultoria": "46",
+		"total": "71"
+	}]
+}, {
+	"feedbackAtendidosGeral": [{
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-14 15:20:43.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2869",
+		"dataRespostaPesquisa": "2019-01-14 16:35:27.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-16 11:17:46.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "7",
+		"dataRespostaPesquisa": "2019-01-16 11:18:35.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-21 13:43:36.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1486",
+		"dataRespostaPesquisa": "2019-01-21 14:16:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "FUNCION\u00c1RIO EDUCADO, DISPOSTO A AJUDAR E COM TOTAL DOM\u00cdNIO DA ASSUNTO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-23 12:20:29.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "608",
+		"dataRespostaPesquisa": "2019-01-23 12:22:52.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-23 12:33:28.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2577",
+		"dataRespostaPesquisa": "2019-01-23 12:48:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO EXCELENTE!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-23 12:34:26.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3262",
+		"dataRespostaPesquisa": "2019-01-23 14:20:49.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-17 11:22:17.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1486",
+		"dataRespostaPesquisa": "2019-01-17 11:29:27.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-18 15:59:42.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2606",
+		"dataRespostaPesquisa": "2019-01-18 17:32:50.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "FUNCION\u00c1RIO MUITO ATENCIOSO E COM GRANDE CONHECIMENTO DA \u00c1REA DE ATUA\u00c7\u00c3O."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CARTA DE CREDITO EXPORTACAO",
+		"dataEnvioPesquisa": "2019-01-03 12:51:12.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "334",
+		"dataRespostaPesquisa": "2019-01-04 11:56:21.000",
+		"notaCordialidade": "4",
+		"notaDominio": "5",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-23 12:18:27.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "242",
+		"dataRespostaPesquisa": "2019-01-23 16:42:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-04 15:00:41.000",
+		"observacaoCeopc": "CONCILIA\u00c7\u00c3O",
+		"unidadeDemandante": "2887",
+		"dataRespostaPesquisa": "2019-01-04 15:03:34.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "AO RESPONDER OS E-MAILS, SERIA INTERESSANTE COPIAR TODOS OS ENVOLVIDOS NA MENSAGEM, UMA VEZ QUE ALGUNS FUNCION\u00c1RIOS N\u00c3O T\u00caM ACESSO \u00c0S CAIXAS POSTAIS PRINCIPAIS DA AG\u00caNCIA, E \u00c0S VEZES OS GESTORES N\u00c3O REPASSAM A RESPOSTA PARA OS DEMAIS FUNCION\u00c1RIOS INTERESSADOS."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-11 11:45:44.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4362",
+		"dataRespostaPesquisa": "2019-01-11 11:47:52.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "INFORMA\u00c7\u00d5ES PRECISAS "
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-22 15:32:41.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1221",
+		"dataRespostaPesquisa": "2019-01-22 15:51:37.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "PARAB\u00c9NS! \u00d3TIMO ATENDIMENTO!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-23 09:56:58.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-23 12:06:56.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-23 10:09:10.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1486",
+		"dataRespostaPesquisa": "2019-01-23 10:19:56.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-23 12:33:52.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1207",
+		"dataRespostaPesquisa": "2019-01-23 12:44:35.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-03 15:43:09.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-03 17:17:48.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CANCELAMENTO",
+		"dataEnvioPesquisa": "2019-01-16 13:20:22.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-21 10:14:58.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2019-01-02 11:10:35.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2585",
+		"dataRespostaPesquisa": "2019-01-02 11:13:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-03 15:42:43.000",
+		"observacaoCeopc": "FINANCEIRO",
+		"unidadeDemandante": "1207",
+		"dataRespostaPesquisa": "2019-01-03 15:45:50.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "MENSAGEM SWIFT",
+		"dataEnvioPesquisa": "2019-01-14 13:49:01.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4680",
+		"dataRespostaPesquisa": "2019-01-14 14:55:13.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-14 15:33:05.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1486",
+		"dataRespostaPesquisa": "2019-01-15 11:02:05.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "SOLICITA\u00c7\u00c3O FOI ATENDIDA PRONTAMENTE, AUXILIANDO O BOM RELACIONAMENTO COM O CLIENTE."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-15 11:17:06.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-15 11:57:45.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-22 11:28:48.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2581",
+		"dataRespostaPesquisa": "2019-01-23 12:11:28.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2019-01-07 11:11:00.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-08 12:02:50.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-11 14:43:27.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "978",
+		"dataRespostaPesquisa": "2019-01-11 14:48:58.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-14 10:30:11.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "978",
+		"dataRespostaPesquisa": "2019-01-14 10:30:53.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "CANCELAMENTO",
+		"dataEnvioPesquisa": "2019-01-18 10:49:52.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-18 10:57:21.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-23 12:00:19.000",
+		"observacaoCeopc": "COMPROVA\u00c7\u00c3O DE EMBARQUE",
+		"unidadeDemandante": "4615",
+		"dataRespostaPesquisa": "2019-01-23 12:20:49.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "A EMPREGADA DEMONSTROU CONHECIMENTO E INTERESSE SOLUCIONAR O PROBLEMA APRESENTADO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-07 11:10:39.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "978",
+		"dataRespostaPesquisa": "2019-01-07 11:12:10.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-10 11:34:56.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1367",
+		"dataRespostaPesquisa": "2019-01-10 13:20:18.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-04 10:31:56.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1531",
+		"dataRespostaPesquisa": "2019-01-04 10:38:58.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-04 10:32:42.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4138",
+		"dataRespostaPesquisa": "2019-01-04 11:39:51.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-14 11:09:46.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1831",
+		"dataRespostaPesquisa": "2019-01-14 11:32:23.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-02 14:40:13.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3905",
+		"dataRespostaPesquisa": "2019-01-02 14:54:24.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-04 15:33:27.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3548",
+		"dataRespostaPesquisa": "2019-01-04 17:52:36.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2019-01-03 11:25:05.000",
+		"observacaoCeopc": "CONSULTA DE LIMITE GLOBAL",
+		"unidadeDemandante": "1831",
+		"dataRespostaPesquisa": "2019-01-03 12:13:36.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "MENSAGEM SWIFT",
+		"dataEnvioPesquisa": "2019-01-04 11:34:48.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4403",
+		"dataRespostaPesquisa": "2019-01-04 11:39:25.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO AGIL E RESOLUTIVO. "
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-07 12:10:52.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1314",
+		"dataRespostaPesquisa": "2019-01-07 16:10:12.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-09 11:40:16.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "555",
+		"dataRespostaPesquisa": "2019-01-09 12:02:09.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "DANIELA \u00c9 EXCEPCIONAL!!! SEMPRE MUITO PRESTATIVA E MUITO INTEIRADA NO QUE FAZ, OBRIGADO PELO ATENDIMENTO!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2019-01-14 10:47:10.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-14 10:50:37.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2019-01-11 17:48:59.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2575",
+		"dataRespostaPesquisa": "2019-01-14 11:00:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "4",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-14 14:13:35.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4362",
+		"dataRespostaPesquisa": "2019-01-14 15:01:41.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "EQUIPE ALTAMENTE COMPROMETIDA E R\u00c1PIDA, DESTAQUE AOS FUNCION\u00c1RIOS BRUNO E EDUARDO QUE PRONTAMENTE ATENDEU A DEMANDA."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-14 17:04:05.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2869",
+		"dataRespostaPesquisa": "2019-01-15 11:19:26.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-15 15:35:22.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2898",
+		"dataRespostaPesquisa": "2019-01-16 09:26:12.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-24 17:12:43.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4361",
+		"dataRespostaPesquisa": "2019-01-24 17:27:23.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO SENSACIONAL. SEMPRE PRESTATIVO E MUITO EDUCADO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-14 12:14:14.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2898",
+		"dataRespostaPesquisa": "2019-01-14 12:43:21.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "FUI MUITO BEM ATENDIDA COM BASTANTE ATEN\u00c7\u00c3O"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "MENSAGEM SWIFT",
+		"dataEnvioPesquisa": "2019-01-04 15:26:07.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2947",
+		"dataRespostaPesquisa": "2019-01-04 15:26:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-14 14:11:25.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1168",
+		"dataRespostaPesquisa": "2019-01-14 14:14:34.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-23 18:03:45.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4361",
+		"dataRespostaPesquisa": "2019-01-24 10:56:53.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-18 15:36:43.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1208",
+		"dataRespostaPesquisa": "2019-01-21 10:12:10.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO EXCELENTE!!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-22 14:21:05.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1004",
+		"dataRespostaPesquisa": "2019-01-22 14:37:19.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "MUITO SIMP\u00c1TICO, ENTENDE OS PROBLEMAS DA AG\u00caNCIA E TENTA AJUDAR AO M\u00c1XIMO. FOI MUITO SOLICITO E PRO ATIVO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-22 18:05:00.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2577",
+		"dataRespostaPesquisa": "2019-01-22 18:11:28.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "AGRADE\u00c7O IMENSAMENTE AO COLEGA EDUARDO NANTES QUE REALIZOU UM EXCELENTE TRABALHO. ATENDEU A DEMANDA DA NOSSA SR DE FORMA TEMPESTIVA E EFICIENTE, AL\u00c9M DE PRESTAR TODO O SUPORTE NECESS\u00c1RIO. PARAB\u00c9NS PELO TRABALHO E MUITO OBRIGADA!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2019-01-11 17:43:28.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4789",
+		"dataRespostaPesquisa": "2019-01-11 17:47:49.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "O FUNCION\u00c1RIO EDUARDO NANTES FOI MUITO ATENCIOSO. AGRADECEMOS PELO \u00d3TIMO ATENDIMENTO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c106407",
+		"nome": "EDUARDO NANTES ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-04 15:23:25.000",
+		"observacaoCeopc": "USIPLAST",
+		"unidadeDemandante": "4048",
+		"dataRespostaPesquisa": "2019-01-08 11:09:17.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2019-01-14 14:01:51.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "413",
+		"dataRespostaPesquisa": "2019-01-14 15:07:31.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "PARAB\u00c9NS OS COLEGAS ERICA DE PAULA ROSA LE SENECHAL E THIAGO DE OLIVEIRA MONTANARI PELO ATENDIMENTO E PROFISSIONALISMO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2019-01-15 14:25:39.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3337",
+		"dataRespostaPesquisa": "2019-01-15 14:35:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-15 14:26:08.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2515",
+		"dataRespostaPesquisa": "2019-01-15 14:27:25.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-15 14:41:48.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2374",
+		"dataRespostaPesquisa": "2019-01-15 15:12:06.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-16 16:08:36.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "379",
+		"dataRespostaPesquisa": "2019-01-16 16:46:04.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-16 16:09:27.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "407",
+		"dataRespostaPesquisa": "2019-01-17 17:07:07.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-24 16:04:28.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "369",
+		"dataRespostaPesquisa": "2019-01-24 16:35:13.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "EXCELENTE ATENDIMENTO PRESTADO PELA COLEGA ERICA, GOSTARIA QUE OS EMPREGADOS DA GELIT E GECAM FOSSEM COM ELA. "
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-24 16:04:55.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2515",
+		"dataRespostaPesquisa": "2019-01-24 16:05:54.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "SEMPRE UM \u00d3TIMO ATENDIMENTO."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-24 16:11:09.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1589",
+		"dataRespostaPesquisa": "2019-01-24 16:14:09.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "\u00c9RICA EST\u00c1 DE PARAB\u00c9NS PELA EFICI\u00caNCIA E ATEN\u00c7\u00c3O. TODAS AS INFORMA\u00c7\u00d5ES FORAM CORRETAS E TEMPESTIVAS."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2019-01-07 14:51:54.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2515",
+		"dataRespostaPesquisa": "2019-01-07 15:04:46.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-15 15:09:32.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2775",
+		"dataRespostaPesquisa": "2019-01-15 16:53:18.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-17 16:44:14.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "968",
+		"dataRespostaPesquisa": "2019-01-18 09:11:45.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-23 16:18:28.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "417",
+		"dataRespostaPesquisa": "2019-01-23 17:12:41.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "MINHAS EXPECTATIVAS EM RELA\u00c7\u00c3O AO ATENDIMENTO FORAM SUPERADAS. A EQUIPE EST\u00c1 DE PARAB\u00c9NS."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-03 12:05:42.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2775",
+		"dataRespostaPesquisa": "2019-01-03 13:52:28.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-23 14:42:52.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1589",
+		"dataRespostaPesquisa": "2019-01-23 14:50:46.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIDO POR \u00c9RICA DE PAULA ROSA LE SENECHAL, DESDE A PRIMEIRA LIGA\u00c7\u00c3O VIA TELEFONE SE MOSTROU SEMPRE DISPOSTA A AJUDAR A RESOLVER A QUEST\u00c3O, ATUOU JUNTO \u00c0S DEMAIS \u00c1REA DA CAIXA E PRESTOU ORIENTA\u00c7\u00d5ES PRECISAS COM AGILIDADE E COMPET\u00caNCIA. PARAB\u00c9NS PELA POSTURA E ATENDIMENTO!"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-24 16:04:13.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "379",
+		"dataRespostaPesquisa": "2019-01-24 16:37:23.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-08 14:46:48.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2775",
+		"dataRespostaPesquisa": "2019-01-08 16:23:46.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2019-01-17 16:46:49.000",
+		"observacaoCeopc": "\r\n",
+		"unidadeDemandante": "379",
+		"dataRespostaPesquisa": "2019-01-17 17:59:49.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "MENSAGEM SWIFT",
+		"dataEnvioPesquisa": "2019-01-17 16:48:53.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "407",
+		"dataRespostaPesquisa": "2019-01-18 16:57:35.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-18 13:25:14.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3337",
+		"dataRespostaPesquisa": "2019-01-22 13:49:40.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-21 14:46:59.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2775",
+		"dataRespostaPesquisa": "2019-01-21 15:19:36.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c063490",
+		"nome": "ERICA DE PAULA ROSA LE SENECHAL ",
+		"nomeAtividade": "MENSAGEM SWIFT",
+		"dataEnvioPesquisa": "2019-01-23 15:05:15.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "413",
+		"dataRespostaPesquisa": "2019-01-23 15:10:18.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO MUITO \u00c1GIL."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-23 15:51:32.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "191",
+		"dataRespostaPesquisa": "2019-01-23 16:34:29.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2019-01-24 11:10:24.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1580",
+		"dataRespostaPesquisa": "2019-01-24 11:39:20.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "CONTINUEM COM A PRESTEZA DE SEMPRE. CONSIDERO UM EXEMPLO A SER SEGUIDO POR OUTRAS \u00c1REAS MEIOS DA CAIXA, COM AS QUAIS TEMOS ENORMES DIFICULDADES DE COMUNICA\u00c7\u00c3O."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-22 17:49:57.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "191",
+		"dataRespostaPesquisa": "2019-01-23 08:44:48.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "FUI ATENDIDA PELA COLEGA LETICIA LEAL DE CARVALHO. DEI CINCO ESTRELAS PARA O ATENDIMENTO PORQUE N\u00c3O TEM COMO DAR 10. ELA FOI AL\u00c9M DO QUE SE ESPERA DE UM ATENDIMENTO. FOI UMA GRATA SURPRESA TER SIDO T\u00c3O BEM ASSESSORADA E ACOLHIDA. ELA DESEMPENHA COM MAESTRIA SUA FUN\u00c7\u00c3O, TANTO NO QUE SE REFERE AO TRATAMENTO DA DEMANDA EM SI QUANTO AO TRATAMENTO DADO AO COLEGA. SE VOC\u00ca QUE EST\u00c1 LENDO \u00c9 O GESTOR DELA SAIBA QUE TENS NAS M\u00c3OS UMA COLEGA COMPROMETIDA, EXTREMAMENTE EMP\u00c1TICA E COM CONHECIMENTO DO TRABALHO A SER EXECUTADO. PRECISAMOS DE PESSOAS COMO LETICIA EM NOSSO MEIO. PARAB\u00c9NS, LETICIA. VOU CUMPRIR MINHA PROMESSA. FORTE ABRA\u00c7O."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "HIST\u00d3RICO EXPORTADOR",
+		"dataEnvioPesquisa": "2019-01-24 11:36:17.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2692",
+		"dataRespostaPesquisa": "2019-01-24 12:34:06.000",
+		"notaCordialidade": "5",
+		"notaDominio": "4",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "O ATENDIMENTO FOI MUITO CORDIAL APESAR DE SER TRANSFERIDO ALGUMAS VEZES ANTES DO ATENDIMENTO DEFINITIVO, MAIS AT\u00c9 A\u00cd TUDO BEM, COM RELA\u00c7\u00c3O AO DOM\u00cdNIO DO ASSUNTO RECEBI A INFORMA\u00c7\u00c3O DE QUE APENAS UM E-MAIL RESOLVIA A QUEST\u00c3O E RECEBEMOS A INFORMA\u00c7\u00c3O OFICIAL QUE DEVEMOS ANEXAR UM MO COM ASSINATURA DO CLIENTE ISSO NOS FEZ PERDER UM DIA. A TEMPESTIVIDADE EST\u00c1 TUDO BEM OS PRAZOS EST\u00c3O FUNCIONANDO BEM COM RELA\u00c7\u00c3O AO ASSUNTO QUE TRATEI. "
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-24 13:47:04.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3630",
+		"dataRespostaPesquisa": "2019-01-24 14:04:27.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "SEMPRE QUE PRECISAMOS SOMOS ATENDIDOS PRONTAMENTE."
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c077793",
+		"nome": "LETICIA LEAL DE CARVALHO ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-24 15:54:46.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "555",
+		"dataRespostaPesquisa": "2019-01-24 15:59:35.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "A COLEGA LETICIA LEAL DE CARVALHO SEMPRE ATENDE TEMPESTIVAMENTE E COM CORDIALIDADE. "
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-10 17:03:41.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4786",
+		"dataRespostaPesquisa": "2019-01-10 18:11:33.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-15 17:44:00.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-15 18:09:28.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-17 17:40:51.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-17 18:30:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2019-01-18 18:05:41.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-21 10:20:14.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-18 18:07:37.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "554",
+		"dataRespostaPesquisa": "2019-01-21 10:39:17.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-22 13:08:05.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "4806",
+		"dataRespostaPesquisa": "2019-01-22 13:08:35.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "ATENDIMENTO EXCELENTE"
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-07 16:17:17.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1831",
+		"dataRespostaPesquisa": "2019-01-07 16:24:47.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "COBRAN\u00c7A DOCUMENTARIA",
+		"dataEnvioPesquisa": "2019-01-09 13:34:17.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-09 14:05:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-23 17:19:01.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1298",
+		"dataRespostaPesquisa": "2019-01-23 17:34:02.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-23 17:36:51.000",
+		"observacaoCeopc": "ALTERA\u00c7\u00c3O DE NATUREZA DA OPERA\u00c7\u00c3O",
+		"unidadeDemandante": "4786",
+		"dataRespostaPesquisa": "2019-01-23 17:41:18.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-08 16:35:14.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3200",
+		"dataRespostaPesquisa": "2019-01-08 18:01:32.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2019-01-11 16:25:43.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2512",
+		"dataRespostaPesquisa": "2019-01-14 10:04:07.000",
+		"notaCordialidade": "5",
+		"notaDominio": "4",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-14 16:25:51.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "22",
+		"dataRespostaPesquisa": "2019-01-14 17:00:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2019-01-03 13:02:46.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "690",
+		"dataRespostaPesquisa": "2019-01-16 12:40:55.000",
+		"notaCordialidade": "4",
+		"notaDominio": "4",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c113591",
+		"nome": "THIAGO DE OLIVEIRA MONTANARI ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2019-01-03 15:39:36.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "373",
+		"dataRespostaPesquisa": "2019-01-03 16:01:15.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2019/01",
+		"matriculaCeopc": "c113591",
+		"nome": "THIAGO DE OLIVEIRA MONTANARI ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2019-01-17 17:21:27.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "426",
+		"dataRespostaPesquisa": "2019-01-17 17:53:50.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2018-12-27 16:48:07.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2585",
+		"dataRespostaPesquisa": "2018-12-27 17:44:54.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2018-12-27 16:49:19.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2940",
+		"dataRespostaPesquisa": "2018-12-27 17:24:25.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "EXCELENTE ATENDIMENTO, BASTANTE SOLICITO."
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2018-12-28 12:01:55.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "156",
+		"dataRespostaPesquisa": "2018-12-28 13:41:38.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "4",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2018-12-28 15:51:06.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2940",
+		"dataRespostaPesquisa": "2018-12-28 15:54:18.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2018-12-28 16:23:21.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1068",
+		"dataRespostaPesquisa": "2019-01-02 11:17:58.000",
+		"notaCordialidade": "5",
+		"notaDominio": "4",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2018-12-24 11:30:08.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "1486",
+		"dataRespostaPesquisa": "2019-01-08 11:00:51.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2018-12-26 13:28:34.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2585",
+		"dataRespostaPesquisa": "2018-12-26 14:30:09.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "EMPREGADO BRUNO LOUREIRO \u00c9 SEMPRE PRESTATIVO E ATENCIOSO EM TODOS OS ATENDIMENTOS!!!!!"
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2018-12-28 11:50:57.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2585",
+		"dataRespostaPesquisa": "2018-12-28 11:51:39.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"dataEnvioPesquisa": "2018-12-28 13:33:41.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2606",
+		"dataRespostaPesquisa": "2018-12-28 14:29:48.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "TRATA-SE DE EXCELENTE PROFISSIONAL QUE SEMPRE NOS ATENDE COM PRESTEZA E EFICI\u00caNCIA."
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2018-12-21 11:28:05.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "159",
+		"dataRespostaPesquisa": "2018-12-21 11:29:23.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "LIQUIDACAO",
+		"dataEnvioPesquisa": "2018-12-24 10:13:56.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "242",
+		"dataRespostaPesquisa": "2018-12-24 10:37:03.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c091639",
+		"nome": "BRUNO LOUREIRO DE OLIVEIRA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2018-12-24 10:15:45.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2581",
+		"dataRespostaPesquisa": "2018-12-24 11:08:43.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c117210",
+		"nome": "CAROLINA MOURA NUCHE ",
+		"nomeAtividade": "ORDEM DE PAGAMENTO",
+		"dataEnvioPesquisa": "2018-12-27 11:33:58.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "978",
+		"dataRespostaPesquisa": "2018-12-27 11:34:37.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c086812",
+		"nome": "DANIELA PANDO DA SILVA ",
+		"nomeAtividade": "POSICAO DE CONTRATOS",
+		"dataEnvioPesquisa": "2018-12-28 11:20:41.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "2589",
+		"dataRespostaPesquisa": "2018-12-28 11:24:01.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c052617",
+		"nome": "LUCYENNE DE OLIVEIRA SILVA ",
+		"nomeAtividade": "CONTRATACAO",
+		"dataEnvioPesquisa": "2018-12-20 18:58:11.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "407",
+		"dataRespostaPesquisa": "2018-12-21 10:21:14.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "A CEOPC07 \u00c9 A \u00daNICA QUE FUNCIONA DIREITO NESSA CENTRALIZADORA. AS DEMAIS C\u00c9LULAS PRECISAM DE UMA BOA AULA DOS IMPACTOS E DANOS QUE SUAS A\u00c7\u00d5ES CAUSAM NO DIA-A-DIA E NO RELACIONAMENTO COM O CLIENTE."
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PAGAMENTO ANTECIPADO",
+		"dataEnvioPesquisa": "2018-12-27 13:32:23.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3419",
+		"dataRespostaPesquisa": "2018-12-27 17:57:59.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "FOI UM SHOW DE EFICI\u00caNCIA."
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "PRORROGACAO",
+		"dataEnvioPesquisa": "2018-12-27 15:38:20.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "919",
+		"dataRespostaPesquisa": "2018-12-27 16:34:05.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "3",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "CARTA DE CREDITO EXPORTACAO",
+		"dataEnvioPesquisa": "2018-12-27 16:21:12.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "3630",
+		"dataRespostaPesquisa": "2018-12-27 16:24:47.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": null
+	}, {
+		"LOTE": "2018/12",
+		"matriculaCeopc": "c121708",
+		"nome": "THAIS DE SOUZA ",
+		"nomeAtividade": "ESTEIRA COMEX",
+		"dataEnvioPesquisa": "2018-12-27 17:29:28.000",
+		"observacaoCeopc": null,
+		"unidadeDemandante": "555",
+		"dataRespostaPesquisa": "2018-12-27 17:52:16.000",
+		"notaCordialidade": "5",
+		"notaDominio": "5",
+		"notaTempestividade": "5",
+		"feedbackAtendido": "EXCELENTE ATENDIMENTO COMO SEMPRE! PARABENIZO VOC\u00caS DO MIDDLE OFFICE PELO PADR\u00c3O DE ATENDIMENTO MANTIDO, SE TODAS AS \u00c1REAS DA CAIXA FOSSEM ASSIM CERTAMENTE TER\u00cdAMOS MENOS RETRABALHO E MENOS STRESS."
+	}]
+}, {
+	"feedbackAtendidosAssistente": []
+}, {
+	"contagemAtendimentoRotinaPorNomeAtividade": [{
+		"lote": "2019/01",
+		"nomeRotina": "POSICAO DE CONTRATOS",
+		"quantidade": "69"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PAGAMENTO ANTECIPADO",
+		"quantidade": "44"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "CANCELAMENTO \u2013 CALCULO",
+		"quantidade": "28"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "BAIXA \u2013 CALCULO",
+		"quantidade": "25"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "LIQUIDACAO \u2013 CALCULO DE VENCIDOS",
+		"quantidade": "20"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "BAIXA \u2013 EMAIL ENCARGOS",
+		"quantidade": "13"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "TRANSFERENCIA DE OP \u2013 VIABILIDADE",
+		"quantidade": "13"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PROTESTO \u2013 CALCULO",
+		"quantidade": "12"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "HISTORICO EXPORTADOR",
+		"quantidade": "12"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "DEVOLUCAO DE OP",
+		"quantidade": "11"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "LIQUIDACAO \u2013 SALDO INSUFICIENTE",
+		"quantidade": "9"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "CONFERENCIA DE CALCULOS",
+		"quantidade": "9"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PRORROGACAO \u2013 CALCULO",
+		"quantidade": "7"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PRORROGACAO \u2013 REGISTRO",
+		"quantidade": "6"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PRORROGACAO \u2013 VIABILIDADE",
+		"quantidade": "5"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "PRORROGACAO \u2013 COTACAO",
+		"quantidade": "5"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "CANCELAMENTO \u2013 REGISTRO",
+		"quantidade": "5"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "ENCARGOS BACEN",
+		"quantidade": "4"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "INCLUSAO DE CLAUSULAS",
+		"quantidade": "3"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "SWIFT",
+		"quantidade": "2"
+	}, {
+		"lote": "2019/01",
+		"nomeRotina": "CANCELAMENTO \u2013 CONFORMIDADE",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "LIQUIDACAO \u2013 CALCULO DE VENCIDOS",
+		"quantidade": "4"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "PRORROGACAO \u2013 CALCULO",
+		"quantidade": "4"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "PRORROGACAO \u2013 VIABILIDADE",
+		"quantidade": "3"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "PAGAMENTO ANTECIPADO",
+		"quantidade": "3"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "TRANSFERENCIA DE OP \u2013 VIABILIDADE",
+		"quantidade": "2"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "POSICAO DE CONTRATOS",
+		"quantidade": "2"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "PRORROGACAO \u2013 REGISTRO",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "PRORROGACAO \u2013 COTACAO",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "HISTORICO EXPORTADOR",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "INCLUSAO DE CLAUSULAS",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "CONFERENCIA DE CALCULOS",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "CANCELAMENTO \u2013 CALCULO",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeRotina": "CANCELAMENTO \u2013 CONFORMIDADE",
+		"quantidade": "1"
+	}]
+}, {
+	"contagemAtendimentoConsultoriaPorNomeAtividade": [{
+		"lote": "2019/01",
+		"nomeConsultoria": "CONTRATACAO",
+		"quantidade": "112"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "ORDEM DE PAGAMENTO",
+		"quantidade": "58"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "PAGAMENTO ANTECIPADO",
+		"quantidade": "42"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "ESTEIRA COMEX",
+		"quantidade": "34"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "LIQUIDACAO",
+		"quantidade": "34"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"quantidade": "18"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "POSICAO DE CONTRATOS",
+		"quantidade": "15"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "PRORROGACAO",
+		"quantidade": "11"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "CARTA DE CREDITO EXPORTACAO",
+		"quantidade": "9"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "MENSAGEM SWIFT",
+		"quantidade": "7"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "CANCELAMENTO",
+		"quantidade": "5"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "TRANSFERENCIA/DEVOLUCAO DE OP",
+		"quantidade": "5"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "COBRAN\u00c7A DOCUMENTARIA",
+		"quantidade": "4"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "BAIXA",
+		"quantidade": "2"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "HIST\u00d3RICO EXPORTADOR",
+		"quantidade": "1"
+	}, {
+		"lote": "2019/01",
+		"nomeConsultoria": "TARIFAS",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "ORDEM DE PAGAMENTO",
+		"quantidade": "11"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "CONTRATACAO",
+		"quantidade": "10"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "PAGAMENTO ANTECIPADO",
+		"quantidade": "5"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "PRORROGACAO",
+		"quantidade": "4"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "ESTEIRA COMEX",
+		"quantidade": "4"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "LIQUIDACAO",
+		"quantidade": "3"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "CLIENTES BLOQUEADOS/SUSPENSOS",
+		"quantidade": "3"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "CARTA DE CREDITO EXPORTACAO",
+		"quantidade": "2"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "CANCELAMENTO",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "COBRAN\u00c7A DOCUMENTARIA",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "TRANSFERENCIA/DEVOLUCAO DE OP",
+		"quantidade": "1"
+	}, {
+		"lote": "2018/12",
+		"nomeConsultoria": "POSICAO DE CONTRATOS",
+		"quantidade": "1"
+	}]
+}, {
+	"dadosEmpregadoCeopc": {
+		"matricula": "c111710",
+		"nome": "EDUARDO CHIAKI CHUMAN ",
+		"idCelula": "6",
+		"nomeCelula": "TI",
+		"nivelAcesso": "EMPREGADO",
+		"funcao": "ASSISTENTE PLENO "
+	}
+}]
