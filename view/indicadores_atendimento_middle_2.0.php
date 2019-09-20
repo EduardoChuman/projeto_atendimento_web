@@ -61,6 +61,15 @@
                         ############################          INICIO DA PÁGINA         ############################
                         ###########################################################################################
                         -->
+                        <div class="box box-warning">
+							<div class="box-body">
+                                <h5> Selecione o mês que deseja visualizar</h5>
+                                <div class="col-md-12">
+                                    <select id="mesBaseIndicadores" class="form-control"></select>
+                                </div>
+                            </div>
+						</div> 
+
                         <h3 class="text-center">
                             Números relativos a <span id="mes-atual"></span>
                         </h3>
@@ -202,7 +211,8 @@
 		<script src="../../esteiracomex2/chart/Chart.js"></script>
         <script src="../../esteiracomex2/chart/Chart.bundle.js"></script>
         <script src="js/moment.js"></script>
-        <script src="js/indicadoresAtendimento.js"></script>		      
+        <script src="js/indicadoresAtendimento.js"></script>
+        <script src="js/indicadoresAtendimentoPeriodoRestrito.js"></script>		      
         <script src="js/componentes-iterativos.js"></script>           
         <!-- /SCRIPTS DA PÁGINA-->
 	</body>

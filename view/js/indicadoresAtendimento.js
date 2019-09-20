@@ -1,6 +1,21 @@
 var _tabelaPizzaContagemAtendimentos;
 var _perfilEmpregado;
 var _celulaEmpregado;
+var _eventualCelula;
+var _eventualCeopc;
+var _mesAtual;
+var _mesPassado;
+var _doisMesesAtras;
+var _jsonPizzaAtendimentoRotinaConsultoria;
+var _jsonContagemPorCanalAtendimento;
+var _jsonMediaNotasPesquisa;
+var _jsonListaAtendimentoRotina;
+var _jsonListaAtendimentoConsultoria;
+var _jsonAtendimentosPorDire;
+var _jsonAtendimentoPorAssistente;
+var _jsonPesquisasEnviadasRespondidasPorAssistente;
+var _jsonListaFeedbackAtendimentos;
+
 
 $(document).ready(function () 
 {
@@ -8,6 +23,10 @@ $(document).ready(function ()
     inicializarTodosOsDataTableIndicadores();
     exibirDataTableAtendimentoPorTipo("#exibirAtendimentoRotina", "#volumeAtendimentoRotina", _tabelaListaAtendimentoRotina);  
     exibirDataTableAtendimentoPorTipo("#exibirAtendimentoConsultoria", "#volumeAtendimentoConsultoria", _tabelaListaAtendimentoConsultoria); 
+    // restringirPorLoteDadosNoDataTableTabelaAtendimentoPorAssistente();
+    // selectCaseComPeriodos();
+    // atualizaDadosDataTablePorLote();
+    // atualizaDataTablePorLote();
 });
 
 function exibirDataTableAtendimentoPorTipo(_botao, _div, _tabela) 
@@ -34,18 +53,29 @@ function carregarApiAtendimentoMiddle()
     {
         method: "GET",
         url: "http://www.ceopc.hom.sp.caixa/api/public/atendimento_web_relatorio_indicadores.php/indicadores_relatorio_atendimento_middle",
+        // url: "../model/origemDados/queries/relatorio/json/indicadores_relatorio_atendimento_middle.json",
         dataType: "json",
     }
     ).done(function (json) 
     { 
         console.log(json);
+        _jsonPizzaAtendimentoRotinaConsultoria = json[7].contagemPizzaAtendimentos
+        _jsonContagemPorCanalAtendimento = json[1].contagemCanalAtendimento
+        _jsonMediaNotasPesquisa = json[2].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasGeral
+        _jsonListaAtendimentoRotina = json[10].contagemAtendimentoRotinaPorNomeAtividade
+        _jsonListaAtendimentoConsultoria = json[11].contagemAtendimentoConsultoriaPorNomeAtividade
+        _jsonAtendimentosPorDire = json[0].contagemAtendimentosUfDire
+        _jsonAtendimentoPorAssistente = json[5].contagemAtendimentosorAssistenteGeral
+        _jsonPesquisasEnviadasRespondidasPorAssistente = json[3].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasPorAssistenteGeral
+        _jsonListaFeedbackAtendimentos = json[8].feedbackAtendidosGeral
+
         capturaDadosPerfilUsuario(json[12].dadosEmpregadoCeopc);
-        if (_perfilEmpregado == "GESTOR" || _celulaEmpregado == "TI") 
-        {
+        // if (_perfilEmpregado == "GESTOR" || _celulaEmpregado == "TI" || _eventualCelula == "SIM" || _eventualCeopc == "SIM") 
+        // {
             carregaDadosNosChartsAndDataTableGestores(json); 
-        } else {
-            carregaDadosNosChartsAndDataTableEmpregados(json); 
-        }
+        // } else {
+        //     carregaDadosNosChartsAndDataTableEmpregados(json); 
+        // }
     }
     ).fail(function (jqXHR, textStatus, errorThrown) 
     {
@@ -58,18 +88,41 @@ function capturaDadosPerfilUsuario(json)
 {
     _celulaEmpregado = json.nomeCelula;
     _perfilEmpregado = json.nivelAcesso;
+    _eventualCelula = json.eventualCelula;
+    _eventualCeopc = json.eventualCeopc;
 }
 
 function carregaDadosNosChartsAndDataTableGestores(json)
 {
-    atualizarDadosChartPizzaAtendimentoRotinaConsultoria(json[7].contagemPizzaAtendimentos);
-    atualizarDataTablePizzaAtendimentoRotinaConsultoria(json[7].contagemPizzaAtendimentos);
-    atualizarDadosChartPorCanalAtendimento(json[1].contagemCanalAtendimento);
-    atualizarDataTablePorCanalAtendimento(json[1].contagemCanalAtendimento);
-    atualizarDadosChartMediaNotasPesquisa(json[2].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasGeral);
-    atualizarDataTableListaAtendimentoRotina(json[10].contagemAtendimentoRotinaPorNomeAtividade);
-    atualizarDataTableListaAtendimentoConsultoria(json[11].contagemAtendimentoConsultoriaPorNomeAtividade);
+    atualizarDadosChartPizzaAtendimentoRotinaConsultoria(_jsonPizzaAtendimentoRotinaConsultoria);
+    atualizarDataTablePizzaAtendimentoRotinaConsultoria(_jsonPizzaAtendimentoRotinaConsultoria);
+    atualizarDadosChartPorCanalAtendimento(_jsonContagemPorCanalAtendimento);
+    atualizarDataTablePorCanalAtendimento(_jsonContagemPorCanalAtendimento);
+    atualizarDadosChartMediaNotasPesquisa(_jsonMediaNotasPesquisa);
+    atualizarDataTableMediaNotasPesquisa(_jsonMediaNotasPesquisa);
+    atualizarDataTableListaAtendimentoRotina(_jsonListaAtendimentoRotina);
+    atualizarDataTableListaAtendimentoConsultoria(_jsonListaAtendimentoConsultoria);
+    atualizarDataTableAtendimentosPorDire(_jsonAtendimentosPorDire);
+    atualizarDataTableAtendimentoPorAssistente(_jsonAtendimentoPorAssistente);
+    atualizarDataTablePesquisasEnviadasRespondidasPorAssistente(_jsonPesquisasEnviadasRespondidasPorAssistente);
+    atualizarDataTableFeedbackAtendimentos(_jsonListaFeedbackAtendimentos);
 }
+
+// function carregaDadosNosChartsAndDataTableEmpregados(json)
+// {
+//     atualizarDadosChartPizzaAtendimentoRotinaConsultoria(json[7].contagemPizzaAtendimentos);
+//     atualizarDataTablePizzaAtendimentoRotinaConsultoria(json[7].contagemPizzaAtendimentos);
+//     atualizarDadosChartPorCanalAtendimento(json[1].contagemCanalAtendimento);
+//     atualizarDataTablePorCanalAtendimento(json[1].contagemCanalAtendimento);
+//     atualizarDadosChartMediaNotasPesquisa(json[2].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasGeral);
+//     atualizarDataTableMediaNotasPesquisa(json[2].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasGeral);
+//     atualizarDataTableListaAtendimentoRotina(json[10].contagemAtendimentoRotinaPorNomeAtividade);
+//     atualizarDataTableListaAtendimentoConsultoria(json[11].contagemAtendimentoConsultoriaPorNomeAtividade);
+//     atualizarDataTableAtendimentosPorDire(json[0].contagemAtendimentosUfDire);
+//     atualizarDataTableAtendimentoPorAssistente(json[6].contagemAtendimentosPorAssistente);
+//     atualizarDataTablePesquisasEnviadasRespondidasPorAssistente(json[4].contagemPesquisasEnviadasPesquisasRespondidasMediaNotasPorAssistente);
+//     atualizarDataTableFeedbackAtendimentos(json[9].feedbackAtendidosAssistente);
+// }
 
 /*------------------------------------------------*/
 
@@ -83,7 +136,7 @@ function atualizarDadosChartMediaNotasPesquisa(json)
             backgroundColor: [
                 'rgba(233, 129, 12, 0.4)',
                 'rgba(50, 52, 53, 0.4)',
-                'rgba(223, 210, 206, 0.6)'
+                'rgba(223, 210, 206, 0.9)'
             ],
             borderColor: [
                 'rgba(233, 129, 12, 1)',
@@ -200,8 +253,6 @@ function atualizarDataTablePizzaAtendimentoRotinaConsultoria(json)
     }
 } 
 
-/*------------------------------------------------*/
-
 function atualizarDadosChartPorCanalAtendimento(json)
 {
     chartData =
@@ -212,7 +263,7 @@ function atualizarDadosChartPorCanalAtendimento(json)
             backgroundColor: [
                 'rgba(233, 129, 12, 0.4)',
                 'rgba(50, 52, 53, 0.4)',
-                'rgba(223, 210, 206, 0.6)'
+                'rgba(223, 210, 206, 0.9)'
             ],
             borderColor: [
                 'rgba(233, 129, 12, 1)',
@@ -261,6 +312,15 @@ function atualizarDataTablePorCanalAtendimento(json)
     }
 }
 
+function atualizarDataTableMediaNotasPesquisa(json) 
+{
+    _tabelaMediaNotasPesquisa.clear().draw(false);
+    if (json != undefined && json != "") 
+    {
+        _tabelaMediaNotasPesquisa.rows.add(json).draw(true);
+    }
+}
+
 function atualizarDataTableListaAtendimentoRotina(json) 
 {
     _tabelaListaAtendimentoRotina.clear().draw(false);
@@ -276,6 +336,42 @@ function atualizarDataTableListaAtendimentoConsultoria(json)
     if (json != undefined && json != "") 
     {
         _tabelaListaAtendimentoConsultoria.rows.add(json).draw(true);
+    }
+}
+
+function atualizarDataTableAtendimentosPorDire(json) 
+{
+    _tabelaAtendimentosPorDire.clear().draw(false);
+    if (json != undefined && json != "") 
+    {
+        _tabelaAtendimentosPorDire.rows.add(json).draw(true);
+    }
+}
+
+function atualizarDataTableAtendimentoPorAssistente(json) 
+{
+    _tabelaAtendimentoPorAssistente.clear().draw(false);
+    if (json != undefined && json != "") 
+    {
+        _tabelaAtendimentoPorAssistente.rows.add(json).draw(true);
+    }
+}
+
+function atualizarDataTablePesquisasEnviadasRespondidasPorAssistente(json) 
+{
+    _tabelaPesquisasEnviadasRespondidasPorAssistente.clear().draw(false);
+    if (json != undefined && json != "") 
+    {
+        _tabelaPesquisasEnviadasRespondidasPorAssistente.rows.add(json).draw(true);
+    }
+}
+
+function atualizarDataTableFeedbackAtendimentos(json) 
+{
+    _tabelaFeedbackAtendimentos.clear().draw(false);
+    if (json != undefined && json != "") 
+    {
+        _tabelaFeedbackAtendimentos.rows.add(json).draw(true);
     }
 }
 
@@ -297,10 +393,10 @@ function inicializarTodosOsDataTableIndicadores()
         bInfo: false,
         columns: 
         [
-            { data: "lote", title: "Lote", width: "25%", class: "dt-center"},
-            { data: "rotina", title: "Rotina", width: "25%", class: "dt-center"},
-            { data: "consultoria", title: "Consultoria", width: "25%", class: "dt-center"}, 
-            { data: "total", title: "Total", width: "25%", class: "dt-center"} 
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "rotina", title: "Rotina", class: "dt-center"},
+            { data: "consultoria", title: "Consultoria", class: "dt-center"}, 
+            { data: "total", title: "Total", class: "dt-center"} 
         ]
     });
 
@@ -318,11 +414,11 @@ function inicializarTodosOsDataTableIndicadores()
         bInfo: false,
         columns: 
         [
-            { data: "lote", title: "Lote", width: "20%", class: "dt-center"},
-            { data: "email", title: "E-mail", width: "20%", class: "dt-center"},
-            { data: "lync", title: "Lync", width: "20%", class: "dt-center"}, 
-            { data: "telefone", title: "Telefone", width: "20%", class: "dt-center"},
-            { data: "total", title: "Total", width: "20%", class: "dt-center"} 
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "email", title: "E-mail", class: "dt-center"},
+            { data: "lync", title: "Lync", class: "dt-center"}, 
+            { data: "telefone", title: "Telefone", class: "dt-center"},
+            { data: "total", title: "Total", class: "dt-center"} 
         ]
     });
 
@@ -340,12 +436,13 @@ function inicializarTodosOsDataTableIndicadores()
         bInfo: false,
         columns: 
         [
-            { data: "lote", title: "Lote", width: "10%", class: "dt-center"},
-            { data: "pesquisaEnviadas", title: "Pesquisas Enviadas", width: "18%", class: "dt-center"},
-            { data: "pesquisasRespondidas", title: "Pesquisas Respondidas", width: "18%", class: "dt-center"}, 
-            { data: "mediaCordialidade", title: "Média Cordialidade", width: "18%", class: "dt-center"},
-            { data: "mediaDominio", title: "Média Domínio", width: "18%", class: "dt-center"},
-            { data: "mediaTempestividade", title: "Média Tempestividade", width: "18%", class: "dt-center"}
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "pesquisaEnviadas", title: "Pesquisas Enviadas", class: "dt-center"},
+            { data: "pesquisasRespondidas", title: "Pesquisas Respondidas", class: "dt-center"}, 
+            { data: "mediaCordialidade", title: "Média Cordialidade", class: "dt-center"},
+            { data: "mediaDominio", title: "Média Domínio", class: "dt-center"},
+            { data: "mediaTempestividade", title: "Média Tempestividade", class: "dt-center"},
+            { data: "mediaAtendimentoMiddle", title: "Nota Conquiste.Caixa", class: "dt-center"}
         ]
     });
 
@@ -364,16 +461,16 @@ function inicializarTodosOsDataTableIndicadores()
         bInfo: false,
         columns: 
         [
-            { data: "lote", title: "Lote", width: "10%", class: "dt-center"},
-            { data: "nomeRotina", title: "Nome atividade de Rotina", width: "18%", class: "dt-center"},
-            { data: "quantidade", title: "Quantidade", width: "18%", class: "dt-center"}, 
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "nomeRotina", title: "Nome atividade de Rotina", class: "dt-center"},
+            { data: "quantidade", title: "Quantidade", class: "dt-center"}, 
         ]
     });
 
     _tabelaListaAtendimentoConsultoria = $('#tabelaAtendimentoConsultoria').DataTable(
     {
         scrollCollapse: false,
-        scrollY: "445px",
+        scrollY: "440px",
         paging: true,
         lengthChange: false,
         pageLength: 15,
@@ -385,12 +482,117 @@ function inicializarTodosOsDataTableIndicadores()
         bInfo: false,
         columns: 
         [
-            { data: "lote", title: "Lote", width: "10%", class: "dt-center"},
-            { data: "nomeConsultoria", title: "Nome atividade de Rotina", width: "18%", class: "dt-center"},
-            { data: "quantidade", title: "Quantidade", width: "18%", class: "dt-center"}, 
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "nomeConsultoria", title: "Nome atividade de Rotina", class: "dt-center"},
+            { data: "quantidade", title: "Quantidade", class: "dt-center"}, 
+        ]
+    });
+
+    _tabelaAtendimentosPorDire = $('#tabelaAtendimentosPorDire').DataTable(
+    {
+        scrollCollapse: true,
+        paging: false,
+        lengthChange: false,
+        pageLength: 10,
+        bSort: true,
+        searching: false,
+        order: [0, "desc"],
+        bAutoWidth: true,
+        responsive: true,
+        bInfo: false,
+        columns: 
+        [
+            { data: "lote", title: "LOTE", class: "dt-center"},
+            { data: "direA", title: "DIRE A", class: "dt-center"},
+            { data: "direB", title: "DIRE B", class: "dt-center"},
+            { data: "direCD", title: "DIRE C e D", class: "dt-center"},
+            { data: "direE", title: "DIRE E", class: "dt-center"},
+            { data: "direF", title: "DIRE F", class: "dt-center"},
+            { data: "direG", title: "DIRE G", class: "dt-center"},
+            { data: "direH", title: "DIRE H", class: "dt-center"},
+            { data: "direOutros", title: "SEM DIRE", class: "dt-center"},
+            { data: "total", title: "TOTAL", class: "dt-center"}, 
+        ]
+    });
+
+    _tabelaAtendimentoPorAssistente = $('#tabelaAtendimentoPorAssistente').DataTable(
+    {
+        scrollCollapse: true,
+        paging: true,
+        lengthChange: false,
+        pageLength: 14,
+        bSort: true,
+        searching: true,
+        order: [0, "desc"],
+        bAutoWidth: true,
+        responsive: true,
+        bInfo: false,
+        columns: 
+        [
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "matriculaCeopc", title: "Matricula", class: "dt-center"},
+            { data: "nome", title: "Assistente", class: "dt-center"},
+            { data: "rotina", title: "Atendimentos rotina", class: "dt-center"},
+            { data: "consultoria", title: "Atendimentos consultoria", class: "dt-center"},
+            { data: "totalAtendimentoMes", title: "Total de atendimentos", class: "dt-center"},
+        ]
+    });
+
+    _tabelaPesquisasEnviadasRespondidasPorAssistente = $('#tabelaPesquisasEnviadasRespondidasPorAssistente  ').DataTable(
+    {
+        scrollCollapse: true,
+        paging: true,
+        lengthChange: false,
+        pageLength: 14,
+        bSort: true,
+        searching: true,
+        order: [0, "desc"],
+        bAutoWidth: true,
+        responsive: true,
+        bInfo: false,
+        columns: 
+        [
+            { data: "lote", title: "Lote", class: "dt-center"},
+            { data: "matricula", title: "Matricula", class: "dt-center"},
+            { data: "nome", title: "Assistente", class: "dt-center"},
+            { data: "pesquisasEnviadas", title: "Pesquisas enviadas", class: "dt-center"},
+            { data: "pesquisasRespondidas", title: "Pesquisas respondidas", class: "dt-center"},
+            { data: "mediaCordialidade", title: "Média Cordialidade", class: "dt-center"},
+            { data: "mediaDominio", title: "Média Domínio", class: "dt-center"},
+            { data: "mediaTempestividade", title: "Média Tempestividade", class: "dt-center"},
+        ]
+    });
+
+    _tabelaFeedbackAtendimentos = $('#tabelafeedbackAtendimentos').DataTable(
+    {
+        scrollCollapse: true,
+        paging: true,
+        lengthChange: true,
+        pageLength: 8,
+        bSort: true,
+        searching: true,
+        order: [0, "desc"],
+        bAutoWidth: true,
+        responsive: true,
+        bInfo: true,
+        columns: 
+        [
+            { data: "id", title: "ID", class: "dt-center"},
+            { data: "dataEnvioPesquisa", title: "Data envio", class: "dt-center"},
+            { data: "nome", title: "Assistente", class: "dt-center"},
+            { data: "nomeAtividade", title: "Consultoria", class: "dt-center"},
+            { data: "unidadeDemandante", title: "Unidade", class: "dt-center"},
+            { data: "observacaoCeopc", title: "Observação Middle", class: "dt-center"},
+            { data: "dataRespostaPesquisa", title: "Data resposta", class: "dt-center"},
+            { data: "notaCordialidade", title: "Cordialidade", class: "dt-center"},
+            { data: "notaDominio", title: "Domínio", class: "dt-center"},
+            { data: "notaTempestividade", title: "Tempestividade", class: "dt-center"},
+            { data: "feedbackAtendido", title: "Feedback atendido", class: "dt-center"},
         ]
     });
 }
+
+/*------------------------------------------------*/
 
 /** 
  * SCRIPT PARA TROCAR AS TABELAS
@@ -400,4 +602,3 @@ $('.collapse').on('show.bs.collapse', function ()
 {
     $('.collapse.in').collapse('hide');
 }); 
-

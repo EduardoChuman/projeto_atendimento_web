@@ -11,23 +11,17 @@
     $registroAtendimento = new RegistroAtendimento();
 
     // SET DA VARIÁVEL DE UNIDADE DEMANDANTE CONFORME O TIPO DO ATENDIMENTO
-    if ($_POST['tipoAtendimento'] == 'CONSULTORIA') 
-    {
+    if ($_POST['tipoAtendimento'] == 'CONSULTORIA') {
         $atendido = new Empregado();
         $atendido->settarEmpregado($_POST['matriculaAtendido']);
         $registroAtendimento->setMatriculaAtendido($atendido->getMatricula());
 
-        if ($atendido->getLotacaoFisica() == " " || $atendido->getLotacaoFisica() == 0) 
-        {
+        if ($atendido->getLotacaoFisica() == " " || $atendido->getLotacaoFisica() == 0) {
             $unidadeDemandante = $atendido->getLotacaoAdm();
-        } 
-        else 
-        {
+        } else {
             $unidadeDemandante = $atendido->getLotacaoFisica();
         }
-    }
-    else 
-    {
+    } else {
         $unidadeDemandante = $_POST['unidadeDemandante'];
     } 
 
@@ -69,12 +63,9 @@
         <br>
         <h2>
             <?php     
-                if ($_POST['tipoAtendimento'] == 'CONSULTORIA') 
-                {
+                if ($_POST['tipoAtendimento'] == 'CONSULTORIA') {
                     $registroAtendimento->registrarAtendimentoConsultoria();
-                }
-                else
-                {
+                } else {
                     $registroAtendimento->registrarAtendimentoRotina();
                 }  
             ?>

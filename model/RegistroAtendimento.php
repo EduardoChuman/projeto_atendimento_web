@@ -161,8 +161,7 @@ class RegistroAtendimento
     {
         $sql = new Sql();
 
-        try
-        {
+        try {
             $sql->select
             (
                 "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
@@ -197,9 +196,7 @@ class RegistroAtendimento
                 )
             );
             echo "Atendimento registrado com sucesso! <br>";
-        }
-        catch(Exception $e)
-        {
+        } catch(Exception $e) {
             // EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
             echo json_encode
             (
@@ -219,8 +216,7 @@ class RegistroAtendimento
     {
         $sql = new Sql();
 
-        try
-        {
+        try {
             $sql->select
             (
                 "INSERT INTO [dbo].[tbl_ATENDIMENTO_WEB_REGISTRO_ATENDIMENTO]          
@@ -259,8 +255,7 @@ class RegistroAtendimento
             );
 
             // ROTINA PARA INSTANCIAR O OBJETO REGISTRO PESQUISA, REGISTRAR A PESQUISA NA TABELA REGISTRO_PESQUISA
-            if ($this->getTipoAtendimento() == 'CONSULTORIA') 
-            {
+            if ($this->getTipoAtendimento() == 'CONSULTORIA')  {
                 // QUERY PARA VERIFICAR SE HOUVE ALGUMA CONSULTORIA PARA ESSA MATRICULA, DO MESMO COLABORADOR CEOPC NA DATA DE HOJE
                 $validarQuantidadePesquisa = $sql->select
                 (
@@ -280,15 +275,13 @@ class RegistroAtendimento
                 );
 
                 // ATRIBUI O VALOR DA CONSULTA NA VARIÁVEL DO OBJETO
-                if(!empty($validarQuantidadePesquisa))
-                {
+                if(!empty($validarQuantidadePesquisa)) {
                     $row = $validarQuantidadePesquisa[0];
                     $this->setContagemConsultorias($row['CONTAGEM']);
                 }
 
                 // VALIDA O RESULTADO DA PESQUISA E CASO NÃO TENHA CONSULTORIA NESSA DATA, SERÁ ENVIADO A PESQUISA
-                if ($this->getContagemConsultorias() <= 1) 
-                {
+                if ($this->getContagemConsultorias() <= 1) {
                     $this->consultarUltimoProtocoloCadastrado();
 
                     // INSTANCIA UM OBJETO DA CLASSE REGISTRO PESQUISA
@@ -305,21 +298,15 @@ class RegistroAtendimento
                         ,$this->getNomeAtividade()
                     );
                     echo "Consultoria registrada com sucesso! <br>";
-                }
+                } else {
                 // CASO JÁ TENHA CONSULTORIA NESSA DATA, SERÁ RALIZADO SOMENTE O REGISTRO NA TABELA REGISTRO ATENDIMENTO
-                else
-                {
                     echo "Consultoria registrada com sucesso! Pesquisa não foi enviada pois você já realizou uma consultoria para essa matricula hoje. <br>";
                 }          
-            }
+            } else {
             // CASO SEJA SOMENTE UM REGISTRO DE ATIVIDADE/ROTINA, NÃO É NECESSÁRIO INSTANCIAR O OBJETO DE REGISTRO PESQUISA
-            else
-            {
                 echo "Atendimento registrado com sucesso! <br>";
             }
-        }
-        catch(Exception $e)
-        {
+        } catch(Exception $e) {
 			// EM CASO DE ERRO, RETORNA O TIPO VIA JSON NA TELA
             echo json_encode
             (
@@ -357,8 +344,7 @@ class RegistroAtendimento
                 ':MATRICULA'=>$this->getMatriculaCeopc()
             )
         );
-        if(!empty($consultaId))
-        {
+        if(!empty($consultaId)) {
             $row = $consultaId[0];
             $this->setIdAtendimento($row['ID']);
             $this->setNomeAtividade($row['NOME_ATIVIDADE']);
@@ -389,8 +375,7 @@ class RegistroAtendimento
                 ':ID'=>$this->getIdAtendimento()
             )
         );
-        if(!empty($consulta))
-        {
+        if(!empty($consulta)) {
             $row = $consulta[0];
             $this->setRecuperarDataAtendimento($row['DATA_ATENDIMENTO']);
             $this->setMatriculaCeopc($row['MATRICULA_CEOPC']);

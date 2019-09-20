@@ -200,7 +200,7 @@
                                                         <input type="radio" name="notaTempestividade" id="tespestividade-4" value="4" required hidden/>
                                                         <input type="radio" name="notaTempestividade" id="tespestividade-5" value="5" required hidden/>
 
-                                                        <fieldset><legend>Tespestividade</legend>
+                                                        <fieldset><legend>Tempestividade</legend>
                                                             <label for="tespestividade-1">
                                                                 <svg width="255" height="240" viewBox="0 0 51 48">
                                                                     <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>

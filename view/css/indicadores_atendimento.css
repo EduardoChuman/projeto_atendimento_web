@@ -21,7 +21,7 @@
 .divisoriaTabela
 {   
     padding: 0.5%;
-    margin: 0.5% 0;
+    margin: 0.5% 0 1.0% 0;
     border: 1px solid gray;
     background-color:#ecf0f1;
     border-radius: 5px;
@@ -35,11 +35,10 @@
 
 .abasNavegacao
 {
-    margin: 5px 0;
-    width: 100%;
     text-align: center;
     font-weight: bold;
     color: grey;
+    background-color:rgba(236, 240, 241, 0.5);
 }
 
 .graficosInicioPagina
@@ -47,9 +46,71 @@
     margin: 0px 0px 10px 0px;
 }
 
-a
+.nav-pills li.active a
 {
-    color: grey;
+    color: black;
+    background-color: #f5ab35;
+    border: 1px solid #d35400;
+}
+
+.nav-pills li.active a:hover
+{
+    color: black;
+    background-color: #eb9532;
+    border: 1px solid #d35400;
+}
+
+.nav-pills li.active a:focus
+{
+    color: black;
+    background-color: #f5ab35;
+    border: 1px solid #d35400;
+}
+
+.nav-pills li a
+{
+    color: black;
+    background-color:rgba(236, 240, 241, 0.5);
+    border: 1px solid gray;
+}
+
+.nav-pills li a:hover
+{
+    color: black;
+    background-color: #eb9532;
+}
+
+.pagination li a
+{
+    color: black;
+}
+
+.pagination .active a
+{
+    color: black;
+    background-color: #f5ab35;
+    border: 1px solid #d35400;
+}
+
+.pagination .active a:focus
+{
+    color: black;
+    background-color: #f5ab35;
+    border: 1px solid #d35400;
+}
+
+.pagination li .active a:hover
+{
+    color: black;
+    background-color: #eb9532;
+    border: 1px solid #d35400;
+}
+
+.pagination li a:hover
+{
+    color: black;
+    background-color: #eb9532;
+    border: 1px solid #d35400;
 }
 
 /* .paginate_button

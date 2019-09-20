@@ -181,7 +181,7 @@ class RegistroPesquisa
 
     // DEFINE AS CÓPIAS OCULTAS
     $mail->addBCC('c079436@mail.caixa');
-    $mail->addBCC('c111710@mail.caixa');
+    $mail->addBCC('c095060@mail.caixa');
     // $mail->addBCC('CEOPC08@mail.caixa');
 
     //Content
